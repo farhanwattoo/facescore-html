@@ -1,0 +1,473 @@
+:root {
+    --primary: #FF7EB3;
+    /* Sakura Pink */
+    --primary-hover: #FF5E9D;
+    --secondary: #4A4E69;
+    --bg: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text: #22223B;
+    --text-muted: #8D99AE;
+    --border: #EDF2F4;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h1 span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: rgba(255, 126, 179, 0.1);
+    padding: 0.3rem 1.2rem;
+    border-radius: 20px;
+}
+
+header p {
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+/* Upload Area */
+.upload-area {
+    background: var(--card-bg);
+    border: 2px dashed var(--primary);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.upload-area:hover,
+.upload-area.active {
+    background: rgba(255, 126, 179, 0.03);
+    border-color: var(--primary-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 126, 179, 0.15);
+}
+
+.upload-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.upload-content p {
+    font-size: 1.1rem;
+}
+
+.upload-content .sub-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Loader */
+#loading {
+    text-align: center;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 126, 179, 0.2);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-card {
+    background: #FFF3F3;
+    color: #D32F2F;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #D32F2F;
+    font-weight: 600;
+}
+
+/* Results Area */
+#results-area {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-preview {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card.primary {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #FF7EB3 0%, #FF5E9D 100%);
+    color: white;
+}
+
+.stat-card.primary .jp-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card.primary h3 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0.5rem 0;
+}
+
+.score-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.score-stars {
+    margin: 0.5rem 0;
+}
+
+.score-stars span {
+    font-size: 1.8rem;
+    margin: 0 2px;
+}
+
+.jp-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #2B2D42;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-twitter {
+    background: #000000;
+}
+
+.btn-twitter:hover {
+    background: #333333;
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Semantic SEO Article & FAQ styling */
+.seo-article {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.seo-article h2 {
+    color: var(--text);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 126, 179, 0.2);
+}
+
+.seo-article h3 {
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.seo-article p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.seo-article ul {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.seo-article ul li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.seo-article strong {
+    color: var(--primary);
+}
+
+.faq-title {
+    margin-top: 3rem;
+}
+
+.faq-list {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-top: 1rem;
+}
+
+.faq-list div {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+}
+
+.faq-list div:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.faq-list dt {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-list dd {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-left: 0;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Add top padding to body to account for fixed navbar */
+body {
+    padding-top: 6rem;
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}

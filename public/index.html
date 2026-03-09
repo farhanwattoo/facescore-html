@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="高精度AIを使った無料の顔面偏差値・顔診断テストチェッカー。あなたの顔面採点（ルックス評価・容姿評価）を瞬時に行い、顔パーツの左右対称性（黄金比・シンメトリー）、笑顔測定（スマイル）、見た目年齢、感情を完全無料で分析・診断します！マッチングアプリやSNSの写真採点・イケメン診断・美人度チェックに最適。スマホ対応。">
+    <meta name="keywords"
+        content="顔面偏差値, 顔面採点, 顔認識スコア, AI診断, 顔診断テスト, ルックス評価, イケメン診断, 美人度診断, 美人度テスト, モテ度測定, 黄金比, 左右対称性, シンメトリー, 笑顔測定, 写真採点, 容姿評価, 顔面評価, 人工知能, スマホ対応, 完全無料, SNSアイコン, マッチングアプリ, 骨格診断, パーソナルカラー, 雰囲気イケメン">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="顔面偏差値チェッカー - 最新AIによるルックス評価・黄金比・顔採点を完全無料診断">
+    <meta property="og:description"
+        content="最新の人工知能(AI)を使用して顔の左右対称性や笑顔の強さを測定。あなたの顔面偏差値（美人度・イケメン度・モテ度）を客観的な数値でスコア化する顔認識ツールです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://face-score.net/">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="顔面偏差値チェッカー - AI顔診断・ルックス評価">
+    <meta name="twitter:description"
+        content="画像の顔面偏差値（Face Score）や容姿評価を最新のAIで測定します。顔パーツの黄金比や笑顔強度を高精度で判定し、モテ度・イケメン度・美人度を写真採点。">
+
+    <link rel="canonical" href="https://face-score.net/">
+
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "顔面偏差値 AI診断チェッカー (Face Score)",
+      "url": "https://face-score.net/",
+      "description": "最新のAI（人工知能）を使った顔面偏差値・顔認識スコア（顔面採点）計測ツール。アップロードされた画像の顔パーツの左右対称性（美容の黄金比・シンメトリー）、笑顔の自然さ（表情の豊かさ・スマイル）、推定年齢、感情をAIが瞬時に分析・スコア化し、ルックス（容姿）評価を客観的に診断・判定します。",
+      "applicationCategory": "UtilitiesApplication, LifestyleApplication",
+      "genre": "AI Face Diagnosis, Beauty Scoring",
+      "browserRequirements": "Requires JavaScript. Requires HTML5 Canvas support.",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+    <title>顔面偏差値チェッカー - AI顔診断・ルックス評価・黄金比・笑顔測定を完全無料で写真採点</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">🌸 顔面偏差値診断</a>
+            <ul class="nav-links">
+                <li><a href="/#upload-area">AI診断</a></li>
+                <li><a href="/#faq">よくある質問</a></li>
+                <li><a href="about.html">概要</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>顔面偏差値チェッカー <span>AI高精度</span></h1>
+            <p>写真をアップロードして、あなたの顔の黄金比・感情・推定年齢をAIで測定します。</p>
+            <p class="seo-description" style="font-size: 0.85rem; color: #8D99AE; margin-top: 5px;">
+                当サイトでは高度な人工知能（顔認識AIアルゴリズム）を用いて、アップロードされた画像の<strong>顔面偏差値（顔面採点・ルックス評価）</strong>を客観的に測定・数値化します。顔パーツの<strong>左右対称性・シンメトリー</strong>（美容の黄金比や顔の歪み）、<strong>笑顔測定</strong>（表情の豊かさ・口角）、見た目年齢、今の感情など、容姿・モテ度に関わる重要な特徴をスマホからでも高精度で分析・判定・診断できる完全無料の顔診断テストです。
+            </p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <div id="upload-area" class="upload-area">
+                <div class="upload-content">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <p>画像をドラッグ＆ドロップ または <strong>クリックして選択</strong></p>
+                    <p class="sub-text">対応形式: JPEG, PNG, WEBP</p>
+                </div>
+                <!-- Adding capture="" so mobile users can take a photo easily -->
+                <input type="file" id="file-input" accept="image/*" capture="user" hidden>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>AIが顔面偏差値を分析中...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-message" class="hidden error-card"></div>
+
+            <!-- Results Section -->
+            <div id="results-area" class="hidden">
+                <div class="image-preview">
+                    <!-- Overlay Canvas for Face Landmarks -->
+                    <canvas id="result-canvas"></canvas>
+                </div>
+
+                <!-- Metrics -->
+                <div class="stats-grid">
+                    <div class="stat-card primary">
+                        <h3>総合判定</h3>
+                        <div class="score-value" id="score-val">-</div>
+                        <div class="score-stars" id="score-stars"></div>
+                        <div class="jp-label">総合スコア (顔面偏差値)</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>年齢</h3>
+                        <div class="stat-value" id="age-val">-</div>
+                        <div class="jp-label">推定年齢</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>性別</h3>
+                        <div class="stat-value" id="gender-val">-</div>
+                        <div class="jp-label">判定性別</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>感情</h3>
+                        <div class="stat-value" id="emotion-val">-</div>
+                        <div class="jp-label">今の感情</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>シンメトリー</h3>
+                        <div class="stat-value" id="symmetry-val">-</div>
+                        <div class="jp-label">左右対称性 (黄金比)</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>笑顔</h3>
+                        <div class="stat-value" id="smile-val">-</div>
+                        <div class="jp-label">笑顔の強さ</div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="download-btn" class="btn btn-secondary">
+                        💾 結果画像を保存する
+                    </button>
+                    <button id="share-x-btn" class="btn btn-twitter">
+                        𝕏 X (Twitter) でシェア
+                    </button>
+                    <button id="reset-btn" class="btn">
+                        🔄 別の写真をAI診断する
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Semantic SEO & FAQ Section -->
+        <article class="seo-article" id="about">
+            <h2>顔認識AIによる「顔面偏差値チェッカー（ルックス評価・顔面採点ツール）」とは？</h2>
+            <p><strong>顔面偏差値チェッカー（AI顔診断テスト）</strong>は、最新鋭のAI（人工知能）技術を用いて、アップロード・自撮りした顔画像を多角的に分析し、あなたの容姿評価やルックスを数値化する完全無料のWebアプリ・オンライン診断ツールです。主に顔の「<strong>左右対称性・シンメトリー（顔の黄金比率・骨格バランス）</strong>」と「<strong>笑顔測定スコア（表情の豊かさ・スマイル・口角の上がり具合）</strong>」を科学的に算出し、AIが客観的な<strong>顔面偏差値（モテ度・美人度・イケメン度）</strong>を瞬時に写真採点・判定します。
+            </p>
+            <p>ご自身のルックスや容姿の客観的なスコア・評価を無料で知る方法を探している方や、<strong>マッチングアプリ（Pairs,
+                    Tinder等）の写真選び</strong>、LINEやInstagram、TikTok、XなどのSNSアイコン・プロフィール用画像の設定に迷っている方、自分が「一番魅力的に見える自然な笑顔・盛れる角度」を探したい方に最適な、高精度の顔面採点・写真診断サービスです。スマホ対応でアプリのインストールは不要です。
+            </p>
+
+            <h3>最新AI顔診断テストの測定プロセスとイケメン・美人の顔の評価基準</h3>
+            <p>当ウェブアプリは、ブラウザとサーバー間で動作する高度な機械学習・顔認識ディープラーニングモデル（API）を使用し、顔写真・自撮り画像から以下の項目を精密に解析します：</p>
+            <ul>
+                <li><strong>顔の黄金比と左右対称性テスト（Symmetry Diagnostics）：</strong>
+                    顎のライン（フェイスライン）、目や眉の間隔、鼻の位置・小鼻の広がり、口のバランスなど「68個に及ぶ顔のランドマーク（特徴点）」をプロットし、顔の歪み・ゆがみを正確に測定。理想的な「美容外科的な黄金比率」にどれほど近いかをパーセンテージでスコア化します。左右対称な顔は本能的に美男美女として認識されやすいという特徴があります。
+                </li>
+                <li><strong>感情・表情分析（Emotion & Smile Index）：</strong>
+                    笑顔の度合い（ハッピー）、真顔（ニュートラル）、悲しみ、驚きなどの顔の表情や喜怒哀楽を読み取ります。とくに、「笑顔の自然さと強度」は総合スコア（顔面偏差値・モテ度）の大幅アップに直結するため、最高の笑顔を作った画像で挑戦・写真採点することを推奨しています！
+                </li>
+                <li><strong>推定年齢・見た目年齢（Age）と性別・ジェンダー（Gender）：</strong>
+                    お顔の輪郭、肌の質感・ハリなどの視覚的な特徴をもとに、実年齢に依存しない見た目年齢（推測される年齢層・若見え度）とジェンダーをAIが自動で判断・診断評価します。</li>
+            </ul>
+
+            <h2 class="faq-title" id="faq">よくある質問 (FAQ)</h2>
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                <dl class="faq-list">
+                    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <dt itemprop="name">Q. アップロードした写真は保存されますか？</dt>
+                        <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <span itemprop="text">A.
+                                いいえ、アップロードされた画像データはAIによる解析のために一時的に使用されるだけで、処理完了直後にサーバーから自動で完全に削除されます。画像を保存、共有、学習データとして利用することは一切ありません。</span>
+                        </dd>
+                    </div>
+
+                    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <dt itemprop="name">Q. 顔面偏差値（総合スコア）はどのように計算されますか？</dt>
+                        <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <span itemprop="text">A.
+                                当サイトの顔面採点アルゴリズムは、顔の「左右対称性（70%）」と「表情・笑顔の強度（30%）」の組み合わせによって計算されています。美しい黄金比（シンメトリー）に近いほど、また魅力的で自然な笑顔であるほどスコアが高くなる仕組みです。</span>
+                        </dd>
+                    </div>
+
+                    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <dt itemprop="name">Q. スマホからでも顔診断テストは可能ですか？</dt>
+                        <dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <span itemprop="text">A.
+                                はい、可能です。iPhone（iOS）のSafariやAndroidのChromeなどのスマートフォンをはじめ、タブレット、PCのすべてのブラウザに完全対応しています。スマホのインカメラを利用して直接自撮り写真を撮ることもできます。</span>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </article>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="/" class="footer-logo">🌸 顔面偏差値診断</a>
+            <div class="footer-links">
+                <a href="about.html">当サイトについて</a>
+                <a href="contact.html">お問い合わせ</a>
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+            </div>
+            <p>&copy; 2026 顔面偏差値チェッカー. 全著作権所有・最新AI搭載</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
