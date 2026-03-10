@@ -74,32 +74,81 @@ function handleFileSelect(file) {
     reader.onload = (e) => {
         currentImage = new Image();
         currentImage.onload = () => {
-            uploadImage(file);
+            uploadImage();
         };
         currentImage.src = e.target.result;
     };
     reader.readAsDataURL(file);
 }
 
-async function uploadImage(file) {
+let modelsLoaded = false;
+Promise.all([
+    faceapi.nets.ssdMobilenetv1.loadFromUri('./models'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('./models'),
+    faceapi.nets.faceExpressionNet.loadFromUri('./models'),
+    faceapi.nets.ageGenderNet.loadFromUri('./models')
+]).then(() => {
+    modelsLoaded = true;
+    console.log('Face API Models loaded successfully.');
+}).catch((err) => {
+    console.error('Failed to load Face API models:', err);
+    setTimeout(() => showError('AIモデルの読み込みに失敗しました: ' + err.message), 1000);
+});
+
+async function uploadImage() {
     uploadArea.classList.add('hidden');
     errorMessage.classList.add('hidden');
     loading.classList.remove('hidden');
 
-    const formData = new FormData();
-    formData.append('image', file);
-
     try {
-        const response = await fetch('/api/analyze', {
-            method: 'POST',
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(data.error || 'Failed to analyze image.');
+        if (!modelsLoaded) {
+            throw new Error('AIモデルを読み込み中です。数秒後にもう一度お試しください。');
         }
+
+        // Run client-side face detection
+        const detections = await faceapi.detectSingleFace(currentImage)
+            .withFaceLandmarks()
+            .withFaceExpressions()
+            .withAgeAndGender();
+
+        if (!detections) {
+            throw new Error('画像から顔を検出できませんでした。別の画像をアップロードしてください。');
+        }
+
+        // --- FACE SCORE LOGIC ---
+        const { landmarks, expressions, age, gender } = detections;
+        const positions = landmarks.positions;
+
+        // Calculate Symmetry using nose tip against jawline width
+        const noseTip = positions[30];
+        const leftJaw = positions[0];
+        const rightJaw = positions[16];
+
+        const distLeft = Math.hypot(noseTip.x - leftJaw.x, noseTip.y - leftJaw.y);
+        const distRight = Math.hypot(noseTip.x - rightJaw.x, noseTip.y - rightJaw.y);
+
+        // Symmetry metric 0 to 1
+        const symmetry = 1 - (Math.abs(distLeft - distRight) / Math.max(distLeft, distRight));
+
+        // Emotion and Smile
+        const smileScore = expressions.happy; // 0 to 1
+
+        // Find dominant emotion
+        let mainEmotion = Object.keys(expressions).reduce((a, b) => expressions[a] > expressions[b] ? a : b);
+
+        // Final score out of 100 (Weighted: 70% symmetry, 30% smile)
+        const faceScoreValue = (symmetry * 70) + (smileScore * 30);
+        const faceScore = Math.min(100, Math.max(0, faceScoreValue)).toFixed(1);
+
+        const data = {
+            age: Math.round(age),
+            gender,
+            emotion: mainEmotion,
+            symmetry: (symmetry * 100).toFixed(1),
+            smileIntensity: (smileScore * 100).toFixed(1),
+            faceScore,
+            landmarks: positions
+        };
 
         displayResults(data);
     } catch (error) {
