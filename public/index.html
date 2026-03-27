@@ -91,7 +91,11 @@
             <!-- Loading State -->
             <div id="loading" class="hidden">
                 <div class="spinner"></div>
-                <p>AIが顔面偏差値を分析中...</p>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <p id="loading-text">AIが顔面偏差値を分析中...</p>
+                <p class="loading-sub">高度なAIアルゴリズムが画像の特徴点を抽出しています</p>
             </div>
 
             <!-- Error State -->

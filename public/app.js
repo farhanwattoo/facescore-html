@@ -8,6 +8,9 @@ const resetBtn = document.getElementById('reset-btn');
 const downloadBtn = document.getElementById('download-btn');
 const shareXBtn = document.getElementById('share-x-btn');
 
+const progressBar = document.getElementById('progress-bar');
+const loadingText = document.getElementById('loading-text');
+
 const ctx = resultCanvas.getContext('2d');
 let currentImage = null;
 let currentScore = 0;
@@ -44,6 +47,7 @@ resetBtn.addEventListener('click', () => {
     uploadArea.classList.remove('hidden');
     errorMessage.classList.add('hidden');
     fileInput.value = '';
+    updateProgress(0, '');
 });
 
 downloadBtn.addEventListener('click', () => {
@@ -70,15 +74,30 @@ function handleFileSelect(file) {
         return;
     }
 
+    // Show loading state immediately to improve UX
+    uploadArea.classList.add('hidden');
+    errorMessage.classList.add('hidden');
+    loading.classList.remove('hidden');
+    updateProgress(10, '画像を読み込み中...');
+
     const reader = new FileReader();
     reader.onload = (e) => {
         currentImage = new Image();
         currentImage.onload = () => {
+            updateProgress(30, 'AIモデルを準備中...');
             uploadImage();
         };
         currentImage.src = e.target.result;
     };
+    reader.onerror = () => {
+        showError('画像の読み込みに失敗しました。');
+    };
     reader.readAsDataURL(file);
+}
+
+function updateProgress(percent, text) {
+    if (progressBar) progressBar.style.width = `${percent}%`;
+    if (loadingText && text) loadingText.textContent = text;
 }
 
 let modelsLoaded = false;
@@ -102,14 +121,27 @@ async function uploadImage() {
 
     try {
         if (!modelsLoaded) {
-            throw new Error('AIモデルを読み込み中です。数秒後にもう一度お試しください。');
+            updateProgress(40, 'AIモデルを読み込み中...');
+            // Wait a bit if models aren't loaded yet
+            let retries = 0;
+            while (!modelsLoaded && retries < 50) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+                retries++;
+            }
+            if (!modelsLoaded) {
+                throw new Error('AIモデルの読み込みに時間がかかっています。ページを再読み込みしてください。');
+            }
         }
+
+        updateProgress(50, '顔パーツを検出中...');
 
         // Run client-side face detection
         const detections = await faceapi.detectSingleFace(currentImage)
             .withFaceLandmarks()
             .withFaceExpressions()
             .withAgeAndGender();
+
+        updateProgress(80, 'ルックス評価を計算中...');
 
         if (!detections) {
             throw new Error('画像から顔を検出できませんでした。別の画像をアップロードしてください。');
