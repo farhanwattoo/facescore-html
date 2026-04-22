@@ -600,10 +600,12 @@ $pageDescription = '写真をブラウザ内で解析し、顔の左右対称性
 <nav aria-label="主要ナビゲーション" class="nav">
 <a class="brand" href="/">AI顔診断</a>
 <ul class="nav-links">
-<li><a href="#face-tool">診断する</a></li>
-<li><a href="#how-it-works">仕組み</a></li>
-<li><a href="#privacy">プライバシー</a></li>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="ai-face-analysis.html">AI顔分析</a></li>
+<li><a href="face-attractiveness-test.html">魅力度テスト</a></li>
+<li><a href="how-it-works.html">仕組み</a></li>
 <li><a href="accuracy-limitations.html">精度と限界</a></li>
+<li><a href="about.html">運営情報</a></li>
 </ul>
 </nav>
 </header>

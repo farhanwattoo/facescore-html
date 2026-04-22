@@ -1,39 +1,21 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>ツールの仕組みの解説 | 顔分析プロセスと写真のヒント</title>
-    <meta
-      content="ツールの仕組み, 分析プロセス, 顔検知, ランドマーク技術, AIの使い方"
-      name="keywords"
-    />
-    <meta
-      content="顔検知、ランドマーク、対称性、画質チェックなど、ツールがどのようにあなたを分析しているか機能別に理解しましょう。"
-      name="description"
-    />
-    <link href="https://face-score.net/how-it-works.html" rel="canonical" />
-    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
-    <link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet" />
-    <link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet" />
-    <noscript
-      ><link
-        href="style-core.min.css?v=20260415-stylefix2"
-        rel="stylesheet" /><link
-        href="style-pages.min.css?v=20260415-stylefix2"
-        rel="stylesheet"
-    /></noscript>
-    <meta
-      content="ツールの仕組みの解説 | 顔分析プロセスと写真のヒント"
-      property="og:title"
-    />
-    <meta
-      content="顔検知、ランドマーク、対称性、画質チェックなど、ツールがどのようにあなたを分析しているか機能別に理解しましょう。"
-      property="og:description"
-    />
-    <meta content="article" property="og:type" />
-    <style>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ツールの仕組みの解説 | 顔分析プロセスと写真のヒント</title>
+<meta content="ツールの仕組み, 分析プロセス, 顔検知, ランドマーク技術, AIの使い方" name="keywords"/>
+<meta content="顔検知、ランドマーク、対称性、画質チェックなど、ツールがどのようにあなたを分析しているか機能別に理解しましょう。" name="description"/>
+<link href="https://face-score.net/how-it-works.html" rel="canonical"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet"/>
+<link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet"/>
+<noscript><link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet"/><link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet"/></noscript>
+<meta content="ツールの仕組みの解説 | 顔分析プロセスと写真のヒント" property="og:title"/>
+<meta content="顔検知、ランドマーク、対称性、画質チェックなど、ツールがどのようにあなたを分析しているか機能別に理解しましょう。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<style>
       .article-page {
         max-width: 1040px;
       }
@@ -140,7 +122,7 @@
         }
       }
     </style>
-    <script id="static-seo-schema" type="application/ld+json">
+<script id="static-seo-schema" type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
@@ -277,244 +259,176 @@
         ]
       }
     </script>
-    <link
-      href="rss.xml"
-      rel="alternate"
-      title="Face Score AI RSS Feed"
-      type="application/rss+xml"
-    />
-  </head>
-  <body class="inner-page">
-    <nav class="navbar">
-      <div class="nav-container">
-        <a class="nav-logo" href="">顔スコアAI</a>
-        <ul class="nav-links">
-          <li><a href="">ホーム</a></li>
-          <li><a href="how-it-works.html">仕組み</a></li>
-          <li><a href="accuracy-limitations.html">精度</a></li>
-          <li><a href="about.html">概要</a></li>
-        </ul>
-      </div>
-    </nav>
-    <main class="container page-content professional-inner article-page">
-      <section class="article-hero">
-        <p class="eyebrow">信頼性と操作性のガイド</p>
-        <h1>顔スコアの仕組み：AI顔分析プロセス、写真の品質、安全な解釈</h1>
-        <p class="lead">
+<link href="rss.xml" rel="alternate" title="Face Score AI RSS Feed" type="application/rss+xml"/>
+</head>
+<body class="inner-page">
+<nav class="navbar">
+<div class="nav-container">
+<a class="nav-logo" href="">顔スコアAI</a>
+<ul class="nav-links">
+<li><a href="index.html">ホーム</a></li>
+<li><a href="ai-face-analysis.html">AI顔分析</a></li>
+<li><a href="face-attractiveness-test.html">魅力度テスト</a></li>
+<li><a href="how-it-works.html">仕組み</a></li>
+<li><a href="accuracy-limitations.html">精度と限界</a></li>
+<li><a href="about.html">運営情報</a></li>
+</ul>
+</div>
+</nav>
+<main class="container page-content professional-inner article-page">
+<section class="article-hero">
+<p class="eyebrow">信頼性と操作性のガイド</p>
+<h1>顔スコアの仕組み：AI顔分析プロセス、写真の品質、安全な解釈</h1>
+<p class="lead">
           顔スコアツールは、その背後にあるプロセスを理解すると役立ちます。このガイドでは、検出、ランドマーク、スコアリング、および写真ベースの分析の限界について説明します。
         </p>
-      </section>
-      <section class="trust-section tool-card" data-simple-tool="">
-        <span class="tool-label">プロセスチェッカー</span>
-        <h2>顔分析入力準備状況ツール</h2>
-        <label
-          >Lighting<select>
-            <option>柔らかなフロントライト</option>
-            <option>側面の影</option>
-            <option>低照度</option>
-          </select></label
-        >
-        <label
-          >写真の角度<select>
-            <option>正面</option>
-            <option>わずかな角度</option>
-            <option>極端な角度</option>
-          </select></label
-        >
-        <label
-          >Editing<select>
-            <option>ナチュラル</option>
-            <option>ライト編集(Light edit)</option>
-            <option>強いフィルター</option>
-          </select></label
-        >
-        <button class="btn btn-secondary" type="button">
+</section>
+<section class="trust-section tool-card" data-simple-tool="">
+<span class="tool-label">プロセスチェッカー</span>
+<h2>顔分析入力準備状況ツール</h2>
+<label>Lighting<select>
+<option>柔らかなフロントライト</option>
+<option>側面の影</option>
+<option>低照度</option>
+</select></label>
+<label>写真の角度<select>
+<option>正面</option>
+<option>わずかな角度</option>
+<option>極端な角度</option>
+</select></label>
+<label>Editing<select>
+<option>ナチュラル</option>
+<option>ライト編集(Light edit)</option>
+<option>強いフィルター</option>
+</select></label>
+<button class="btn btn-secondary" type="button">
           準備状況を確認する
         </button>
-        <div class="tool-result">
+<div class="tool-result">
           スコーリングページに顔写真をアップロードする前に、これを使用してください。
         </div>
-      </section>
-      <article class="trust-section article-body">
-        <h2>手順1：顔検出</h2>
-        <p>
+</section>
+<article class="trust-section article-body">
+<h2>手順1：顔検出</h2>
+<p>
           最初のステップは、画像に顔が存在するかどうかを判断することです。顔が小さすぎたり、隠れていたり、ぼやけていたり、角度が強すぎたりすると、その後の分析の安定性が低下します。優れたツールは、すべての写真が等しく信頼できるふりをするのではなく、入力が弱いときにユーザーに伝える必要があります。
         </p>
-        <h2>ステップ2：ランドマークと特徴の読み取り</h2>
-        <p>
+<h2>ステップ2：ランドマークと特徴の読み取り</h2>
+<p>
           検出後、ソフトウェアは目、鼻、口、あご、眉毛、輪郭の周りの顔のランドマークを推定します。これらのポイントは、顔の形、対称性、黄金比、表情、および比較機能をサポートします。
         </p>
-        <p>
+<p>
           ランドマークは幾何学であり、アイデンティティではありません。それらは1枚の写真に目に見えるポイントがどこに現れるかを記述します。それらは性格、感情、または現実世界の魅力を完全に理解することはできません。
         </p>
-        <h2>Step 3: Scoring and Weighting</h2>
-        <p>
+<h2>Step 3: Scoring and Weighting</h2>
+<p>
           スコアは、明瞭さ、対称性、プロポーション、表情、照明などの信号を組み合わせます。ツールによって使用する重みが異なるため、2つのWebサイトで同じ画像に対して異なる数字が生成される可能性があります。
         </p>
-        <p>
+<p>
           有用な部分は数字だけではありません。それは説明です：何がスコアを改善したか、何が不安定にしたか、そして次に何を試すべきか。
         </p>
-        <h2>ステップ4：結果を安全に読み取る</h2>
-        <p>
+<h2>ステップ4：結果を安全に読み取る</h2>
+<p>
           結果は推定値として読み取ってください。同じような条件下で写真を比較したり、カメラの設定を改善したりするために使用します。人をランク付けしたり、健康状態を診断したり、法的な身元を確認したり、自己価値を判断したりするために使用しないでください。
         </p>
-        <h2>最適な写真設定</h2>
-        <ul class="summary-list">
-          <li>柔らかな正面からの光を使用します。</li>
-          <li>両目が見えるようにしてください。</li>
-          <li>Avoid 強いフィルターs and face reshaping.</li>
-          <li>鮮明で最新の写真を使用してください。</li>
-          <li>パターンを信頼する前に、複数の画像を比較してください。</li>
-        </ul>
-        <h2>2つのツールが異なるスコアを出す理由</h2>
-        <p>
+<h2>最適な写真設定</h2>
+<ul class="summary-list">
+<li>柔らかな正面からの光を使用します。</li>
+<li>両目が見えるようにしてください。</li>
+<li>Avoid 強いフィルターs and face reshaping.</li>
+<li>鮮明で最新の写真を使用してください。</li>
+<li>パターンを信頼する前に、複数の画像を比較してください。</li>
+</ul>
+<h2>2つのツールが異なるスコアを出す理由</h2>
+<p>
           システムが異なれば、選択する信号も異なります。顔の対称性を重視するツールもあれば、画像の鮮明さを重視するツールもあり、表情やスタイルを含めるツールもあります。そのため、背後にある方法を知らずに数字を読み取るべきではありません。
         </p>
-        <p>
+<p>
           画像が変化すると、同じツールでも出力が変化する可能性があります。カメラが近いと比率が歪む可能性があり、光が柔らかいとランドマークが検出しやすくなります。プロセスは技術的ですが、ユーザーの教訓は単純です。入力を一貫して行うことです。
         </p>
-        <h2>アップロードされた画像はどうなりますか？?</h2>
-        <p>
+<h2>アップロードされた画像はどうなりますか？?</h2>
+<p>
           アップロードベースのページはすべて、ツールが画像をどう処理するかをユーザーに伝える必要があります。一部の機能はブラウザでファイルをプレビューするだけです。他の機能はサーバー処理を必要とする場合があります。この違いがアップロードボタンの近くに書かれていると、ユーザーエクスペリエンスが向上します。
         </p>
-        <h2>公平に再テストする方法</h2>
-        <p>
+<h2>公平に再テストする方法</h2>
+<p>
           同じ場所で3枚の写真を撮ります：ニュートラルな表情、わずかな笑顔、そしてオンラインで通常使用する角度。古い写真、フィルター、異なる照明を混在させるのではなく、それらを比較してください。公平なテストにより、結果はより有用になり、感情的ではなくなります。
         </p>
-      </article>
-    </main>
-    <footer class="site-footer">
-      <div class="footer-content">
-        <a class="footer-logo" href="">顔スコアAI</a>
-        <div class="footer-directory">
-          <div class="footer-column">
-            <h4>おすすめのAI診断</h4>
-            <a href="index.html">総合AI顔診断</a>
-            <a href="ai-face-analysis.html">AI顔分析</a>
-            <a href="face-attractiveness-test.html">顔の魅力度テスト</a>
-            <a href="photo-face-rating.html">写真顔評価</a>
-            <a href="face-comparison-tool.html">顔比較ツール</a>
-            <a href="random-face-score-generator.html">ランダム顔スコア</a>
-            <a href="golden-ratio-face.html">黄金比テスト</a>
-            <a href="hotness-scale-test.html">ホットネススケール</a>
-          </div>
-          <div class="footer-column">
-            <h4>詳細分析機能</h4>
-            <a href="smile-expression-analysis.html">笑顔・表情分析</a>
-            <a href="age-estimation-ai.html">年齢推定AI</a>
-            <a href="golden-ratio-face-analysis.html">顔の黄金比分析</a>
-          </div>
-          <div class="footer-column">
-            <h4>ガイド・解説記事</h4>
-            <a href="how-it-works.html">仕組みについて</a>
-            <a href="how-face-score-works.html">顔スコアの仕組み</a>
-            <a href="accuracy-limitations.html">精度と限界</a>
-            <a href="selfie-photo-quality-guide.html">自撮り写真ガイド</a>
-            <a href="facial-landmarks-explained.html">顔のランドマーク</a>
-            <a href="face-symmetry-guide.html">顔の対称性ガイド</a>
-            <a href="what-makes-you-attractive.html">魅力の特徴</a>
-          </div>
-          <div class="footer-column">
-            <h4>サポートと組織情報</h4>
-            <a href="about.html">当サイトについて</a>
-            <a href="team.html">運営チーム</a>
-            <a href="editorial-guidelines.html">編集ガイドライン</a>
-            <a href="privacy.html">プライバシーポリシー</a>
-            <a href="terms.html">利用規約</a>
-            <a href="contact.html">お問い合わせ</a>
-            <a href="sitemap.html">HTMLサイトマップ</a>
-            <a href="rss.xml">RSSフィード</a>
-          </div>
-        </div>
-        <form
-          action="/sitemap.html"
-          class="footer-search"
-          id="site-search-form"
-          role="search"
-        >
-          <label for="site-search-input"
-            >顔スコアAIのツールとガイドを検索</label
-          >
-          <input
-            aria-label="顔スコアAIを検索"
-            id="site-search-input"
-            name="q"
-            placeholder="ツール、ガイド、ポリシーを検索"
-            type="search"
-          />
-          <button type="submit">検索</button>
-        </form>
-        <div class="footer-trust">
-          <div class="footer-contact">
-            <span
-              >Email:
-              <a href="mailto:support@face-score.net"
-                >support@face-score.net</a
-              ></span
-            >
-            <span>Phone: <a href="tel:+14155550198">+1 (415) 555-0198</a></span>
-          </div>
-          <div aria-label="ソーシャルメディアリンク" class="footer-social">
-            <a
-              href="https://twitter.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Twitter/X</a
-            >
-            <a
-              href="https://www.facebook.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Facebook</a
-            >
-            <a
-              href="https://www.linkedin.com/company/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <a
-              href="https://www.youtube.com/@facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >YouTube</a
-            >
-            <a
-              href="https://www.instagram.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Instagram</a
-            >
-            <a
-              href="https://www.pinterest.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Pinterest</a
-            >
-            <a
-              href="https://www.tiktok.com/@facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >TikTok</a
-            >
-          </div>
-          <div class="footer-legal">
-            <a
-              class="dmca-badge"
-              href="https://www.dmca.com/Protection/Status.aspx"
-              rel="nofollow noopener"
-              target="_blank"
-              >DMCA保護</a
-            >
-            <span>Copyright © 2026 顔スコアAI. All rights reserved.</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <button aria-label="Back to top" class="back-to-top" id="back-to-top">
+</article>
+</main>
+<footer class="site-footer">
+<div class="footer-content">
+<a class="footer-logo" href="">顔スコアAI</a>
+<div class="footer-directory">
+<div class="footer-column">
+<h4>おすすめのAI診断</h4>
+<a href="index.html">総合AI顔診断</a>
+<a href="ai-face-analysis.html">AI顔分析</a>
+<a href="face-attractiveness-test.html">顔の魅力度テスト</a>
+<a href="photo-face-rating.html">写真顔評価</a>
+<a href="face-comparison-tool.html">顔比較ツール</a>
+<a href="random-face-score-generator.html">ランダム顔スコア</a>
+<a href="golden-ratio-face.html">黄金比テスト</a>
+<a href="hotness-scale-test.html">ホットネススケール</a>
+</div>
+<div class="footer-column">
+<h4>詳細分析機能</h4>
+<a href="smile-expression-analysis.html">笑顔・表情分析</a>
+<a href="age-estimation-ai.html">年齢推定AI</a>
+<a href="golden-ratio-face-analysis.html">顔の黄金比分析</a>
+</div>
+<div class="footer-column">
+<h4>ガイド・解説記事</h4>
+<a href="how-it-works.html">仕組みについて</a>
+<a href="how-face-score-works.html">顔スコアの仕組み</a>
+<a href="accuracy-limitations.html">精度と限界</a>
+<a href="selfie-photo-quality-guide.html">自撮り写真ガイド</a>
+<a href="facial-landmarks-explained.html">顔のランドマーク</a>
+<a href="face-symmetry-guide.html">顔の対称性ガイド</a>
+<a href="what-makes-you-attractive.html">魅力の特徴</a>
+</div>
+<div class="footer-column">
+<h4>サポートと組織情報</h4>
+<a href="about.html">当サイトについて</a>
+<a href="team.html">運営チーム</a>
+<a href="editorial-guidelines.html">編集ガイドライン</a>
+<a href="privacy.html">プライバシーポリシー</a>
+<a href="terms.html">利用規約</a>
+<a href="contact.html">お問い合わせ</a>
+<a href="sitemap.html">HTMLサイトマップ</a>
+</div>
+</div>
+<form action="/sitemap.html" class="footer-search" id="site-search-form" role="search">
+<label for="site-search-input">顔スコアAIのツールとガイドを検索</label>
+<input aria-label="顔スコアAIを検索" id="site-search-input" name="q" placeholder="ツール、ガイド、ポリシーを検索" type="search"/>
+<button type="submit">検索</button>
+</form>
+<div class="footer-trust">
+<div class="footer-contact">
+<span>Email:
+              <a href="mailto:support@face-score.net">support@face-score.net</a></span>
+<span>Phone: <a href="tel:+14155550198">+1 (415) 555-0198</a></span>
+</div>
+<div aria-label="ソーシャルメディアリンク" class="footer-social">
+<a href="https://twitter.com/facescoreai" rel="nofollow noopener" target="_blank">Twitter/X</a>
+<a href="https://www.facebook.com/facescoreai" rel="nofollow noopener" target="_blank">Facebook</a>
+<a href="https://www.linkedin.com/company/facescoreai" rel="nofollow noopener" target="_blank">LinkedIn</a>
+<a href="https://www.youtube.com/@facescoreai" rel="nofollow noopener" target="_blank">YouTube</a>
+<a href="https://www.instagram.com/facescoreai" rel="nofollow noopener" target="_blank">Instagram</a>
+<a href="https://www.pinterest.com/facescoreai" rel="nofollow noopener" target="_blank">Pinterest</a>
+<a href="https://www.tiktok.com/@facescoreai" rel="nofollow noopener" target="_blank">TikTok</a>
+</div>
+<div class="footer-legal">
+<a class="dmca-badge" href="https://www.dmca.com/Protection/Status.aspx" rel="nofollow noopener" target="_blank">DMCA保護</a>
+<span>Copyright © 2026 顔スコアAI. All rights reserved.</span>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="back-to-top">
       Top
     </button>
-    <script>
+<script>
       document.addEventListener("DOMContentLoaded", function () {
         document
           .querySelectorAll("[data-simple-tool]")
@@ -542,6 +456,6 @@
           });
       });
     </script>
-    <script defer="" src="site.js?v=20260415-seo-meta2"></script>
-  </body>
+<script defer="" src="site.js?v=20260415-seo-meta2"></script>
+</body>
 </html>

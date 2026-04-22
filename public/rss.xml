@@ -1,18 +1,133 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
     <title>顔面偏差値診断 RSS</title>
     <link>https://face-score.net</link>
     <description>顔面偏差値診断サイトの更新情報</description>
     <item>
-      <title>編集ガイドライン公開</title>
-      <link>https://face-score.net/editorial-guidelines.html</link>
-      <description>編集方針、運営情報、品質管理方針を公開しました。</description>
+      <title>顔面偏差値チェッカー</title>
+      <link>https://face-score.net/index.html</link>
+      <description>写真1枚であなたの顔面偏差値を無料測定！AIが顔の特徴や比率を分析し、高精度な美人度・イケメン度診断結果を提供します。</description>
     </item>
     <item>
-      <title>仕組みと精度ページ公開</title>
+      <title>AI顔分析</title>
+      <link>https://face-score.net/ai-face-analysis.html</link>
+      <description>顔の形、バランス、左右対称性などをチェックする無料のAI顔分析ツール。結果を活用して自分磨きに役立てましょう。</description>
+    </item>
+    <item>
+      <title>年齢推定AI</title>
+      <link>https://face-score.net/age-estimation-ai.html</link>
+      <description>AIが写真の顔つきから推定年齢を分析します。顔の特徴や肌の質感がどう年齢スコアに影響するかを確認しましょう。</description>
+    </item>
+    <item>
+      <title>顔の魅力度テスト</title>
+      <link>https://face-score.net/face-attractiveness-test.html</link>
+      <description>オンラインで簡単に顔の魅力度を判定。AIがあなたの美人度やイケメン度を多角的にスコア化します。</description>
+    </item>
+    <item>
+      <title>顔比較ツール</title>
+      <link>https://face-score.net/face-comparison-tool.html</link>
+      <description>無料の顔比較ツールで2枚の写真を分析し、顔の特徴や類似度を比較します。兄弟、親戚、友達とどれくらい似ているかチェックしましょう。</description>
+    </item>
+    <item>
+      <title>黄金比顔比率テスト</title>
+      <link>https://face-score.net/golden-ratio-face.html</link>
+      <description>美の基準とされる「黄金比（1:1.618）」を用いた顔のプロポーションの分析方法と、それが魅力の全てではない理由について。</description>
+    </item>
+    <item>
+      <title>顔の黄金比分析</title>
+      <link>https://face-score.net/golden-ratio-face-analysis.html</link>
+      <description>AI 黄金比 face analyzer with facial features, facial symmetry, face ratio, and harmony score guidance.</description>
+    </item>
+    <item>
+      <title>ホットネススケール</title>
+      <link>https://face-score.net/hotness-scale-test.html</link>
+      <description>AIによるホットネススケールテストであなたの顔面偏差値を無料測定。画像分析から魅力度スコアを算出します。</description>
+    </item>
+    <item>
+      <title>写真顔評価</title>
+      <link>https://face-score.net/photo-face-rating.html</link>
+      <description>セルフィーの品質や顔の魅力をAIがどのように評価するかをテストします。無料の写真顔評価による客観的なフィードバック。</description>
+    </item>
+    <item>
+      <title>ランダム顔スコア</title>
+      <link>https://face-score.net/random-face-score-generator.html</link>
+      <description>顔の美しさとは無関係な、ランダムなスコアを楽しく生成するエンターテイメント用ジェネレーターです。</description>
+    </item>
+    <item>
+      <title>魅力の要因</title>
+      <link>https://face-score.net/what-makes-you-attractive.html</link>
+      <description>顔のどんな特徴が人々を惹きつけるのか？黄金比、対称性、肌の質など、魅力の要因を科学的視点から解説します。</description>
+    </item>
+    <item>
+      <title>ツールの仕組み解説</title>
       <link>https://face-score.net/how-it-works.html</link>
-      <description>解析フローと精度上の注意点を詳しく解説しました。</description>
+      <description>顔検知、ランドマーク、対称性、画質チェックなど、ツールがどのようにあなたを分析しているか機能別に理解しましょう。</description>
+    </item>
+    <item>
+      <title>顔スコアの仕組み</title>
+      <link>https://face-score.net/how-face-score-works.html</link>
+      <description>AIが写真をスキャンしてスコアを算出するプロセス、利用される技術、そして評価の限界について解説します。</description>
+    </item>
+    <item>
+      <title>精度と限界</title>
+      <link>https://face-score.net/accuracy-limitations.html</link>
+      <description>顔スコアAIの精度と限界を解説します。照明、角度、モデルのバイアスがスコアにどう影響するのかを理解してください。</description>
+    </item>
+    <item>
+      <title>自撮り写真品質ガイド</title>
+      <link>https://face-score.net/selfie-photo-quality-guide.html</link>
+      <description>自撮り写真を劇的に改善するための照明、角度、表情作りのガイド。高得点を出すための撮影テクニック。</description>
+    </item>
+    <item>
+      <title>顔のランドマーク解説</title>
+      <link>https://face-score.net/facial-landmarks-explained.html</link>
+      <description>AIはどうやって顔の特徴を検出しているのか？顔のランドマーク、測定ポイント、分析プロセスの仕組みを詳しく解説します。</description>
+    </item>
+    <item>
+      <title>笑顔の表情分析</title>
+      <link>https://face-score.net/smile-expression-analysis.html</link>
+      <description>笑顔や表情が相手に与える印象と魅力度にどう影響するかを分析します。自然な笑顔の作り方も解説。</description>
+    </item>
+    <item>
+      <title>顔の左右対称性ガイド</title>
+      <link>https://face-score.net/face-symmetry-guide.html</link>
+      <description>顔の左右対称性を高める方法とは？メイク、エクササイズから外科的治療まで、顔のバランスを改善するための包括的なガイドです。</description>
+    </item>
+    <item>
+      <title>サイト概要 (About)</title>
+      <link>https://face-score.net/about.html</link>
+      <description>顔スコアAIは、客観的で安全な顔分析ツールを無料で提供しています。当サイトの手法、開発チーム、技術へのアプローチをご覧ください。</description>
+    </item>
+    <item>
+      <title>運営チーム (Team)</title>
+      <link>https://face-score.net/team.html</link>
+      <description>顔スコアAIの背後にいるエンジニア、エディター、プロダクトチームについて。私たちは責任あるAI顔評価の設計に取り組んでいます。</description>
+    </item>
+    <item>
+      <title>編集ガイドライン</title>
+      <link>https://face-score.net/editorial-guidelines.html</link>
+      <description>顔スコアAIが提供するコンテンツの編集基準と品質ポリシーについて説明します。正確性と透明性を重視しています。</description>
+    </item>
+    <item>
+      <title>プライバシーポリシー</title>
+      <link>https://face-score.net/privacy.html</link>
+      <description>顔スコアAIのプライバシーポリシーです。どのようにユーザーデータを保護し、安全に顔分析サービスを提供しているかをご確認いただけます。</description>
+    </item>
+    <item>
+      <title>利用規約</title>
+      <link>https://face-score.net/terms.html</link>
+      <description>顔スコアAIの利用規約です。当サイトのエッセイやツールを適切に利用するためのルール、制限事項についてご確認ください。</description>
+    </item>
+    <item>
+      <title>お問い合わせ (Contact)</title>
+      <link>https://face-score.net/contact.html</link>
+      <description>顔スコアAIに関するご質問、フィードバック、ツールの問題については、こちらのページからサポートチームにお問い合わせください。</description>
+    </item>
+    <item>
+      <title>HTMLサイトマップ</title>
+      <link>https://face-score.net/sitemap.html</link>
+      <description>顔スコアAIの全ツール、学習ガイド、サポートページへのリンクをまとめたサイトマップです。目的のページをすぐに見つけられます。</description>
     </item>
   </channel>
 </rss>

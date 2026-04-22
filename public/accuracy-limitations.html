@@ -1,46 +1,22 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>精度と限界 | 顔スコアAIツールの認識精度について</title>
-    <meta
-      content="顔スコアAIの精度と限界を解説します。照明、角度、モデルのバイアスがスコアにどう影響するのかを理解してください。"
-      name="description"
-    />
-    <meta
-      content="AI精度, 顔認識の限界, スコアの信頼性, 画像バイアス, 顔スコアAI"
-      name="keywords"
-    />
-    <link
-      href="https://face-score.net/accuracy-limitations.html"
-      rel="canonical"
-    />
-    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
-    <link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet" />
-    <link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet" />
-    <noscript
-      ><link
-        href="style-core.min.css?v=20260415-stylefix2"
-        rel="stylesheet" /><link
-        href="style-pages.min.css?v=20260415-stylefix2"
-        rel="stylesheet"
-    /></noscript>
-    <meta
-      content="精度と限界 | 顔スコアAIツールの認識精度について"
-      property="og:title"
-    />
-    <meta
-      content="顔スコアAIの精度と限界を解説します。照明、角度、モデルのバイアスがスコアにどう影響するのかを理解してください。"
-      property="og:description"
-    />
-    <meta content="article" property="og:type" />
-    <meta
-      content="https://face-score.net/accuracy-limitations.html"
-      property="og:url"
-    />
-    <script type="application/ld+json">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>精度と限界 | 顔スコアAIツールの認識精度について</title>
+<meta content="顔スコアAIの精度と限界を解説します。照明、角度、モデルのバイアスがスコアにどう影響するのかを理解してください。" name="description"/>
+<meta content="AI精度, 顔認識の限界, スコアの信頼性, 画像バイアス, 顔スコアAI" name="keywords"/>
+<link href="https://face-score.net/accuracy-limitations.html" rel="canonical"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet"/>
+<link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet"/>
+<noscript><link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet"/><link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet"/></noscript>
+<meta content="精度と限界 | 顔スコアAIツールの認識精度について" property="og:title"/>
+<meta content="顔スコアAIの精度と限界を解説します。照明、角度、モデルのバイアスがスコアにどう影響するのかを理解してください。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://face-score.net/accuracy-limitations.html" property="og:url"/>
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -49,11 +25,11 @@
         "mainEntityOfPage": "https://face-score.net/accuracy-limitations.html"
       }
     </script>
-    <script>
+<script>
       document.documentElement.lang = "ja";
       document.documentElement.classList.add("lang-ja");
     </script>
-    <style>
+<style>
       .article-page {
         max-width: 1040px;
       }
@@ -137,7 +113,7 @@
         }
       }
     </style>
-    <script id="static-seo-schema" type="application/ld+json">
+<script id="static-seo-schema" type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
@@ -290,259 +266,197 @@
         ]
       }
     </script>
-    <link
-      href="rss.xml"
-      rel="alternate"
-      title="Face Score AI RSS Feed"
-      type="application/rss+xml"
-    />
-  </head>
-  <body class="inner-page">
-    <nav class="navbar">
-      <div class="nav-container">
-        <a class="nav-logo" href="">顔スコアAI</a>
-        <ul class="nav-links">
-          <li><a href="">ホーム</a></li>
-          <li><a href="how-it-works.html">仕組み</a></li>
-          <li><a href="accuracy-limitations.html">精度</a></li>
-          <li><a href="about.html">概要</a></li>
-        </ul>
-      </div>
-    </nav>
-    <main class="container page-content professional-inner article-page">
-      <section class="article-hero">
-        <p class="eyebrow">精度と限界</p>
-        <h1>データサイエンスにおける精度スコア、指標、標準偏差、近似</h1>
-        <p class="lead">
+<link href="rss.xml" rel="alternate" title="Face Score AI RSS Feed" type="application/rss+xml"/>
+</head>
+<body class="inner-page">
+<nav class="navbar">
+<div class="nav-container">
+<a class="nav-logo" href="">顔スコアAI</a>
+<ul class="nav-links">
+<li><a href="index.html">ホーム</a></li>
+<li><a href="ai-face-analysis.html">AI顔分析</a></li>
+<li><a href="face-attractiveness-test.html">魅力度テスト</a></li>
+<li><a href="how-it-works.html">仕組み</a></li>
+<li><a href="accuracy-limitations.html">精度と限界</a></li>
+<li><a href="about.html">運営情報</a></li>
+</ul>
+</div>
+</nav>
+<main class="container page-content professional-inner article-page">
+<section class="article-hero">
+<p class="eyebrow">精度と限界</p>
+<h1>データサイエンスにおける精度スコア、指標、標準偏差、近似</h1>
+<p class="lead">
           精度は便利ですが、過大に受け取られやすい数字です。このガイドでは、精度スコア、標準偏差、測定誤差、AI顔スコアが真値ではなく近似である理由を説明します。
         </p>
-        <p class="lead">
+<p class="lead">
           モデル評価、指標の意味、機械学習結果の比較を、ひとつの数字だけに頼らず理解したい人向けです。
         </p>
-        <div class="jump-links">
-          <a href="#outline">記事の流れ</a><a href="#summary">要点</a>
-        </div>
-      </section>
-      <article class="trust-section article-body">
-        <section id="outline">
-          <h2>記事の流れ：精度をどう理解するか</h2>
-          <p>
+<div class="jump-links">
+<a href="#outline">記事の流れ</a><a href="#summary">要点</a>
+</div>
+</section>
+<article class="trust-section article-body">
+<section id="outline">
+<h2>記事の流れ：精度をどう理解するか</h2>
+<p>
             精度、標準偏差、二値分類と多クラス分類、分類器の誤り、校正、分光法のような測定の考え方、F1スコアやブライアスコア、ログロスなどを扱います。
           </p>
-        </section>
-        <h2>1. データサイエンスで精度とは何ですか？</h2>
-        <p>
+</section>
+<h2>1. データサイエンスで精度とは何ですか？</h2>
+<p>
           データサイエンスでは、精度は正しく分類された予測の割合を指すことが多いです。正解数を全データ点で割るシンプルな指標です。
         </p>
-        <p>
+<p>
           便利ですが、分布の問題を隠します。多数派には強いモデルでも、小さなクラスや少数派では失敗することがあります。
         </p>
-        <h2>2. 精度スコアはどう計算しますか？</h2>
-        <p>
+<h2>2. 精度スコアはどう計算しますか？</h2>
+<p>
           二値分類の精度スコアは、正解した陽性と真陰性を数え、正解ラベルと比べます。ただし偽陽性や偽陰性のコストは反映しません。
         </p>
-        <p>
+<p>
           多クラス分類でも正解割合ですが、似たクラスの取り違えと大きく違うクラスの取り違えでは意味が変わります。
         </p>
-        <h2>3. 分類器が高精度でも誤解を招くのはなぜ？</h2>
-        <p>
+<h2>3. 分類器が高精度でも誤解を招くのはなぜ？</h2>
+<p>
           データが偏っていると、多数派クラスだけを予測しても高精度に見えることがあります。誤りのコストが違う場合は、重み付き精度やコスト感度学習が役立ちます。
         </p>
-        <p>
+<p>
           混同行列は、ひとつの精度より多くの情報を与えます。どこで正しく分類し、どこで失敗するかが見えます。
         </p>
-        <h2>4. 標準偏差は何を示しますか？</h2>
-        <p>
+<h2>4. 標準偏差は何を示しますか？</h2>
+<p>
           標準偏差は、平均値の周りのばらつきを示します。結果の散らばりが大きい場合、平均だけでは信頼しにくくなります。
         </p>
-        <p>
+<p>
           測定の集合では、算術平均が中心傾向、標準偏差が反復性を示します。測定回数が少ないと自信を持ちすぎる危険があります。
         </p>
-        <h2>5. 測定精度と精密さはどう違いますか？</h2>
-        <p>
+<h2>5. 測定精度と精密さはどう違いますか？</h2>
+<p>
           計量学では、測定の精度は真値や参照値への近さを意味します。精密さは、同じ測定対象を繰り返した時の結果同士の近さです。
         </p>
-        <p>
+<p>
           ランダム誤差は散らばりを生み、系統誤差は結果を一定方向にずらします。これらを分けることで不確かさを正直に説明できます。
         </p>
-        <h2>6. AI顔スコアが近似にすぎない理由</h2>
-        <p>
+<h2>6. AI顔スコアが近似にすぎない理由</h2>
+<p>
           顔スコアは計算上の近似です。光、カメラ品質、姿勢、学習データ、校正が結果に影響します。
         </p>
-        <p>
+<p>
           精度の上限はラベル品質と課題の性質に左右されます。美しさや魅力は定性的なので、数値は判決ではなく参考として読むべきです。
         </p>
-        <h2>7. ベイズや校正の考え方はどう役立ちますか？</h2>
-        <p>
+<h2>7. ベイズや校正の考え方はどう役立ちますか？</h2>
+<p>
           ベイズ的な考え方は、事前情報と証拠から結果の可能性を考えます。校正は、予測確率が実際の結果と合っているかを見る考え方です。
         </p>
-        <p>
+<p>
           ニューラルネットワークは自信ありげな確率を出すことがありますが、その自信が正しく校正されているとは限りません。ブライアスコアやログロスは確率の質を評価します。
         </p>
-        <h2>8. 分光法から精度について何を学べますか？</h2>
-        <p>
+<h2>8. 分光法から精度について何を学べますか？</h2>
+<p>
           分光法は、すべての測定器に限界、ノイズ、校正、桁数の制約があることを教えてくれます。測定結果の集合は、標準と不確かさを含めて解釈します。
         </p>
-        <p>
+<p>
           AIスコアでも同じ考え方が役立ちます。結果は一定範囲では使えますが、外れ値、画像の乱れ、ランダム誤差や系統誤差で変わります。
         </p>
-        <h2>9. 精度を補う指標は何ですか？</h2>
-        <p>
+<h2>9. 精度を補う指標は何ですか？</h2>
+<p>
           F1スコアは偽陽性と偽陰性の両方が重要な場合に役立ちます。平均二乗誤差は回帰で使われ、人の主観ラベルでは評価者間一致が重要になることもあります。
         </p>
-        <p>
+<p>
           完璧な指標はありません。目的、誤りのコスト、データ分布、二値か多クラスか、数値か質的かで選ぶ指標は変わります。
         </p>
-        <h2>10. 過大表現せず精度を改善するには？</h2>
-        <p>
+<h2>10. 過大表現せず精度を改善するには？</h2>
+<p>
           精度を高めるには、良いデータ、明確なラベル、再現できる評価、校正確認、透明な報告が必要です。モデルが見ていないデータで評価しましょう。
         </p>
-        <p>
+<p>
           可能なら平均だけでなく不確かさも示します。精度は、限界、標準偏差、モデルが知れることと知れないことの説明と一緒に使うと役立ちます。
         </p>
-        <h2 id="summary">覚えておきたいこと</h2>
-        <ul class="summary-list">
-          <li>精度は便利ですが、偏りや誤りのコストを隠すことがあります。</li>
-          <li>標準偏差は平均周辺の安定性とばらつきを示します。</li>
-          <li>AI顔スコアは真値ではなく近似です。</li>
-          <li>
+<h2 id="summary">覚えておきたいこと</h2>
+<ul class="summary-list">
+<li>精度は便利ですが、偏りや誤りのコストを隠すことがあります。</li>
+<li>標準偏差は平均周辺の安定性とばらつきを示します。</li>
+<li>AI顔スコアは真値ではなく近似です。</li>
+<li>
             必要に応じて混同行列、F1、ブライア、ログロス、校正を使います。
           </li>
-          <li>限界を明確にするほど指標は信頼しやすくなります。</li>
-        </ul>
-      </article>
-    </main>
-    <footer class="site-footer">
-      <div class="footer-content">
-        <a class="footer-logo" href="">顔スコアAI</a>
-        <div class="footer-directory">
-          <div class="footer-column">
-            <h4>おすすめのAI診断</h4>
-            <a href="index.html">総合AI顔診断</a>
-            <a href="ai-face-analysis.html">AI顔分析</a>
-            <a href="face-attractiveness-test.html">顔の魅力度テスト</a>
-            <a href="photo-face-rating.html">写真顔評価</a>
-            <a href="face-comparison-tool.html">顔比較ツール</a>
-            <a href="random-face-score-generator.html">ランダム顔スコア</a>
-            <a href="golden-ratio-face.html">黄金比テスト</a>
-            <a href="hotness-scale-test.html">ホットネススケール</a>
-          </div>
-          <div class="footer-column">
-            <h4>詳細分析機能</h4>
-            <a href="smile-expression-analysis.html">笑顔・表情分析</a>
-            <a href="age-estimation-ai.html">年齢推定AI</a>
-            <a href="golden-ratio-face-analysis.html">顔の黄金比分析</a>
-          </div>
-          <div class="footer-column">
-            <h4>ガイド・解説記事</h4>
-            <a href="how-it-works.html">仕組みについて</a>
-            <a href="how-face-score-works.html">顔スコアの仕組み</a>
-            <a href="accuracy-limitations.html">精度と限界</a>
-            <a href="selfie-photo-quality-guide.html">自撮り写真ガイド</a>
-            <a href="facial-landmarks-explained.html">顔のランドマーク</a>
-            <a href="face-symmetry-guide.html">顔の対称性ガイド</a>
-            <a href="what-makes-you-attractive.html">魅力の特徴</a>
-          </div>
-          <div class="footer-column">
-            <h4>サポートと組織情報</h4>
-            <a href="about.html">当サイトについて</a>
-            <a href="team.html">運営チーム</a>
-            <a href="editorial-guidelines.html">編集ガイドライン</a>
-            <a href="privacy.html">プライバシーポリシー</a>
-            <a href="terms.html">利用規約</a>
-            <a href="contact.html">お問い合わせ</a>
-            <a href="sitemap.html">HTMLサイトマップ</a>
-            <a href="rss.xml">RSSフィード</a>
-          </div>
-        </div>
-        <form
-          action="/sitemap.html"
-          class="footer-search"
-          id="site-search-form"
-          role="search"
-        >
-          <label for="site-search-input"
-            >顔スコアAIのツールとガイドを検索</label
-          >
-          <input
-            aria-label="顔スコアAIを検索"
-            id="site-search-input"
-            name="q"
-            placeholder="ツール、ガイド、ポリシーを検索"
-            type="search"
-          />
-          <button type="submit">検索</button>
-        </form>
-        <div class="footer-trust">
-          <div class="footer-contact">
-            <span
-              >Email:
-              <a href="mailto:support@face-score.net"
-                >support@face-score.net</a
-              ></span
-            >
-            <span>Phone: <a href="tel:+14155550198">+1 (415) 555-0198</a></span>
-          </div>
-          <div aria-label="ソーシャルメディアリンク" class="footer-social">
-            <a
-              href="https://twitter.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Twitter/X</a
-            >
-            <a
-              href="https://www.facebook.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Facebook</a
-            >
-            <a
-              href="https://www.linkedin.com/company/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <a
-              href="https://www.youtube.com/@facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >YouTube</a
-            >
-            <a
-              href="https://www.instagram.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Instagram</a
-            >
-            <a
-              href="https://www.pinterest.com/facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >Pinterest</a
-            >
-            <a
-              href="https://www.tiktok.com/@facescoreai"
-              rel="nofollow noopener"
-              target="_blank"
-              >TikTok</a
-            >
-          </div>
-          <div class="footer-legal">
-            <a
-              class="dmca-badge"
-              href="https://www.dmca.com/Protection/Status.aspx"
-              rel="nofollow noopener"
-              target="_blank"
-              >DMCA Protected</a
-            >
-            <span>Copyright © 2026 顔スコアAI. All rights reserved.</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <button aria-label="Back to top" class="back-to-top" id="back-to-top">
+<li>限界を明確にするほど指標は信頼しやすくなります。</li>
+</ul>
+</article>
+</main>
+<footer class="site-footer">
+<div class="footer-content">
+<a class="footer-logo" href="">顔スコアAI</a>
+<div class="footer-directory">
+<div class="footer-column">
+<h4>おすすめのAI診断</h4>
+<a href="index.html">総合AI顔診断</a>
+<a href="ai-face-analysis.html">AI顔分析</a>
+<a href="face-attractiveness-test.html">顔の魅力度テスト</a>
+<a href="photo-face-rating.html">写真顔評価</a>
+<a href="face-comparison-tool.html">顔比較ツール</a>
+<a href="random-face-score-generator.html">ランダム顔スコア</a>
+<a href="golden-ratio-face.html">黄金比テスト</a>
+<a href="hotness-scale-test.html">ホットネススケール</a>
+</div>
+<div class="footer-column">
+<h4>詳細分析機能</h4>
+<a href="smile-expression-analysis.html">笑顔・表情分析</a>
+<a href="age-estimation-ai.html">年齢推定AI</a>
+<a href="golden-ratio-face-analysis.html">顔の黄金比分析</a>
+</div>
+<div class="footer-column">
+<h4>ガイド・解説記事</h4>
+<a href="how-it-works.html">仕組みについて</a>
+<a href="how-face-score-works.html">顔スコアの仕組み</a>
+<a href="accuracy-limitations.html">精度と限界</a>
+<a href="selfie-photo-quality-guide.html">自撮り写真ガイド</a>
+<a href="facial-landmarks-explained.html">顔のランドマーク</a>
+<a href="face-symmetry-guide.html">顔の対称性ガイド</a>
+<a href="what-makes-you-attractive.html">魅力の特徴</a>
+</div>
+<div class="footer-column">
+<h4>サポートと組織情報</h4>
+<a href="about.html">当サイトについて</a>
+<a href="team.html">運営チーム</a>
+<a href="editorial-guidelines.html">編集ガイドライン</a>
+<a href="privacy.html">プライバシーポリシー</a>
+<a href="terms.html">利用規約</a>
+<a href="contact.html">お問い合わせ</a>
+<a href="sitemap.html">HTMLサイトマップ</a>
+</div>
+</div>
+<form action="/sitemap.html" class="footer-search" id="site-search-form" role="search">
+<label for="site-search-input">顔スコアAIのツールとガイドを検索</label>
+<input aria-label="顔スコアAIを検索" id="site-search-input" name="q" placeholder="ツール、ガイド、ポリシーを検索" type="search"/>
+<button type="submit">検索</button>
+</form>
+<div class="footer-trust">
+<div class="footer-contact">
+<span>Email:
+              <a href="mailto:support@face-score.net">support@face-score.net</a></span>
+<span>Phone: <a href="tel:+14155550198">+1 (415) 555-0198</a></span>
+</div>
+<div aria-label="ソーシャルメディアリンク" class="footer-social">
+<a href="https://twitter.com/facescoreai" rel="nofollow noopener" target="_blank">Twitter/X</a>
+<a href="https://www.facebook.com/facescoreai" rel="nofollow noopener" target="_blank">Facebook</a>
+<a href="https://www.linkedin.com/company/facescoreai" rel="nofollow noopener" target="_blank">LinkedIn</a>
+<a href="https://www.youtube.com/@facescoreai" rel="nofollow noopener" target="_blank">YouTube</a>
+<a href="https://www.instagram.com/facescoreai" rel="nofollow noopener" target="_blank">Instagram</a>
+<a href="https://www.pinterest.com/facescoreai" rel="nofollow noopener" target="_blank">Pinterest</a>
+<a href="https://www.tiktok.com/@facescoreai" rel="nofollow noopener" target="_blank">TikTok</a>
+</div>
+<div class="footer-legal">
+<a class="dmca-badge" href="https://www.dmca.com/Protection/Status.aspx" rel="nofollow noopener" target="_blank">DMCA Protected</a>
+<span>Copyright © 2026 顔スコアAI. All rights reserved.</span>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="Back to top" class="back-to-top" id="back-to-top">
       Top
     </button>
-    <script defer="" src="site.js?v=20260415-seo-meta2"></script>
-  </body>
+<script defer="" src="site.js?v=20260415-seo-meta2"></script>
+</body>
 </html>
