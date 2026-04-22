@@ -1,0 +1,71 @@
+--- editorial-guidelines.html ---
+Copyright © 2026 Face Score AI. All rights reserved.
+
+--- accuracy-limitations.html ---
+Copyright © 2026 Face Score AI. All rights reserved.
+
+--- how-it-works.html ---
+Trust and usability guide
+How Face Score Works: AI Face Analysis Process, Photo Quality, and
+          Safe Interpretation
+Face score tools can be useful when you understand the process behind
+          them. This guide explains detection, landmarks, scoring, and the
+          limits of photo-based analysis.
+Process checker
+Face Analysis Input Readiness Tool
+Soft front light
+Photo angle
+Slight angle
+Extreme angle
+Heavy filter
+Check readiness
+Use this before uploading a face photo to any scoring page.
+The first step is finding whether a face is present in the image. If
+          the face is too small, hidden, blurred, or strongly angled, later
+          analysis becomes less stable. Good tools should tell users when the
+          input is weak instead of pretending every photo is equally reliable.
+Step 2: Landmark and Feature Reading
+After detection, software estimates facial landmarks around the eyes,
+          nose, mouth, chin, eyebrows, and outline. These points support face
+          shape, symmetry, golden ratio, expression, and comparison features.
+Landmarks are geometry, not identity. They describe where visible
+          points appear in one photo. They cannot fully understand personality,
+          emotion, or real-world attractiveness.
+A score combines signals such as clarity, symmetry, proportions,
+          expression, and lighting. Different tools use different weights, so
+          two websites may produce different numbers for the same image.
+The useful part is not the number alone. It is the explanation: what
+          improved the score, what made it unstable, and what to try next.
+Step 4: Reading the Result Safely
+Results should be read as estimates. Use them to compare photos under
+          similar conditions or to improve camera setup. Do not use them to rank
+          people, diagnose health, verify legal identity, or judge self-worth.
+Best Photo Setup
+Use soft front-facing light.
+Avoid heavy filters and face reshaping.
+Use a clear, current photo.
+Compare more than one image before trusting a pattern.
+Why Two Tools Can Give Different Scores
+Different systems choose different signals. One tool may weight facial
+          symmetry heavily, another may emphasize image clarity, and another may
+          include expression or style. This is why a number should never be read
+          without knowing the method behind it.
+Even the same tool can change its output when the image changes. A
+          closer camera can distort proportions, while a softer light can make
+          landmarks easier to detect. The process is technical, but the user
+          lesson is simple: make the input consistent.
+What Happens To Uploaded Images?
+Every upload-based page should tell users what the tool does with the
+          image. Some features only preview the file in the browser. Other
+          features may need server processing. The user experience is stronger
+          when that distinction is written near the upload button.
+How To Retest Fairly
+Take three photos in the same place: neutral expression, slight smile,
+          and the angle you normally use online. Compare those instead of mixing
+          old photos, filters, and different lighting. Fair testing makes the
+          result more useful and less emotional.
+Copyright © 2026 Face Score AI. All rights reserved.
+
+--- how-face-score-works.html ---
+Copyright © 2026 Face Score AI. All rights reserved.
+

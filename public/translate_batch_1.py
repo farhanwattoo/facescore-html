@@ -1,0 +1,138 @@
+import os, re
+
+translations = {
+    # Common
+    '"inLanguage": "en"': '"inLanguage": "ja"',
+    '"availableLanguage": ["English", "Japanese"]': '"availableLanguage": ["Japanese"]',
+    '<html': '<html lang="ja"',
+    '<a class="nav-logo" href="/">Face Score AI</a>': '<a class="nav-logo" href="/">顔スコアAI</a>',
+    '<li><a href="/">Home</a></li>': '<li><a href="/">ホーム</a></li>',
+    '<li><a href="how-it-works.html">How It Works</a></li>': '<li><a href="how-it-works.html">仕組み</a></li>',
+    '<li><a href="accuracy-limitations.html">Accuracy</a></li>': '<li><a href="accuracy-limitations.html">精度</a></li>',
+    '<li><a href="about.html">About</a></li>': '<li><a href="about.html">概要</a></li>',
+    'Trust and usability guide': '信頼性と操作性のガイド',
+    'Copyright © 2026 Face Score AI. All rights reserved.': 'Copyright © 2026 顔スコアAI. All rights reserved.',
+    
+    # privacy.html
+    r'Privacy Policy \| Face Photos, Upload Safety, and AI Face Tools': 'プライバシーポリシー | 顔写真、アップロードの安全性、AI顔ツール',
+    r'Privacy Policy for Face Photos, Upload Safety, and AI Face Tools': 'プライバシーポリシー：顔写真、アップロードの安全性、AI顔ツール',
+    r'Privacy guidance for Face Score AI, including face photo uploads, consent, sensitive images, and responsible use\.': '顔写真のアップロード、同意、機密画像、責任ある使用など、顔スコアAIのプライバシーに関するガイダンス。',
+    r'This privacy page explains how users should think about face images, uploads, consent, and the limits of AI face-analysis tools\.': 'このプライバシーページでは、ユーザーが顔画像、アップロード、同意、およびAI顔分析ツールの限界についてどのように考えるべきかを説明しています。',
+    r'Privacy helper': 'プライバシーヘルパー',
+    r'Check privacy risk': 'プライバシーリスクを確認する',
+    r'Use this checklist before uploading sensitive face images\.': '機密性の高い顔画像をアップロードする前に、このチェックリストを使用してください。',
+    r'Privacy Principles': 'プライバシーの原則',
+    r'Face images are sensitive because they can reveal identity, age range, expression, and other personal signals\. Our privacy guidance is built around consent, clarity, minimal collection, and practical user control\.': '顔画像は身元、年齢層、表情、その他の個人的なサインを明らかにする可能性があるため、機密性が高いものです。当社のプライバシーガイドラインは、同意、明確さ、最小限の収集、および実用的なユーザーコントロールを中心に構築されています。',
+    r'Users should understand what happens before uploading\. If a tool only previews an image in the browser, that should be clear\. If a tool sends data to a server, the page should explain why, how long it is retained, and whether it is used for improvement\.': 'ユーザーは、アップロードする前に何が起こるかを理解する必要があります。ツールがブラウザで画像をプレビューするだけの場合は、それを明確にする必要があります。ツールがサーバーにデータを送信する場合は、その理由、保持期間、および改善に使用されるかどうかをページで説明する必要があります。',
+    r'What You Should Avoid Uploading': 'アップロードを避けるべきもの',
+    r'Do not upload images of other people without permission\. Avoid uploading children, identity documents, private photos, medical images, or anything you would not want processed by an online tool\.': '許可なく他人の画像をアップロードしないでください。子供、身分証明書、プライベートな写真、医療画像、またはオンラインツールで処理されたくないもののアップロードは避けてください。',
+    r'How Results Should Be Treated': '結果の取り扱い方法',
+    r'Face scores, age estimates, symmetry checks, and attractiveness ratings are estimates\. They should not be used for employment, lending, school decisions, medical evaluation, legal age verification, or surveillance\.': '顔スコア、年齢推定、左右対称性のチェック、および魅力度の評価は推定値です。これらを雇用、融資、学校の決定、医学的評価、法的な年齢確認、または監視に使用してはなりません。',
+    r'Users can choose not to upload, can test with a non-sensitive image first, and can read the accuracy and limitations page before using any score\. A trustworthy tool should make caution easy, not hidden\.': 'ユーザーは、アップロードしないことを選択したり、最初に機密性のない画像でテストしたり、スコアを使用する前に精度と制限のページを読んだりすることができます。信頼できるツールは、注意を促すことを容易にし、隠すべきではありません。',
+    r'Face Data Is Not Ordinary Data': '顔データは通常のデータではありません',
+    r'A face image can be more sensitive than a username or casual message because it can be connected to identity\. Even when a tool is playful, the image still deserves careful handling and clear explanation\.': '顔画像は身元に関連付けられる可能性があるため、ユーザー名や何気ないメッセージよりも機密性が高い場合があります。ツールが遊び心のあるものであっても、画像は慎重な取り扱いと明確な説明に値します。',
+    r'Users should be able to understand the privacy tradeoff before using a tool, not after\. That means upload pages should avoid vague language and should not imply that a face photo is harmless just because the tool is free\.': 'ユーザーは、ツールを使用した後にではなく、使用する前にプライバシーのトレードオフを理解できる必要があります。つまり、アップロードページではあいまいな表現を避け、ツールが無料であるという理由だけで顔写真が無害であると暗示すべきではありません。',
+    r'Consent and Other People\'s Photos': '同意と他人の写真',
+    r'Do not upload another person\'s face to compare, rate, or estimate without permission\. This is especially important for children, coworkers, classmates, dating profiles, and private social photos\.': '許可なく比較、評価、または推定するために他人の顔をアップロードしないでください。これは、子供、同僚、クラスメート、出会い系プロフィール、およびプライベートなソーシャル写真にとって特に重要です。',
+    r'If a page includes shareable results, users should share only their own images or results that another person has agreed to share\.': 'ページに共有可能な結果が含まれている場合、ユーザーは自分自身の画像、または他の人が共有に同意した結果のみを共有する必要があります。',
+    r'Practical Privacy Checklist': '実用的なプライバシーチェックリスト',
+    r'Use your own photo whenever possible\.': '可能な限りご自身の写真を使用してください。',
+    r'Avoid ID documents and children\'s images\.': '身分証明書や子供の画像は避けてください。',
+    r'Read whether the tool stores uploads\.': 'ツールがアップロードを保存するかどうかを確認してください。',
+    r'Do not use scores for official decisions\.': '公式な決定にスコアを使用しないでください。',
+    r'Ask for consent before comparing someone else\.': '他の人を比較する前に同意を求めてください。',
+    r'Before You Upload a Face Photo': '顔写真をアップロードする前に',
+    r'Photo type': '写真の種類',
+    r'My own selfie': '自分の自撮り写真',
+    r'Someone else': '他の誰か',
+    r'Child or minor': '子供または未成年',
+    r'ID document': '身分証明書',
+    r'Reason for upload': 'アップロードの理由',
+    r'Example: compare two profile photos': '例：2つのプロフィール写真を比較する',
+
+    # terms.html
+    r'Terms of Use \| Responsible Use of Face Score AI Tools': '利用規約 | 顔スコアAIツールの責任ある使用',
+    r'These terms explain how to use Face Score AI tools responsibly and what the results should not be used for\.': 'これらの利用規約は、顔スコアAIツールを責任を持って使用する方法と、結果を何に使用すべきでないかを説明しています。',
+    r'Rank another person': '他人をランク付けする',
+    r'Medical or legal decision': '医学的または法的な決定',
+    r'Use this reminder before relying on a score\.': 'スコアに頼る前に、このリマインダーを利用してください。',
+    r'You may use the site for personal photo feedback, learning how face-analysis tools work, comparing your own images, and exploring entertainment features with consent\. The tools are intended for guidance and education, not official decisions\.': 'このサイトは、個人的な写真のフィードバック、顔分析ツールの仕組みの学習、自分の画像の比較、および同意を得たエンターテインメント機能の探索に使用できます。このツールはガイダンスと教育を目的としており、公式な決定のためのものではありません。',
+    r'Do not use the tools to harass, shame, rank, surveil, identify, or make decisions about other people\. Do not use results for medical, legal, employment, school, immigration, credit, insurance, or law-enforcement decisions\.': '他人への嫌がらせ、恥をかかせる、ランク付けする、監視する、特定する、または他人に関する決定を下すためにツールを使用しないでください。結果を、医療、法律、雇用、学校、移民、信用、保険、または法執行の決定に使用しないでください。',
+    r'Scores and estimates can be affected by lighting, pose, image quality, filters, model assumptions, and user input\. We do not guarantee that any score reflects real-world attractiveness, age, identity, health, or character\.': 'スコアや推定値は、照明、ポーズ、画質、フィルター、モデルの前提、およびユーザーの入力によって影響を受ける可能性があります。いかなるスコアも、現実世界の魅力、年齢、身元、健康、または性格を反映していることを保証するものではありません。',
+    r'You are responsible for choosing appropriate images, getting consent where needed, and interpreting results safely\. If a result causes stress or encourages repeated checking, stop using the tool and treat the number as noise\.': '適切な画像を選択し、必要な場合は同意を得て、結果を安全に解釈する責任はあなたにあります。結果がストレスを引き起こしたり、繰り返しのチェックを助長したりする場合は、ツールの使用を中止し、数値をノイズとして扱ってください。',
+    r'Entertainment Versus Practical Guidance': 'エンターテインメントと実践的なガイダンスの比較',
+    r'Some tools are practical helpers, such as photo quality checks or method explainers\. Others are clearly entertainment, such as a random score generator\. Users should read the page label before treating a result seriously\.': '一部のツールは、写真の品質チェックやメソッドの説明など、実用的なヘルパーです。ランダムスコアジェネレーターなど、他のものは明らかにエンターテインメントです。ユーザーは結果を深刻に受け止める前に、ページのラベルを読む必要があります。',
+    r'When a tool says it is an estimate, that wording matters\. It means the output is not a factual statement about identity, beauty, maturity, health, or personal value\.': 'ツールが推定値であると述べている場合、その文言は重要です。それは、出力がアイデンティティ、美しさ、成熟度、健康、または個人の価値に関する事実の声明ではないことを意味します。',
+    r'Do not post someone else\'s score to mock, shame, pressure, or compare them\. Do not use the tools to make claims about a person\'s attractiveness, ethnicity, age, health, or trustworthiness\.': '他人をからかったり、恥をかかせたり、プレッシャーをかけたり、比較したりするために、他人のスコアを投稿しないでください。ツールを使用して、人の魅力、民族性、年齢、健康、または信頼性について主張をしないでください。',
+    r'Use results for your own learning: choosing a clearer photo, understanding lighting, or reading how AI analysis works\.': 'より鮮明な写真の選択、照明の理解、AI分析の仕組みの理解など、ご自身の学習のために結果を使用してください。',
+    r'If you find yourself retesting repeatedly, feeling worse, or using the tool to rank people, stop\. The tools are designed for light guidance and learning, not compulsive scoring\.': '何度も再テストしたり、気分が悪くなったり、ツールを使って人をランク付けしたりしていることに気付いた場合は、中止してください。これらのツールは、強迫的なスコアリングではなく、軽いガイダンスと学習のために設計されています。',
+
+    # team.html
+    r'Face Score AI Team \| Editorial, Engineering, and Review Standards': '顔スコアAIチーム | 編集、エンジニアリング、レビュー基準',
+    r'Face Score AI Team: Editorial, Engineering, and Review Standards': '顔スコアAIチーム：編集、エンジニアリング、レビュー基準',
+    r'This page explains how the site is maintained, how tool pages are reviewed, and what standards guide responsible face-analysis content\.': 'このページでは、サイトの維持方法、ツールページの確認方法、および責任ある顔分析コンテンツのガイドとなる基準について説明します。',
+    r'Review helper': 'レビューヘルパー',
+    r'Content Review Checklist': 'コンテンツレビューチェックリスト',
+    r'Face analysis guide': '顔分析ガイド',
+    r'Research-style article': '調査スタイルの記事',
+    r'Check review focus': 'レビューの焦点をチェック',
+    r'Use this to identify what an editor should review first\.': 'これを使用して、編集者が最初に何をレビューすべきかを特定します。',
+    r'The Face Score AI team combines product, engineering, content, and review work\. The goal is to make tools that are understandable, cautious, and useful for photo improvement rather than harsh judgment\.': '顔スコアAIチームは、製品、エンジニアリング、コンテンツ、およびレビュー作業を組み合わせています。目標は、厳しい判断ではなく、わかりやすく、慎重で、写真の改善に役立つツールを作ることです。',
+    r'Editorial Review': '編集レビュー',
+    r'Content is reviewed for clarity, privacy risk, overclaiming, and user safety\. Pages about attractiveness, face comparison, age estimation, and accuracy require especially careful wording because they can affect confidence and decision-making\.': 'コンテンツは、明確さ、プライバシーリスク、過大な主張、およびユーザーの安全性についてレビューされます。魅力、顔の比較、年齢推定、精度に関するページは、自信や意思決定に影響を与える可能性があるため、特に慎重な表現が必要です。',
+    r'Engineering Review': 'エンジニアリングレビュー',
+    r'Tool behavior is checked for broken inputs, confusing labels, hidden assumptions, and mismatches between the page copy and what the script actually does\. If a tool is only a demo or estimate, the page should say so\.': 'ツールの動作は、壊れた入力、わかりにくいラベル、隠された前提、およびページのコピーとスクリプトが実際に実行する内容との不一致についてチェックされます。ツールが単なるデモまたは推定値である場合は、ページにその旨を記載する必要があります。',
+    r'We improve pages by removing placeholder content, adding limitations, clarifying privacy, and replacing keyword stuffing with useful explanations\. Feedback from users helps decide which page to improve next\.': 'プレースホルダーコンテンツを削除し、制限を追加し、プライバシーを明確にし、キーワードの詰め込みを役立つ説明に置き換えることでページを改善します。ユーザーからのフィードバックは、次にどのページを改善するかを決定するのに役立ちます。',
+    r'Reviewers look for overclaiming, unclear upload behavior, missing limitations, and copy that could make users feel judged\. Pages about attractiveness and age estimation need especially careful review because the topic can be personal\.': 'レビュアーは、過大な主張、不明確なアップロードの動作、制限の欠如、ユーザーが判断されていると感じる可能性のあるコピーを探します。魅力と年齢推定に関するページは、トピックが個人的なものになる可能性があるため、特に慎重なレビューが必要です。',
+    r'Engineering review checks whether the controls match the script, whether buttons return useful output, and whether the result text honestly describes what the tool did\. A demo should not pretend to be a full AI model\.': 'エンジニアリングレビューでは、コントロールがスクリプトと一致するかどうか、ボタンが有用な出力を返すかどうか、結果テキストがツールが実行したことを正直に説明しているかどうかを確認します。デモは、完全なAIモデルのふりをするべきではありません。',
+    r'Editorial review checks headings, search intent, human tone, privacy language, and whether each section adds new value\. Repeated paragraphs and keyword lists are treated as quality problems, not shortcuts\.': '編集レビューでは、見出し、検索意図、人間らしいトーン、プライバシーの言葉、各セクションが新しい価値を追加するかどうかを確認します。繰り返される段落やキーワードリストは、ショートカットではなく、品質の問題として扱われます。',
+    r'User feedback often reveals issues that automated checks miss: confusing labels, missing disclaimers, awkward mobile layouts, or translated pages that need clearer source text\.': '混乱を招くラベル、免責事項の欠如、ぎこちないモバイルレイアウト、またはより明確なソーステキストを必要とする翻訳ページなど、自動チェックが見逃す問題は、ユーザーフィードバックによって明らかになることがよくあります。',
+    r'What are you reviewing\?': '何をレビューしていますか？',
+
+    # sitemap.html
+    r'Sitemap \| Face Score AI Tools, Guides, Privacy, and Support Pages': 'サイトマップ | 顔スコアAI ツール、ガイド、プライバシー、サポートページ',
+    r'Sitemap: Face Score AI Tools, Guides, Privacy, and Support Pages': 'サイトマップ：顔スコアAI ツール、ガイド、プライバシー、サポートページ',
+    r'Use this sitemap to find the right face-analysis tool, learn how scores work, or review privacy and support pages\.': 'このサイトマップを使用して、適切な顔分析ツールを見つけたり、スコアの仕組みを学んだり、プライバシーやサポートページを確認したりしてください。',
+    r'Understand accuracy': '精度を理解する',
+    r'Learn privacy rules': 'プライバシールールを学ぶ',
+    r'Choose a goal to decide where to go next\.': '次に行く場所を決めるために目標を選択してください。',
+    r'Face Score Checker': '顔面偏差値チェッカー',
+    r'Golden Ratio Face Analysis': '顔の黄金比分析',
+    r'Learning Guides': '学習ガイド',
+    r'How Face Score Works': '顔スコアの仕組み',
+    r'Selfie Photo Quality Guide': '自撮り写真の品質ガイド',
+    r'Facial Landmarks Explained': '顔のランドマークの解説',
+    r'Smile Expression Analysis': '笑顔の表情分析',
+    r'Facial Symmetry Guide': '顔の左右対称性ガイド',
+    r'Trust and Policy Pages': '信頼とポリシーページ',
+    r'Editorial Guidelines': '編集ガイドライン',
+    r'Start with the tool that matches your immediate goal, then read the related guide before trusting a result\. If you are uploading a face image, read the privacy and accuracy pages first\.': '当面の目標に一致するツールから始め、結果を信頼する前に関連するガイドをお読みください。顔画像をアップロードする場合は、まずプライバシーと精度のページをお読みください。',
+    r'Best Starting Points': '最適な出発点',
+    r'If you want a score, start with the Face Score Checker or Photo Face Rating page\. If you want to understand the number, read How Face Score Works and Accuracy and Limitations before testing multiple photos\.': 'スコアが必要な場合は、顔スコアチェッカーまたは写真の顔評価ページから始めてください。数値を理解したい場合は、複数の写真をテストする前に、顔スコアの仕組みと精度と限界をお読みください。',
+    r'For Photo Improvement': '写真の改善のために',
+    r'Use the Selfie Photo Quality Guide when your main goal is a better image\. It focuses on lighting, camera distance, pose, and editing choices rather than judging the face itself\.': 'より良い画像が主な目的である場合は、自撮り写真品質ガイドを使用してください。顔そのものを判断するのではなく、照明、カメラの距離、ポーズ、編集の選択に焦点を当てています。',
+    r'Before uploading sensitive images, read Privacy, Terms, and Editorial Guidelines\. These pages explain consent, limits, and how the site should handle claims about faces\.': '機密性の高い画像をアップロードする前に、プライバシー、規約、編集ガイドラインをお読みください。これらのページでは、同意、制限、およびサイトが顔に関する主張をどのように処理すべきかについて説明しています。',
+    r'For Multilingual Pages': '多言語ページについて',
+    r'The language selector creates SEO-friendly language paths and translates page content while keeping one codebase\. Internal links stay within the selected language path where possible\.': '言語セレクターは、SEOに配慮した言語パスを作成し、1つのコードベースを維持したままページコンテンツを翻訳します。内部リンクは、可能な限り選択した言語パス内に留まります。',
+    r'Navigation helper': 'ナビゲーションヘルパー',
+    r'Find the Right Page': '適切なページを見つける',
+    r'Your goal': 'あなたの目標',
+    r'Get a photo score': '写真のスコアを取得する',
+    r'Contact support': 'サポートに連絡する',
+    r'Get page recommendation': 'ページの推奨事項を取得する',
+
+    # Remaining missing phrases
+    r'Check privacy risk': 'プライバシーリスクを確認する',
+    r'Use this checklist before uploading sensitive face images\.': '機密性の高い顔画像をアップロードする前に、このチェックリストを使用してください。',
+}
+
+for filename in ['privacy.html', 'terms.html', 'team.html', 'sitemap.html']:
+    with open(filename, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    for en, jp in translations.items():
+        pattern = re.compile(en.replace(r'\ ', r'\s+'), re.MULTILINE|re.IGNORECASE)
+        content = re.sub(pattern, jp, content)
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(content)

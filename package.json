@@ -1,0 +1,20 @@
+{
+    "name": "face-score-app",
+    "version": "1.0.0",
+    "description": "Face Score Web Application Frontend",
+    "main": "public/index.html",
+    "scripts": {
+        "start": "serve public",
+        "build:css": "npx clean-css-cli@5.3.3 -O1 -o public/style-core.min.css public/style-core.css && npx clean-css-cli@5.3.3 -O1 -o public/style-pages.min.css public/style-pages.css",
+        "build:images": "node scripts/build-hero-images.mjs",
+        "audit": "node scripts/audit-site.mjs",
+        "upgrade:inner": "python scripts/upgrade_inner_html.py && python scripts/fix_ld_graph.py",
+        "build": "npm run build:css && npm run build:images"
+    },
+    "devDependencies": {
+        "serve": "^14.2.4",
+        "sharp": "^0.34.5"
+    },
+    "author": "Antigravity",
+    "license": "MIT"
+}

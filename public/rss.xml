@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>顔面偏差値診断 RSS</title>
+    <link>https://face-score.net</link>
+    <description>顔面偏差値診断サイトの更新情報</description>
+    <item>
+      <title>編集ガイドライン公開</title>
+      <link>https://face-score.net/editorial-guidelines.html</link>
+      <description>編集方針、運営情報、品質管理方針を公開しました。</description>
+    </item>
+    <item>
+      <title>仕組みと精度ページ公開</title>
+      <link>https://face-score.net/how-it-works.html</link>
+      <description>解析フローと精度上の注意点を詳しく解説しました。</description>
+    </item>
+  </channel>
+</rss>

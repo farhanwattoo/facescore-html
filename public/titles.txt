@@ -1,0 +1,31 @@
+about.html : About Face Score AI | Purpose, Privacy, and Responsible Face Analysis
+accuracy-limitations.html : Accuracy Score, Metric, Standard Deviation, and Approximation in Data
+      Science
+age-estimation-ai.html : Age Estimation Using AI | Facial Age, Face Age, and Verification Guide
+ai-face-analysis.html : AI Face Analyzer | Free AI Face Analysis App for Face Shape and Symmetry
+contact.html : Contact Face Score AI | Support, Corrections, Privacy, and Tool Bugs
+editorial-guidelines.html : Editorial Guidelines and Editorial Policies | Face Score AI Style Guide
+face-attractiveness-test.html : AI Attractiveness Test Online Free | Beauty Score and Face Rating
+face-comparison-tool.html : AI顔比較ツール | オンラインで2つの顔を瞬時に比較
+face-symmetry-guide.html : Facial Asymmetry Guide | Non-Surgical and Surgical Ways to Improve Facial
+      Symmetry
+facial-landmarks-explained.html : Facial Landmarks Explained | AI Facial Landmark Detection and Human Face
+      Analysis
+golden-ratio-face-analysis.html : Golden Ratio Face Analyzer | AI Golden Ratio Face Calculator
+golden-ratio-face.html : Golden Ratio Face Calculator | AI Facial Beauty and Face Ratio Guide
+hotness-scale-test.html : AI Attractiveness Test App | Free AI Face Rater and Hotness Scale
+how-face-score-works.html : How AI Face Score Works | Attractiveness Calculator, Ratio, Symmetry,
+      Beauty Score
+how-it-works.html : How Face Score Works | AI Face Analysis Process and Photo Tips
+index.html : AI Face Score Checker | 顔面偏差値チェッカー
+photo-face-rating.html : AI Face Rating | Rate My Face with a Free Online AI Beauty Calculator
+privacy.html : Privacy Policy | Face Photos, Upload Safety, and AI Face Tools
+random-face-score-generator.html : Random AI Face Score Generator | Free Online Beauty Score Test
+selfie-photo-quality-guide.html : Selfie Tips: Take a Good Selfie with Better Lighting, Poses, and Camera
+      Settings
+sitemap.html : Sitemap | Face Score AI Tools, Guides, Privacy, and Support Pages
+smile-expression-analysis.html : Smile Expression Analysis | Genuine Smile, Duchenne Smile, Facial
+      Feedback, and Attractiveness
+team.html : Face Score AI Team | Editorial, Engineering, and Review Standards
+terms.html : Terms of Use | Responsible Use of Face Score AI Tools
+what-makes-you-attractive.html : What Makes You More Attractive | Qualities That Make Someone Appealing

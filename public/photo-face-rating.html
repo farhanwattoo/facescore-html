@@ -1,0 +1,674 @@
+﻿<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>写真顔評価：あなたの顔写真を評価する無料ツール</title>
+    <meta
+      content="セルフィーの品質や顔の魅力をAIがどのように評価するかをテストします。無料の写真顔評価による客観的なフィードバック。"
+      name="description"
+    />
+    <meta
+      content="写真顔評価, 顔評価テスト, AI顔判定, 無料ツール, 魅力評価"
+      name="keywords"
+    />
+    <link
+      href="https://face-score.net/photo-face-rating.html"
+      rel="canonical"
+    />
+    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet" />
+    <link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet" />
+    <link href="intent-tools.css?v=20260415-stylefix2" rel="stylesheet" />
+    <noscript
+      ><link
+        href="style-core.min.css?v=20260415-stylefix2"
+        rel="stylesheet" /><link
+        href="style-pages.min.css?v=20260415-stylefix2"
+        rel="stylesheet"
+    /></noscript>
+    <meta
+      content="写真顔評価：あなたの顔写真を評価する無料ツール"
+      property="og:title"
+    />
+    <meta
+      content="セルフィーの品質や顔の魅力をAIがどのように評価するかをテストします。無料の写真顔評価による客観的なフィードバック。"
+      property="og:description"
+    />
+    <meta content="article" property="og:type" />
+    <meta
+      content="https://face-score.net/photo-face-rating.html"
+      property="og:url"
+    />
+    <meta content="en_US" property="og:locale" />
+    <meta content="ja_JP" property="og:locale:alternate" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="AI Face Rating and Rate My Face Guide"
+      name="twitter:title"
+    />
+    <meta
+      content="Free online photo face rating, AI beauty test, and upload tips."
+      name="twitter:description"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "name": "AI Face Rating",
+            "url": "https://face-score.net/photo-face-rating.html",
+            "description": "A bilingual AI face rating and photo attractiveness guide.",
+            "inLanguage": ["en", "ja"]
+          },
+          {
+            "@type": "Article",
+            "headline": "AI Face Rating: Rate My Face with a Free Online AI Beauty Calculator",
+            "mainEntityOfPage": "https://face-score.net/photo-face-rating.html",
+            "inLanguage": ["en", "ja"]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://face-score.net/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Photo Face Rating",
+                "item": "https://face-score.net/photo-face-rating.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <style>
+      .photo-rating-page {
+        max-width: 1040px;
+      }
+
+      .rating-hero {
+        background: linear-gradient(135deg, #fff 0%, #f8fbff 100%);
+        border: 1px solid #e6edf7;
+        border-radius: 18px;
+        padding: 1.7rem;
+        box-shadow: 0 18px 42px rgba(16, 24, 40, 0.08);
+        margin-bottom: 1.25rem;
+      }
+
+      .rating-hero__eyebrow,
+      .tool-label {
+        display: inline-flex;
+        border-radius: 999px;
+        background: rgba(255, 126, 179, 0.12);
+        color: #a82d67;
+        padding: 0.34rem 0.72rem;
+        font-size: 0.82rem;
+        font-weight: 800;
+        margin-bottom: 0.8rem;
+      }
+
+      .rating-hero h1 {
+        display: block;
+        align-items: initial;
+        gap: 0;
+        font-size: clamp(2rem, 4vw, 3.05rem);
+        line-height: 1.15;
+        letter-spacing: 0;
+        margin: 0 0 0.85rem;
+      }
+
+      .rating-hero h1 span {
+        display: inline;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+      }
+
+      .lead {
+        color: #526176;
+        line-height: 1.85;
+        max-width: 850px;
+        margin: 0.65rem 0 0;
+      }
+
+      .jump-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 1rem;
+      }
+
+      .jump-links a {
+        border: 1px solid #dbe4ef;
+        background: #fff;
+        border-radius: 999px;
+        padding: 0.5rem 0.82rem;
+        text-decoration: none;
+        color: #44556d;
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      .article-body h2 {
+        margin-top: 2rem;
+        padding-bottom: 0.55rem;
+        border-bottom: 2px solid rgba(255, 126, 179, 0.18);
+        font-size: 1.45rem;
+        line-height: 1.35;
+      }
+
+      .article-body p {
+        color: #4f5d73;
+        line-height: 1.9;
+        margin: 0.75rem 0 0;
+      }
+
+      .summary-list {
+        background: #f8fbff;
+        border: 1px solid #dce8f8;
+        border-radius: 14px;
+        padding: 1rem 1.2rem 1rem 2rem;
+        color: #4f5d73;
+        line-height: 1.75;
+      }
+
+      .intent-tool label {
+        display: grid;
+        gap: 0.4rem;
+        font-weight: 700;
+        color: #334155;
+      }
+
+      .nav-container {
+        gap: 1rem;
+      }
+
+      @media (max-width: 760px) {
+        .nav-container,
+        .nav-links {
+          flex-wrap: wrap;
+        }
+
+        .rating-hero,
+        .trust-section {
+          padding: 1.1rem;
+        }
+      }
+    </style>
+    <script id="static-seo-schema" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "email": "support@face-score.net",
+            "name": "Face Score AI",
+            "@id": "https://face-score.net/#organization",
+            "logo": "https://face-score.net/favicon.svg",
+            "@type": "Organization",
+            "url": "https://face-score.net",
+            "telephone": "+1-415-555-0198",
+            "sameAs": [
+              "https://twitter.com/facescoreai",
+              "https://www.facebook.com/facescoreai",
+              "https://www.linkedin.com/company/facescoreai",
+              "https://www.youtube.com/@facescoreai",
+              "https://www.instagram.com/facescoreai",
+              "https://www.pinterest.com/facescoreai",
+              "https://www.tiktok.com/@facescoreai"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-415-555-0198",
+              "email": "support@face-score.net",
+              "contactType": "customer support",
+              "availableLanguage": ["English", "Japanese"]
+            }
+          },
+          {
+            "name": "Face Score AI",
+            "@id": "https://face-score.net/#website",
+            "publisher": { "@id": "https://face-score.net/#organization" },
+            "@type": "WebSite",
+            "url": "https://face-score.net",
+            "potentialAction": {
+              "query-input": "required name=search_term_string",
+              "target": "https://face-score.net/sitemap.html?q={search_term_string}",
+              "@type": "SearchAction"
+            }
+          },
+          {
+            "@id": "https://face-score.net/photo-face-rating.html#webpage",
+            "@type": "WebPage",
+            "url": "https://face-score.net/photo-face-rating.html",
+            "name": "写真顔評価：あなたの顔写真を評価する無料ツール",
+            "description": "セルフィーの品質や顔の魅力をAIがどのように評価するかをテストします。無料の写真顔評価による客観的なフィードバック。",
+            "inLanguage": "ja",
+            "dateModified": "2026-04-15",
+            "isPartOf": { "@id": "https://face-score.net/#website" }
+          },
+          {
+            "mainEntity": [
+              {
+                "acceptedAnswer": {
+                  "text": "This article covers the full flow: how a face rating works, what an attractiveness test can and cannot measure, how to upload better photos, how ai beauty tools read facial symmetry, how the pretty scale works, and how to use the results without becoming harsh toward yourself.",
+                  "@type": "Answer"
+                },
+                "name": "Article Outline: What Will This AI Face Rating Guide Cover? 記事の流れ：このAI顔評価ガイドでわかること",
+                "@type": "Question"
+              },
+              {
+                "acceptedAnswer": {
+                  "text": "AI face rating is a photo-based assessment that uses ai technology to estimate how a face appears in one image. People search rate my face because they want a quick outside view, especially before posting a selfie, choosing a profile picture, or comparing dating apps photos.",
+                  "@type": "Answer"
+                },
+                "name": "1. What Is AI Face Rating and Why Do People Search Rate My Face? 1. AI顔評価とは何ですか？なぜ「顔を評価して」と検索するのですか？",
+                "@type": "Question"
+              },
+              {
+                "acceptedAnswer": {
+                  "text": "An ai attractiveness test may analyze face shape, facial features, facial proportions, expression, and photo clarity. It often looks for patterns like symmetry, balanced lighting, and whether the full face is visible. Some systems use ai algorithms trained on many examples to estimate visual appeal.",
+                  "@type": "Answer"
+                },
+                "name": "2. How Does an AI Attractiveness Test Analyze a Photo? 2. AI魅力度テストは写真をどう分析しますか？",
+                "@type": "Question"
+              },
+              {
+                "acceptedAnswer": {
+                  "text": "When you upload a photo, the tool checks whether a face is visible, then estimates landmarks and photo conditions. A good upload shows the full face, has enough light, and avoids 強いフィルターs. You can upload a selfie, but it should not be too close to the lens.",
+                  "@type": "Answer"
+                },
+                "name": "3. What Happens When You Upload a Photo? 3. 写真をアップロードすると何が起きますか？",
+                "@type": "Question"
+              }
+            ],
+            "@id": "https://face-score.net/photo-face-rating.html#faq",
+            "@type": "FAQPage"
+          },
+          {
+            "itemListElement": [
+              {
+                "position": 1,
+                "url": "https://face-score.net/",
+                "name": "Home",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 2,
+                "url": "https://face-score.net/how-it-works.html",
+                "name": "How It Works",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 3,
+                "url": "https://face-score.net/accuracy-limitations.html",
+                "name": "Accuracy and Limits",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 4,
+                "url": "https://face-score.net/editorial-guidelines.html",
+                "name": "Editorial Guidelines",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 5,
+                "url": "https://face-score.net/sitemap.html",
+                "name": "HTML Sitemap",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 6,
+                "url": "https://face-score.net/rss.xml",
+                "name": "RSS Feed",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 7,
+                "url": "https://face-score.net/ai-face-analysis.html",
+                "name": "AI Face Analysis",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 8,
+                "url": "https://face-score.net/photo-face-rating.html",
+                "name": "Photo Face Rating",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 9,
+                "url": "https://face-score.net/contact.html",
+                "name": "Contact",
+                "@type": "SiteNavigationElement"
+              }
+            ],
+            "name": "Site Navigation",
+            "@id": "https://face-score.net/#site-navigation",
+            "@type": "ItemList"
+          }
+        ]
+      }
+    </script>
+    <link
+      href="rss.xml"
+      rel="alternate"
+      title="Face Score AI RSS Feed"
+      type="application/rss+xml"
+    />
+  </head>
+  <body class="inner-page">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="nav-logo" href="">顔スコアAI</a>
+        <ul class="nav-links">
+          <li><a href="">ホーム</a></li>
+          <li><a href="how-it-works.html">仕組み</a></li>
+          <li><a href="accuracy-limitations.html">精度</a></li>
+          <li><a href="about.html">概要</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="container page-content professional-inner photo-rating-page">
+      <section class="rating-hero">
+        <p class="rating-hero__eyebrow">写真顔評価ガイド</p>
+        <h1>
+          AI魅力度テストとAI顔評価：無料オンラインの可愛さスケール計算で写真をチェック
+        </h1>
+        <p class="lead">
+          写真顔評価は、自撮り、プロフィール写真、マッチングアプリ用の写真を軽く確認したいときに役立ちます。このガイドでは、AIが魅力度をどう見るのか、写真をアップロードすると何が起きるのか、そしてスコアを最終判断として受け取らない読み方を解説します。
+        </p>
+        <p class="lead">
+          AIに顔を評価させる前に読んでおくと、画質、顔の特徴、顔型、対称性、比率、光が結果にどう影響するかがわかります。過度な加工に頼らず、写真でより魅力的に見せる実用的な方法もまとめています。
+        </p>
+        <div class="jump-links">
+          <a href="#tool">ツールを試す</a>
+          <a href="#outline">記事の流れ</a>
+          <a href="#summary">要点</a>
+        </div>
+      </section>
+      <section class="trust-section intent-tool" id="tool">
+        <span class="tool-label">無料AI顔評価ツール</span>
+        <h2>写真をアップロードしてAI顔評価を見る</h2>
+        <p>
+          写真をアップロードし、写真条件のスライダーを調整すると、すばやい目安が表示されます。完全無料で、ブラウザ上のテストツールとして使えます。
+        </p>
+        <label
+          >写真をアップロード<input
+            accept="image/*"
+            id="tool-photo-file"
+            type="file"
+        /></label>
+        <img
+          alt="Photo preview"
+          class="intent-preview"
+          id="tool-photo-preview"
+        />
+        <div class="intent-tool__grid two">
+          <label
+            >照明の質<input
+              id="photo-light"
+              max="100"
+              min="0"
+              type="range"
+              value="70"
+          /></label>
+          <label
+            >顔の角度<input
+              id="photo-angle"
+              max="100"
+              min="0"
+              type="range"
+              value="65"
+          /></label>
+          <label
+            >写真の質<input
+              id="photo-quality"
+              max="100"
+              min="0"
+              type="range"
+              value="75"
+          /></label>
+        </div>
+        <div class="row">
+          <button class="btn btn-secondary" id="tool-photo-run" type="button">
+            すぐに評価する
+          </button>
+        </div>
+        <div class="intent-tool__result" id="tool-photo-result">
+          写真をアップロードして顔評価を実行してください。
+        </div>
+      </section>
+      <article class="trust-section article-body">
+        <section id="outline">
+          <h2>記事の流れ：このAI顔評価ガイドでわかること</h2>
+          <p>
+            この記事では、顔評価の流れ、魅力度テストで測れることと測れないこと、よりよい写真のアップロード方法、AI美容ツールが顔の対称性をどう見るか、可愛さスケールの考え方、結果を自分に厳しくなりすぎず使う方法を説明します。
+          </p>
+          <p>
+            また、正確な美容評価が写真条件に左右される理由、オンライン写真の結果と鏡での印象が違う理由、完璧な数字より役立つフィードバックを目指すべき理由も整理します。
+          </p>
+        </section>
+        <h2>
+          1. AI顔評価とは何ですか？なぜ「顔を評価して」と検索するのですか？
+        </h2>
+        <p>
+          AI顔評価は、一枚の写真に写った顔の印象をAI技術で推定する仕組みです。自撮りを投稿する前、プロフィール写真を選ぶ前、マッチングアプリ用の写真を比べるときに、客観的な目安を知りたい人が「顔を評価して」と検索します。
+        </p>
+        <p>
+          結果は参考になりますが、あなた全体を決めるものではありません。AIは写真の中の見えるパターンを見ているだけで、性格、声、雰囲気、会話の魅力までは判断できません。
+        </p>
+        <h2>2. AI魅力度テストは写真をどう分析しますか？</h2>
+        <p>
+          AI魅力度テストは、顔型、顔の特徴、顔の比率、表情、写真の鮮明さなどを分析します。対称性、光のバランス、顔全体が見えているかも重要です。多くの例から学習したAIアルゴリズムで、見た目の印象を推定します。
+        </p>
+        <p>
+          顔データに基づくスコアと聞くと正確に感じますが、入力写真はとても重要です。ぼけ、強い影、傾きのある写真を使うと、モデルは顔そのものだけでなく写真条件にも反応します。
+        </p>
+        <h2>3. 写真をアップロードすると何が起きますか？</h2>
+        <p>
+          写真をアップロードすると、ツールは顔が見えているかを確認し、顔のポイントや写真条件を推定します。よいアップロード写真は、顔全体が見え、十分な光があり、強い加工がないものです。自撮りでも使えますが、レンズに近すぎる写真は避けましょう。
+        </p>
+        <p>
+          写真をアップロードして計算すると、AIが画像を評価し、総合的な目安を作ります。すぐにAI顔スコアを表示するツールもあれば、処理中であることを示す読み込み表示を入れるものもあります。
+        </p>
+        <h2>4. 美容テストと顔の魅力は同じですか？</h2>
+        <p>
+          美容テストは写真の中の顔の魅力を推定できますが、現実の魅力は美容評価より広いものです。顔の魅力には見た目の特徴が含まれますが、実際には自信、目線、清潔感、動き、やさしさ、場の雰囲気も関係します。
+        </p>
+        <p>
+          そのため、顔魅力度テストは画像へのフィードバックとして使うのがよいでしょう。一枚の写真の美容スコアは得られますが、すべての人から見た魅力を完全に語ることはできません。
+        </p>
+        <h2>5. 可愛さスケール計算は何を見ていますか？</h2>
+        <p>
+          可愛さスケール計算は、見える情報をまとめてシンプルな数字にします。顔の構造、肌の質、パーツの間隔、顔の指標、左右対称性に基づく評価などが使われることがあります。10段階のスケールで表すツールもあります。
+        </p>
+        <p>
+          わかりやすい形式ですが、完全に客観的なものではありません。高度なAIでも一枚の写真を読んでいるだけです。光や角度が少し変わるだけで、魅力度スコアが変わることがあります。
+        </p>
+        <h2>6. AI美容ツールは正確な美容結果を出せますか？</h2>
+        <p>
+          AI美容ツールは、写真への一貫したフィードバックには役立ちます。ただし、正確な美しさが一つの固定数字で表せるわけではありません。高度なAIを使うツールでも、対称性、鮮明さ、比率を比べる一方で、画質やモデル設計に左右されます。
+        </p>
+        <p>
+          公平に見るには、正面、明るい光、鮮明、過度な加工なしのテスト写真を使いましょう。ある写真が最も高いスコアになったら、笑顔、光、カメラ距離、背景のどれが効いたのかを確認すると役立ちます。
+        </p>
+        <h2>7. オンライン写真評価でより魅力的に見せるには？</h2>
+        <p>
+          オンライン写真でより魅力的に見せるには、まず基本を整えましょう。柔らかい正面光、自然な表情、すっきりした構図、近すぎないカメラ距離。写真の質は、思った以上に結果を変えます。
+        </p>
+        <p>
+          写真編集は明るさや切り抜きには役立ちますが、顔を大きく変える加工は避けたほうがよいです。小顔加工を使うと、AIは本来の顔ではなく編集後の形に反応します。自然に良く見える、誠実な写真を目指しましょう。
+        </p>
+        <h2>8. 魅力度テスト結果はどう読めばよいですか？</h2>
+        <p>
+          魅力度テスト結果は、スナップショットとして読むのが安全です。AIは数秒で評価を出しますが、それは一枚の写真への判断であり、あなたの人生への判断ではありません。顔評価結果は、写真比較、光の選び方、自然に見える画像選びに役立ちます。
+        </p>
+        <p>
+          結果が思ったより低くても、すぐに落ち込まず別の写真を試してください。光、表情、角度を変えるだけで、よりはっきりした情報がAIに伝わり、結果が変わることがあります。
+        </p>
+        <h2>9. マッチングアプリ用にAIで顔評価をするべきですか？</h2>
+        <p>
+          マッチングアプリでは、AIは第一印象が伝わりやすい写真を選ぶ助けになります。完璧な美容スコアを追うより、自然な笑顔、楽な姿勢、よい光のほうが大切なことが多いです。AIの評価は一つの意見として使い、自分の感覚も残しましょう。
+        </p>
+        <p>
+          おすすめの流れはシンプルです。写真をアップロードして評価し、2、3枚を比べ、自分らしく見えるものを選ぶ。魅力的に見えるかを試すなら、短く実用的に終えるのが健全です。
+        </p>
+        <h2>10. 考えすぎずに顔スコアを受け取るには？</h2>
+        <p>
+          健康的に顔スコアを見るには、アップロード前に目的を決めてください。プロフィール写真を選びたいのか、写真の質を確認したいのか、無料AI顔ツールで遊びたいだけなのか。目的があると、数字を大きく受け止めすぎずに済みます。
+        </p>
+        <p>
+          最もよい使い方は、写真をアップロードし、AIの目安を見て、一つだけ実用的な改善点を拾い、そこで終えることです。よりよい画像選びに役立ったなら十分です。細部を長く見続けて不安になるなら、少し離れましょう。
+        </p>
+        <h2 id="summary">覚えておきたい大切なポイント</h2>
+        <ul class="summary-list">
+          <li>
+            AI顔評価は一枚の写真を推定するもので、あなた全体の魅力を決めるものではありません。
+          </li>
+          <li>
+            アップロード写真の質、光、角度、表情、鮮明さでテストスコアは変わります。
+          </li>
+          <li>
+            可愛さスケールや計算ツールは写真比較に役立ちますが、完璧な真実ではありません。
+          </li>
+          <li>
+            結果は写真の質を上げ、より自然に見える画像を選ぶために使いましょう。
+          </li>
+          <li>
+            不安が強くなるなら、テストを止めて目的を整理してから戻りましょう。
+          </li>
+        </ul>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <a class="footer-logo" href="">顔スコアAI</a>
+        <div class="footer-links">
+          <a href="index.html">ホーム</a>
+          <a href="about.html">当サイトについて</a>
+          <a href="how-it-works.html">仕組みについて</a>
+          <a href="how-face-score-works.html">顔スコアの仕組み</a>
+          <a href="accuracy-limitations.html">精度と限界</a>
+          <a href="selfie-photo-quality-guide.html">自撮り写真ガイド</a>
+          <a href="facial-landmarks-explained.html">顔のランドマーク</a>
+          <a href="smile-expression-analysis.html">笑顔分析</a>
+          <a href="face-symmetry-guide.html">顔の対称性ガイド</a>
+          <a href="ai-face-analysis.html">AI顔分析</a>
+          <a href="age-estimation-ai.html">年齢推定AI</a>
+          <a href="face-attractiveness-test.html">顔の魅力度テスト</a>
+          <a href="face-comparison-tool.html">顔比較ツール</a>
+          <a href="golden-ratio-face.html">黄金比テスト</a>
+          <a href="golden-ratio-face-analysis.html">顔の黄金比分析</a>
+          <a href="hotness-scale-test.html">ホットネススケール</a>
+          <a href="photo-face-rating.html">写真顔評価</a>
+          <a href="random-face-score-generator.html">ランダム顔スコア</a>
+          <a href="what-makes-you-attractive.html">魅力の特徴</a>
+          <a href="editorial-guidelines.html">編集ガイドライン</a>
+          <a href="sitemap.html">HTMLサイトマップ</a>
+          <a href="rss.xml">RSSフィード</a>
+          <a href="team.html">運営チーム</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="contact.html">お問い合わせ</a>
+        </div>
+        <form
+          action="/sitemap.html"
+          class="footer-search"
+          id="site-search-form"
+          role="search"
+        >
+          <label for="site-search-input"
+            >顔スコアAIのツールとガイドを検索</label
+          >
+          <input
+            aria-label="顔スコアAIを検索"
+            id="site-search-input"
+            name="q"
+            placeholder="ツール、ガイド、ポリシーを検索"
+            type="search"
+          />
+          <button type="submit">検索</button>
+        </form>
+        <div class="footer-trust">
+          <div class="footer-contact">
+            <span
+              >Email:
+              <a href="mailto:support@face-score.net"
+                >support@face-score.net</a
+              ></span
+            >
+            <span>Phone: <a href="tel:+14155550198">+1 (415) 555-0198</a></span>
+          </div>
+          <div aria-label="ソーシャルメディアリンク" class="footer-social">
+            <a
+              href="https://twitter.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Twitter/X</a
+            >
+            <a
+              href="https://www.facebook.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Facebook</a
+            >
+            <a
+              href="https://www.linkedin.com/company/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              href="https://www.youtube.com/@facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >YouTube</a
+            >
+            <a
+              href="https://www.instagram.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Instagram</a
+            >
+            <a
+              href="https://www.pinterest.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Pinterest</a
+            >
+            <a
+              href="https://www.tiktok.com/@facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >TikTok</a
+            >
+          </div>
+          <div class="footer-legal">
+            <a
+              class="dmca-badge"
+              href="https://www.dmca.com/Protection/Status.aspx"
+              rel="nofollow noopener"
+              target="_blank"
+              >DMCA Protected</a
+            >
+            <span>Copyright © 2026 顔スコアAI. All rights reserved.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button aria-label="Back to top" class="back-to-top" id="back-to-top">
+      Top
+    </button>
+    <script defer="" src="intent-tools.js?v=20260415-stylefix2"></script>
+    <script defer="" src="site.js?v=20260415-seo-meta2"></script>
+  </body>
+</html>

@@ -1,0 +1,653 @@
+﻿<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ca-pub-8115094000745777" name="google-adsense-account" />
+    <title>顔面偏差値チェッカー | 高精度AI顔面偏差値測定・美人度診断</title>
+    <meta
+      content="写真1枚であなたの顔面偏差値を無料測定！AIが顔の特徴や比率を分析し、高精度な美人度・イケメン度診断結果を提供します。"
+      name="description"
+    />
+    <meta
+      content="顔面偏差値チェッカー, 顔面偏差値, 美人度診断, イケメン診断, AI顔スコア, ランキング"
+      name="keywords"
+    />
+    <link href="https://face-score.net/" rel="canonical" />
+    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
+    <link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect" />
+    <link href="https://cdn.jsdelivr.net" rel="dns-prefetch" />
+    <link
+      as="script"
+      crossorigin=""
+      href="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"
+      rel="preload"
+    />
+    <link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet" />
+    <noscript
+      ><link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet"
+    /></noscript>
+    <meta
+      content="顔面偏差値チェッカー | 高精度AI顔面偏差値測定・美人度診断"
+      property="og:title"
+    />
+    <meta
+      content="写真1枚であなたの顔面偏差値を無料測定！AIが顔の特徴や比率を分析し、高精度な美人度・イケメン度診断結果を提供します。"
+      property="og:description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="https://face-score.net/" property="og:url" />
+    <meta content="ja_JP" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="AI Face Score Checker | 顔面偏差値チェッカー"
+      name="twitter:title"
+    />
+    <meta
+      content="無料のAI顔診断・顔スコアチェッカー。写真で顔スコア、左右対称性、表情を分析します。"
+      name="twitter:description"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "AI Face Score Checker",
+            "alternateName": "顔面偏差値チェッカー",
+            "url": "https://face-score.net/",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Any",
+            "inLanguage": ["en", "ja"],
+            "description": "Free AI face score checker for photo-based symmetry, smile, expression, and face analysis.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Article",
+            "headline": "Faces, Attractive Psychology, and Attention",
+            "inLanguage": ["en", "ja"],
+            "about": [
+              "face score",
+              "facial attractiveness",
+              "psychology",
+              "attention"
+            ],
+            "mainEntityOfPage": "https://face-score.net/"
+          }
+        ]
+      }
+    </script>
+    <style>
+      @media (max-width: 720px) {
+      }
+
+      .article-content {
+        max-width: 980px;
+        margin: 2.4rem auto 0;
+        padding: 2rem;
+        border: 1px solid rgba(255, 126, 179, 0.14);
+        background: linear-gradient(180deg, #ffffff 0%, #fffafe 100%);
+      }
+
+      .article-kicker {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+        padding: 0.28rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(255, 126, 179, 0.12);
+        color: var(--primary);
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+
+      .article-title {
+        margin: 0 0 0.75rem;
+        color: var(--text);
+        font-size: 1.85rem;
+        line-height: 1.25;
+      }
+
+      .article-intro {
+        margin-bottom: 1.4rem;
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .article-intro p,
+      .article-content p {
+        color: #4f5c6f;
+        line-height: 1.85;
+        margin: 0.6rem 0 0;
+      }
+
+      .article-content h3 {
+        margin: 1.55rem 0 0.55rem;
+        padding-left: 0.85rem;
+        border-left: 4px solid var(--primary);
+        color: var(--text);
+        font-size: 1.22rem;
+        line-height: 1.35;
+      }
+
+      .article-summary {
+        margin-top: 1.6rem;
+        padding: 1rem 1.1rem;
+        border-radius: 8px;
+        background: #f8fbff;
+        border: 1px solid #e5edf8;
+      }
+
+      .article-summary li {
+        margin: 0.42rem 0;
+        color: #4f5c6f;
+      }
+
+      .stat-heading {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      .stat-card.primary .stat-heading {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      @media (max-width: 720px) {
+        .article-content {
+          padding: 1.2rem;
+        }
+
+        .article-title {
+          font-size: 1.45rem;
+        }
+
+        .article-content h3 {
+          font-size: 1.05rem;
+        }
+      }
+    </style>
+    <script id="static-seo-schema" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "email": "support@face-score.net",
+            "name": "Face Score AI",
+            "@id": "https://face-score.net/#organization",
+            "logo": "https://face-score.net/favicon.svg",
+            "@type": "Organization",
+            "url": "https://face-score.net",
+            "telephone": "+1-415-555-0198",
+            "sameAs": [
+              "https://twitter.com/facescoreai",
+              "https://www.facebook.com/facescoreai",
+              "https://www.linkedin.com/company/facescoreai",
+              "https://www.youtube.com/@facescoreai",
+              "https://www.instagram.com/facescoreai",
+              "https://www.pinterest.com/facescoreai",
+              "https://www.tiktok.com/@facescoreai"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-415-555-0198",
+              "email": "support@face-score.net",
+              "contactType": "customer support",
+              "availableLanguage": ["English", "Japanese"]
+            }
+          },
+          {
+            "name": "Face Score AI",
+            "@id": "https://face-score.net/#website",
+            "publisher": { "@id": "https://face-score.net/#organization" },
+            "@type": "WebSite",
+            "url": "https://face-score.net",
+            "potentialAction": {
+              "query-input": "required name=search_term_string",
+              "target": "https://face-score.net/sitemap.html?q={search_term_string}",
+              "@type": "SearchAction"
+            }
+          },
+          {
+            "@id": "https://face-score.net/#webpage",
+            "@type": "WebPage",
+            "url": "https://face-score.net/",
+            "name": "顔面偏差値チェッカー | 高精度AI顔面偏差値測定・美人度診断",
+            "description": "写真1枚であなたの顔面偏差値を無料測定！AIが顔の特徴や比率を分析し、高精度な美人度・イケメン度診断結果を提供します。",
+            "inLanguage": "ja",
+            "dateModified": "2026-04-15",
+            "isPartOf": { "@id": "https://face-score.net/#website" }
+          },
+          {
+            "mainEntity": [
+              {
+                "acceptedAnswer": {
+                  "text": "文献からまず知っておきたいのは、顔の魅力は一つの固定スコアではないということです。むしろ、いくつもの小さな手がかりが重なって生まれる印象に近いものです。",
+                  "@type": "Answer"
+                },
+                "name": "1. 文献では顔の魅力をどう考えている？",
+                "@type": "Question"
+              },
+              {
+                "acceptedAnswer": {
+                  "text": "表情はとても早く伝わります。人は写真を見た瞬間、ほかの要素より先に表情を読み取ることが多いです。軽い笑顔は親しみやすく、照明が良ければ無表情も落ち着いたプロらしい印象になります。",
+                  "@type": "Answer"
+                },
+                "name": "2. 情報としての表情はなぜ重要なのか？",
+                "@type": "Question"
+              },
+              {
+                "acceptedAnswer": {
+                  "text": "見た目スコアの問題は、数字が出るとそれが決定的に見えてしまうことです。でも、暗い自撮りと明るい正面写真では、本人が同じでも結果が変わることがあります。",
+                  "@type": "Answer"
+                },
+                "name": "3. 見た目スコアの問題はどこにある？",
+                "@type": "Question"
+              },
+              {
+                "acceptedAnswer": {
+                  "text": "symmetryは大切ですが、誤解されやすい要素でもあります。左右のバランスが整った写真はすっきり見えますが、完全に鏡のような顔である必要はありません。",
+                  "@type": "Answer"
+                },
+                "name": "4. symmetryは本当に魅力の中心なのか？",
+                "@type": "Question"
+              }
+            ],
+            "@id": "https://face-score.net/#faq",
+            "@type": "FAQPage"
+          },
+          {
+            "itemListElement": [
+              {
+                "position": 1,
+                "url": "https://face-score.net/",
+                "name": "Home",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 2,
+                "url": "https://face-score.net/how-it-works.html",
+                "name": "How It Works",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 3,
+                "url": "https://face-score.net/accuracy-limitations.html",
+                "name": "Accuracy and Limits",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 4,
+                "url": "https://face-score.net/editorial-guidelines.html",
+                "name": "Editorial Guidelines",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 5,
+                "url": "https://face-score.net/sitemap.html",
+                "name": "HTML Sitemap",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 6,
+                "url": "https://face-score.net/rss.xml",
+                "name": "RSS Feed",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 7,
+                "url": "https://face-score.net/ai-face-analysis.html",
+                "name": "AI Face Analysis",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 8,
+                "url": "https://face-score.net/photo-face-rating.html",
+                "name": "Photo Face Rating",
+                "@type": "SiteNavigationElement"
+              },
+              {
+                "position": 9,
+                "url": "https://face-score.net/contact.html",
+                "name": "Contact",
+                "@type": "SiteNavigationElement"
+              }
+            ],
+            "name": "Site Navigation",
+            "@id": "https://face-score.net/#site-navigation",
+            "@type": "ItemList"
+          }
+        ]
+      }
+    </script>
+    <link
+      href="rss.xml"
+      rel="alternate"
+      title="Face Score AI RSS Feed"
+      type="application/rss+xml"
+    />
+  </head>
+  <body class="home-page">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="nav-logo" href="">顔面偏差値診断</a>
+        <ul class="nav-links">
+          <li><a href="#upload-area">AI診断</a></li>
+          <li><a href="how-it-works.html">仕組み</a></li>
+          <li><a href="accuracy-limitations.html">精度と限界</a></li>
+          <li><a href="about.html">運営情報</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="container home-layout">
+      <section class="hero-card">
+        <p class="hero-badge">無料・スマホ対応・ブラウザ内AI解析</p>
+        <h1>顔面偏差値チェッカー</h1>
+        <p class="hero-lead">
+          写真をアップロードすると、顔の左右対称性・笑顔強度・推定年齢・性別・表情をわかりやすいスコアで表示します。
+        </p>
+      </section>
+      <section class="analyzer-card">
+        <h2>AI診断を開始</h2>
+        <div class="upload-area" id="upload-area">
+          <div class="upload-content">
+            <p>
+              画像をドラッグ＆ドロップ または <strong>クリックして選択</strong>
+            </p>
+            <p class="sub-text">対応形式: JPEG, PNG, WEBP</p>
+          </div>
+          <input
+            accept="image/*"
+            capture="user"
+            hidden=""
+            id="file-input"
+            type="file"
+          />
+        </div>
+        <div class="hidden" id="loading">
+          <div class="spinner"></div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <p id="loading-text">AIが解析中...</p>
+          <p class="loading-sub">画像特徴点を抽出しています</p>
+        </div>
+        <div class="hidden error-card" id="error-message"></div>
+        <div class="hidden" id="results-area">
+          <div class="image-preview"><canvas id="result-canvas"></canvas></div>
+          <div class="stats-grid">
+            <div class="stat-card primary">
+              <p class="stat-heading">総合判定</p>
+              <div class="score-value" id="score-val">-</div>
+              <div class="score-stars" id="score-stars"></div>
+              <div class="jp-label">総合スコア</div>
+            </div>
+            <div class="stat-card">
+              <p class="stat-heading">年齢</p>
+              <div class="stat-value" id="age-val">-</div>
+            </div>
+            <div class="stat-card">
+              <p class="stat-heading">性別</p>
+              <div class="stat-value" id="gender-val">-</div>
+            </div>
+            <div class="stat-card">
+              <p class="stat-heading">感情</p>
+              <div class="stat-value" id="emotion-val">-</div>
+            </div>
+            <div class="stat-card">
+              <p class="stat-heading">シンメトリー</p>
+              <div class="stat-value" id="symmetry-val">-</div>
+            </div>
+            <div class="stat-card">
+              <p class="stat-heading">笑顔</p>
+              <div class="stat-value" id="smile-val">-</div>
+            </div>
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-secondary" id="download-btn">
+              結果画像を保存
+            </button>
+            <button class="btn btn-twitter" id="share-x-btn">Xでシェア</button>
+            <button class="btn" id="reset-btn">別の写真を診断</button>
+          </div>
+        </div>
+      </section>
+      <section class="trust-section article-content">
+        <p class="article-kicker">研究ガイド</p>
+        <h2 class="article-title">
+          faces attractive psychology and
+          attention：自然に見える顔写真には理由がある
+        </h2>
+        <div class="article-intro">
+          <p>
+            同じ人なのに、ある写真は自然で親しみやすく見え、別の写真は少し硬く見えることがあります。本人が変わったわけではありません。変わったのは写真の条件です。
+          </p>
+          <p>
+            このガイドでは、その違いをむずかしくしすぎずに説明します。心理学、視覚的なattention、AI顔診断を、厳しい評価ではなく写真を整えるためのヒントとして使います。読み終えるころには、結果を落ち着いて受け止め、次の写真を少し良くするコツが見えてくるはずです。
+          </p>
+        </div>
+        <h2>1. 文献では顔の魅力をどう考えている？</h2>
+        <p>
+          文献からまず知っておきたいのは、顔の魅力は一つの固定スコアではないということです。むしろ、いくつもの小さな手がかりが重なって生まれる印象に近いものです。
+        </p>
+        <p>
+          研究では、目、口元、肌の見え方、輪郭バランス、写真全体の雰囲気などが判断に関わります。窓際のやわらかい光は落ち着いた印象を作り、口元が緊張していると少し距離を感じる写真になることもあります。小さな差ですが、積み重なると印象は変わります。
+        </p>
+        <h2>2. 情報としての表情はなぜ重要なのか？</h2>
+        <p>
+          表情はとても早く伝わります。人は写真を見た瞬間、ほかの要素より先に表情を読み取ることが多いです。軽い笑顔は親しみやすく、照明が良ければ無表情も落ち着いたプロらしい印象になります。
+        </p>
+        <p>
+          良い結果を出そうとして、無理に大きく笑う必要はありません。自然な表情、軽い笑顔、少し角度を変えた写真を撮って比べてみてください。一つの点数だけを見るより、そのほうがずっと参考になります。
+        </p>
+        <h2>3. 見た目スコアの問題はどこにある？</h2>
+        <p>
+          見た目スコアの問題は、数字が出るとそれが決定的に見えてしまうことです。でも、暗い自撮りと明るい正面写真では、本人が同じでも結果が変わることがあります。
+        </p>
+        <p>
+          スコアは写真を比べるための目安として使いましょう。点数が高かった写真があるなら、なぜ良かったのかを見てみます。光がきれいだったのか、顔が近かったのか、表情が自然だったのか。役に立つヒントはそこにあります。
+        </p>
+        <h2>4. symmetryは本当に魅力の中心なのか？</h2>
+        <p>
+          symmetryは大切ですが、誤解されやすい要素でもあります。左右のバランスが整った写真はすっきり見えますが、完全に鏡のような顔である必要はありません。
+        </p>
+        <p>
+          写真ごとに左右対称性のスコアが変わる場合は、まず撮り方を確認しましょう。体が傾いていないか、カメラが近すぎないか、片側だけ影になっていないか。多くの場合、顔そのものより写真条件の影響が大きいです。
+        </p>
+        <h2>5. 研究ではどのように顔の印象を調べる？</h2>
+        <p>
+          典型的な研究では、参加者に複数の画像を見せ、好ましさ、記憶しやすさ、信頼感、感情反応などを評価してもらいます。目的は現実の人を順位づけることではなく、写真がどう読まれるかの傾向を知ることです。
+        </p>
+        <p>
+          実験では画像サイズ、背景、表示時間などをそろえることが多いです。でも、スマホで撮る日常の写真はもっと不完全で、それが普通です。研究は厳密なルールではなく、役に立つ地図のように読むのがおすすめです。
+        </p>
+        <h2>6. 文化差や個人差はどう関係する？</h2>
+        <p>
+          魅力的に感じる要素は、文化、年齢、流行、個人経験によって変わります。仕事用プロフィールで自信があるように見える写真が、別の場面ではかたく見えることもあります。カジュアルな自撮りも、場面によって親しみやすく見えたり、少し雑に見えたりします。
+        </p>
+        <p>
+          個人の見方には違いがあります。温かさを先に見る人もいれば、清潔感、自信、顔のバランスを先に見る人もいます。だから、一つのスコアを自分そのものの評価にする必要はありません。
+        </p>
+        <h2>7. AI顔診断では何を見るべき？</h2>
+        <p>
+          AI顔診断では、ランドマーク、表情、画像の鮮明さ、顔パーツの位置を読み取ります。顔が小さい、角度が強い、ぼけている、隠れている場合、AIは推測に頼る部分が増えます。
+        </p>
+        <p>
+          よりきれいに試すなら、まずはシンプルな一枚を撮ってみてください。顔が見える、カメラは目線に近い、強い加工なし、明るさは十分。完璧でなくて大丈夫です。読み取りやすいことが大切です。
+        </p>
+        <h2>8. 写真を改善すると結果はどう変わる？</h2>
+        <p>
+          最も改善しやすいのは光と角度です。窓の近くに立ち、光の方向へ少し顔を向け、カメラを目線に近い高さにします。それだけでも、写真はかなり自然で見やすくなります。
+        </p>
+        <p>
+          一貫した結果を見たい場合は、強い加工を避けましょう。強いフィルターは一見きれいに見えても、人やAIが写真を理解するための細かな情報を隠してしまうことがあります。多くの場合、過度な加工より自然さのほうが強いです。
+        </p>
+        <h2>9. 数字にしにくい魅力はどこにある？</h2>
+        <p>
+          姿勢、温かさ、清潔感、自信、文脈は写真の読み方を左右します。こうしたcharacteristicsは確かに印象に関わりますが、一つの数字にまとめるのは簡単ではありません。
+        </p>
+        <p>
+          AIは視覚的な手がかりを測れますが、あなたの笑い方、話し方、やさしさ、一緒にいるときの安心感までは分かりません。スコアが説明できるのは写真の一部であって、その人全体ではありません。
+        </p>
+        <h2>10. DOIメモと顔診断ツールはどう使う？</h2>
+        <p>
+          出版物を読むときは、見出しだけで判断せず、ジャーナル名、doi、参加者、方法を確認しましょう。最近の心理学研究では、注目の意味が、課題内容、画像の表示時間、何を評価させたかによって変わることがあります。
+        </p>
+        <p>
+          資料では、3389fpsyg、org10、httpsdoi、frontiersmedia、frontiersinpsychologyのような断片を見かけることがあります。facialattractiveness、offacial、ofvisual、orunattractive、attractivenessby、offacialattractiveness、characteristicsof、thisstudyのような語も、コピーされたタイトルや抄録の一部として出ることがあります。大切なのは、断片だけで判断せず、実際の文脈を読むことです。
+        </p>
+        <p>
+          大学の授業やレポートでは、結論だけを引用せず、方法と限界を確認しましょう。その結果が自分の写真条件に本当に当てはまるかを見ることが大切です。AIツールでも同じです。スコアを見るだけでなく、写真そのものも見直しましょう。
+        </p>
+        <ul class="article-summary">
+          <li>顔スコアは本人の価値ではなく、写真条件を含む参考値です。</li>
+          <li>
+            光、角度、顔の大きさ、表情は、思っている以上に結果を変えます。
+          </li>
+          <li>
+            対称性や笑顔は大切ですが、その人全体の魅力を説明するものではありません。
+          </li>
+          <li>
+            論文や実験を見るときは、対象者、画像条件、測定方法、限界を確認しましょう。
+          </li>
+          <li>
+            AI診断は、やさしい比較と改善のヒントとして使うのがおすすめです。
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <a class="footer-logo" href="">顔スコアAI</a>
+        <div class="footer-links">
+          <a href="index.html">ホーム</a>
+          <a href="about.html">当サイトについて</a>
+          <a href="how-it-works.html">仕組みについて</a>
+          <a href="how-face-score-works.html">顔スコアの仕組み</a>
+          <a href="accuracy-limitations.html">精度と限界</a>
+          <a href="selfie-photo-quality-guide.html">自撮り写真ガイド</a>
+          <a href="facial-landmarks-explained.html">顔のランドマーク</a>
+          <a href="smile-expression-analysis.html">笑顔分析</a>
+          <a href="face-symmetry-guide.html">顔の対称性ガイド</a>
+          <a href="ai-face-analysis.html">AI顔分析</a>
+          <a href="age-estimation-ai.html">年齢推定AI</a>
+          <a href="face-attractiveness-test.html">顔の魅力度テスト</a>
+          <a href="face-comparison-tool.html">顔比較ツール</a>
+          <a href="golden-ratio-face.html">黄金比テスト</a>
+          <a href="golden-ratio-face-analysis.html">顔の黄金比分析</a>
+          <a href="hotness-scale-test.html">ホットネススケール</a>
+          <a href="photo-face-rating.html">写真顔評価</a>
+          <a href="random-face-score-generator.html">ランダム顔スコア</a>
+          <a href="what-makes-you-attractive.html">魅力の特徴</a>
+          <a href="editorial-guidelines.html">編集ガイドライン</a>
+          <a href="sitemap.html">HTMLサイトマップ</a>
+          <a href="rss.xml">RSSフィード</a>
+          <a href="team.html">運営チーム</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="contact.html">お問い合わせ</a>
+        </div>
+        <form
+          action="/sitemap.html"
+          class="footer-search"
+          id="site-search-form"
+          role="search"
+        >
+          <label for="site-search-input"
+            >顔スコアAIのツールとガイドを検索</label
+          >
+          <input
+            aria-label="顔スコアAIを検索"
+            id="site-search-input"
+            name="q"
+            placeholder="ツール、ガイド、ポリシーを検索"
+            type="search"
+          />
+          <button type="submit">検索</button>
+        </form>
+        <div class="footer-trust">
+          <div class="footer-contact">
+            <span
+              >Email:
+              <a href="mailto:support@face-score.net"
+                >support@face-score.net</a
+              ></span
+            >
+            <span>Phone: <a href="tel:+14155550198">+1 (415) 555-0198</a></span>
+          </div>
+          <div aria-label="ソーシャルメディアリンク" class="footer-social">
+            <a
+              href="https://twitter.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Twitter/X</a
+            >
+            <a
+              href="https://www.facebook.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Facebook</a
+            >
+            <a
+              href="https://www.linkedin.com/company/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              href="https://www.youtube.com/@facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >YouTube</a
+            >
+            <a
+              href="https://www.instagram.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Instagram</a
+            >
+            <a
+              href="https://www.pinterest.com/facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >Pinterest</a
+            >
+            <a
+              href="https://www.tiktok.com/@facescoreai"
+              rel="nofollow noopener"
+              target="_blank"
+              >TikTok</a
+            >
+          </div>
+          <div class="footer-legal">
+            <a
+              class="dmca-badge"
+              href="https://www.dmca.com/Protection/Status.aspx"
+              rel="nofollow noopener"
+              target="_blank"
+              >DMCA保護</a
+            >
+            <span>Copyright © 2026 顔スコアAI. 無断複写・転載を禁じます.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button
+      aria-label="Back to top / ページ上部へ戻る"
+      class="back-to-top"
+      id="back-to-top"
+    >
+      トップ
+    </button>
+    <script defer="" src="app.js"></script>
+    <script defer="" src="site.js?v=20260415-seo-meta2"></script>
+  </body>
+</html>

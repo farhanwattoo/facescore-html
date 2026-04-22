@@ -1,0 +1,173 @@
+--- privacy.html ---
+Trust and usability guide
+Privacy Policy for Face Photos, Upload Safety, and AI Face Tools
+This privacy page explains how users should think about face images,
+          uploads, consent, and the limits of AI face-analysis tools.
+Privacy helper
+Check privacy risk
+Use this checklist before uploading sensitive face images.
+Privacy Principles
+Face images are sensitive because they can reveal identity, age range,
+          expression, and other personal signals. Our privacy guidance is built
+          around consent, clarity, minimal collection, and practical user
+          control.
+Users should understand what happens before uploading. If a tool only
+          previews an image in the browser, that should be clear. If a tool
+          sends data to a server, the page should explain why, how long it is
+          retained, and whether it is used for improvement.
+What You Should Avoid Uploading
+Do not upload images of other people without permission. Avoid
+          uploading children, identity documents, private photos, medical
+          images, or anything you would not want processed by an online tool.
+How Results Should Be Treated
+Face scores, age estimates, symmetry checks, and attractiveness
+          ratings are estimates. They should not be used for employment,
+          lending, school decisions, medical evaluation, legal age verification,
+          or surveillance.
+Users can choose not to upload, can test with a non-sensitive image
+          first, and can read the accuracy and limitations page before using any
+          score. A trustworthy tool should make caution easy, not hidden.
+A face image can be more sensitive than a username or casual message
+          because it can be connected to identity. Even when a tool is playful,
+          the image still deserves careful handling and clear explanation.
+Users should be able to understand the privacy tradeoff before using a
+          tool, not after. That means upload pages should avoid vague language
+          and should not imply that a face photo is harmless just because the
+          tool is free.
+Consent and Other People's Photos
+Do not upload another person's face to compare, rate, or estimate
+          without permission. This is especially important for children,
+          coworkers, classmates, dating profiles, and private social photos.
+If a page includes shareable results, users should share only their
+          own images or results that another person has agreed to share.
+Practical Privacy Checklist
+Use your own photo whenever possible.
+Read whether the tool stores uploads.
+Do not use scores for official decisions.
+Ask for consent before comparing someone else.
+Copyright © 2026 Face Score AI. All rights reserved.
+
+--- terms.html ---
+Trust and usability guide
+These terms explain how to use Face Score AI tools responsibly and
+          what the results should not be used for.
+Rank another person
+Medical or legal decision
+Use this reminder before relying on a score.
+You may use the site for personal photo feedback, learning how
+          face-analysis tools work, comparing your own images, and exploring
+          entertainment features with consent. The tools are intended for
+          guidance and education, not official decisions.
+Do not use the tools to harass, shame, rank, surveil, identify, or
+          make decisions about other people. Do not use results for medical,
+          legal, employment, school, immigration, credit, insurance, or
+          law-enforcement decisions.
+Scores and estimates can be affected by lighting, pose, image quality,
+          filters, model assumptions, and user input. We do not guarantee that
+          any score reflects real-world attractiveness, age, identity, health,
+          or character.
+You are responsible for choosing appropriate images, getting consent
+          where needed, and interpreting results safely. If a result causes
+          stress or encourages repeated checking, stop using the tool and treat
+          the number as noise.
+Entertainment Versus Practical Guidance
+Some tools are practical helpers, such as photo quality checks or
+          method explainers. Others are clearly entertainment, such as a random
+          score generator. Users should read the page label before treating a
+          result seriously.
+When a tool says it is an estimate, that wording matters. It means the
+          output is not a factual statement about identity, beauty, maturity,
+          health, or personal value.
+Do not post someone else's score to mock, shame, pressure, or compare
+          them. Do not use the tools to make claims about a person's
+          attractiveness, ethnicity, age, health, or trustworthiness.
+Use results for your own learning: choosing a clearer photo,
+          understanding lighting, or reading how AI analysis works.
+If you find yourself retesting repeatedly, feeling worse, or using the
+          tool to rank people, stop. The tools are designed for light guidance
+          and learning, not compulsive scoring.
+Copyright © 2026 Face Score AI. All rights reserved.
+
+--- team.html ---
+Trust and usability guide
+Face Score AI Team: Editorial, Engineering, and Review Standards
+This page explains how the site is maintained, how tool pages are
+          reviewed, and what standards guide responsible face-analysis content.
+Review helper
+Content Review Checklist
+Face analysis guide
+Research-style article
+Check review focus
+Use this to identify what an editor should review first.
+The Face Score AI team combines product, engineering, content, and
+          review work. The goal is to make tools that are understandable,
+          cautious, and useful for photo improvement rather than harsh judgment.
+Editorial Review
+Content is reviewed for clarity, privacy risk, overclaiming, and user
+          safety. Pages about attractiveness, face comparison, age estimation,
+          and accuracy require especially careful wording because they can
+          affect confidence and decision-making.
+Engineering Review
+Tool behavior is checked for broken inputs, confusing labels, hidden
+          assumptions, and mismatches between the page copy and what the script
+          actually does. If a tool is only a demo or estimate, the page should
+          say so.
+We improve pages by removing placeholder content, adding limitations,
+          clarifying privacy, and replacing keyword stuffing with useful
+          explanations. Feedback from users helps decide which page to improve
+          next.
+Reviewers look for overclaiming, unclear upload behavior, missing
+          limitations, and copy that could make users feel judged. Pages about
+          attractiveness and age estimation need especially careful review
+          because the topic can be personal.
+Engineering review checks whether the controls match the script,
+          whether buttons return useful output, and whether the result text
+          honestly describes what the tool did. A demo should not pretend to be
+          a full AI model.
+Editorial review checks headings, search intent, human tone, privacy
+          language, and whether each section adds new value. Repeated paragraphs
+          and keyword lists are treated as quality problems, not shortcuts.
+User feedback often reveals issues that automated checks miss:
+          confusing labels, missing disclaimers, awkward mobile layouts, or
+          translated pages that need clearer source text.
+Copyright © 2026 Face Score AI. All rights reserved.
+
+--- sitemap.html ---
+Trust and usability guide
+Sitemap: Face Score AI Tools, Guides, Privacy, and Support Pages
+Use this sitemap to find the right face-analysis tool, learn how
+          scores work, or review privacy and support pages.
+Understand accuracy
+Learn privacy rules
+Choose a goal to decide where to go next.
+Face Score Checker
+Golden Ratio Face Analysis
+Learning Guides
+How Face Score Works
+Selfie Photo Quality Guide
+Facial Landmarks Explained
+Smile Expression Analysis
+Facial Symmetry Guide
+Trust and Policy Pages
+Editorial Guidelines
+Privacy Policy
+Start with the tool that matches your immediate goal, then read the
+          related guide before trusting a result. If you are uploading a face
+          image, read the privacy and accuracy pages first.
+Best Starting Points
+If you want a score, start with the Face Score Checker or Photo Face
+          Rating page. If you want to understand the number, read How Face Score
+          Works and Accuracy and Limitations before testing multiple photos.
+For Photo Improvement
+Use the Selfie Photo Quality Guide when your main goal is a better
+          image. It focuses on lighting, camera distance, pose, and editing
+          choices rather than judging the face itself.
+Before uploading sensitive images, read Privacy, Terms, and Editorial
+          Guidelines. These pages explain consent, limits, and how the site
+          should handle claims about faces.
+For Multilingual Pages
+The language selector creates SEO-friendly language paths and
+          translates page content while keeping one codebase. Internal links
+          stay within the selected language path where possible.
+Copyright © 2026 Face Score AI. All rights reserved.
+
