@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+  <title id="title">Perfect face analysis photo setup steps</title>
+  <desc id="desc">Original SVG showing a seven-step setup guide for taking a strong AI face analysis photo.</desc>
+  <rect width="900" height="760" fill="#f7fbff"/>
+  <rect x="24" y="24" width="852" height="712" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#203047">
+    <text x="72" y="92" font-size="34" font-weight="700">7-step perfect photo setup</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">A simple recipe for consistent retests with any modern smartphone.</text>
+  </g>
+  <g transform="translate(72 176)" font-family="Arial, sans-serif">
+    <g>
+      <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">1</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Find soft front light</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">Window light or a ring light at eye level</text>
+    </g>
+    <g transform="translate(0 80)">
+      <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">2</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Choose a plain background</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">Light wall, no other faces, no busy patterns</text>
+    </g>
+    <g transform="translate(0 160)">
+      <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">3</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Use the rear camera if possible</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">Set a timer and step back 60 to 80 cm</text>
+    </g>
+    <g transform="translate(0 240)">
+      <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">4</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Place the camera slightly above eye level</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">This reduces jaw distortion without over-stretching the forehead</text>
+    </g>
+    <g transform="translate(0 320)">
+      <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">5</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Relax the face</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">Aim for a soft natural smile and relaxed brows</text>
+    </g>
+    <g transform="translate(0 400)">
+      <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">6</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Take at least five shots</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">Keep conditions the same and pick the sharpest frame</text>
+    </g>
+    <g transform="translate(0 480)">
+      <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">7</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Check before uploading</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">Eyes in focus, face fills at least half the frame, no blockers</text>
+    </g>
+  </g>
+</svg>

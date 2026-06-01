@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">顔の左右対称性の測定イメージ図</title>
+  <desc id="desc">顔の中心線、左右のランドマーク距離、写真条件による誤差要因を示すオリジナル図解です。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fffafc"/>
+      <stop offset="100%" stop-color="#f4f8ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#ff9cc4"/>
+      <stop offset="100%" stop-color="#ff6ca7"/>
+    </linearGradient>
+    <style>
+      .panel { fill: #ffffff; stroke: #dbe4ef; stroke-width: 2; }
+      .face { fill: #fff; stroke: #334155; stroke-width: 6; }
+      .guide { fill: none; stroke: #334155; stroke-width: 4; stroke-linecap: round; }
+      .axis { fill: none; stroke: url(#accent); stroke-width: 8; stroke-linecap: round; }
+      .soft { fill: none; stroke: #94a3b8; stroke-width: 3; stroke-dasharray: 12 10; }
+      .label { font-family: "Noto Sans JP", sans-serif; font-size: 28px; fill: #1f2937; font-weight: 700; }
+      .small { font-family: "Noto Sans JP", sans-serif; font-size: 22px; fill: #475569; }
+      .tiny { font-family: "Noto Sans JP", sans-serif; font-size: 18px; fill: #64748b; }
+      .card { fill: #fff5fb; stroke: #ffc0d8; stroke-width: 2; }
+      .dotA { fill: #ff6ca7; }
+      .dotB { fill: #3b82f6; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="50" y="50" width="1100" height="800" rx="28" class="panel"/>
+
+  <text x="100" y="125" class="label">対称性は「左右が完全に同じか」ではなく、中心線からのズレの小ささを見る指標</text>
+  <text x="100" y="165" class="small">AI は鼻先や目尻、口角、輪郭などの位置関係を測ります。写真条件が悪いと数値は簡単に揺れます。</text>
+
+  <ellipse cx="390" cy="470" rx="165" ry="245" class="face"/>
+  <line x1="390" y1="225" x2="390" y2="715" class="axis"/>
+  <ellipse cx="325" cy="385" rx="32" ry="18" fill="none" stroke="#334155" stroke-width="5"/>
+  <ellipse cx="455" cy="390" rx="32" ry="18" fill="none" stroke="#334155" stroke-width="5"/>
+  <circle cx="325" cy="385" r="7" class="dotB"/>
+  <circle cx="455" cy="390" r="7" class="dotB"/>
+  <path d="M390 410 C368 455 365 495 365 522" class="guide"/>
+  <path d="M358 560 C386 580 394 580 424 560" class="guide"/>
+  <circle cx="365" cy="522" r="7" class="dotA"/>
+  <circle cx="332" cy="560" r="7" class="dotA"/>
+  <circle cx="448" cy="560" r="7" class="dotA"/>
+  <circle cx="250" cy="610" r="7" class="dotA"/>
+  <circle cx="530" cy="602" r="7" class="dotA"/>
+  <line x1="365" y1="522" x2="390" y2="522" class="soft"/>
+  <line x1="332" y1="560" x2="390" y2="560" class="soft"/>
+  <line x1="448" y1="560" x2="390" y2="560" class="soft"/>
+  <line x1="250" y1="610" x2="390" y2="610" class="soft"/>
+  <line x1="530" y1="602" x2="390" y2="602" class="soft"/>
+
+  <rect x="640" y="220" width="440" height="135" rx="24" class="card"/>
+  <text x="670" y="265" class="label">1. 中心線を決める</text>
+  <text x="670" y="305" class="small">鼻先や顔の中央を基準に縦の軸を引きます。</text>
+  <text x="670" y="335" class="tiny">この軸が傾くだけで、左右差の読み取りは大きく変わります。</text>
+
+  <rect x="640" y="390" width="440" height="135" rx="24" class="card"/>
+  <text x="670" y="435" class="label">2. 左右の距離を比較する</text>
+  <text x="670" y="475" class="small">目、口角、輪郭の距離差が小さいほどスコアは上がりやすいです。</text>
+  <text x="670" y="505" class="tiny">ただし「完璧な左右一致」が魅力そのものを保証するわけではありません。</text>
+
+  <rect x="640" y="560" width="440" height="160" rx="24" class="card"/>
+  <text x="670" y="605" class="label">3. 写真条件が誤差を生む</text>
+  <text x="670" y="645" class="small">斜め顔、片側だけ暗い光、広角の近距離、髪で隠れた輪郭は誤差の原因です。</text>
+  <text x="670" y="675" class="tiny">AI の対称性スコアは、顔そのものの左右差と「その写真でどれだけ読み取りやすいか」の両方を反映します。</text>
+
+  <rect x="120" y="748" width="960" height="64" rx="18" fill="#eef6ff" stroke="#d5e3f5" stroke-width="2"/>
+  <text x="155" y="789" class="small">使い方のコツ: 正面、やわらかい前向きの光、輪郭が見える髪型、少し距離を取った撮影条件で比較する。</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Photo factors affecting face score</title>
+  <desc id="desc">Original SVG overview of six photo quality factors and estimated impact on AI face score accuracy.</desc>
+  <rect width="900" height="620" fill="#f7fbff"/>
+  <rect x="24" y="24" width="852" height="572" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#203047">
+    <text x="72" y="92" font-size="34" font-weight="700">6 photo factors that move the score most</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">Estimated ranges only. Better inputs help the AI read more accurately.</text>
+  </g>
+  <g transform="translate(72 170)" font-family="Arial, sans-serif">
+    <g>
+      <rect width="356" height="110" rx="20" fill="#fff8fc" stroke="#e1e8f4"/>
+      <text x="24" y="40" font-size="22" font-weight="700" fill="#203047">Lighting / 光</text>
+      <text x="24" y="68" font-size="16" fill="#64748b">Even front light raises landmark confidence the most</text>
+      <rect x="24" y="80" width="260" height="14" rx="7" fill="#e8eef8"/>
+      <rect x="24" y="80" width="208" height="14" rx="7" fill="#ff6ca7"/>
+      <text x="302" y="92" font-size="16" font-weight="700" fill="#8c2f5a">~30%</text>
+    </g>
+    <g transform="translate(372 0)">
+      <rect width="356" height="110" rx="20" fill="#fff" stroke="#e1e8f4"/>
+      <text x="24" y="40" font-size="22" font-weight="700" fill="#203047">Camera angle / 角度</text>
+      <text x="24" y="68" font-size="16" fill="#64748b">Frontal angle and enough distance reduce distortion</text>
+      <rect x="24" y="80" width="260" height="14" rx="7" fill="#e8eef8"/>
+      <rect x="24" y="80" width="176" height="14" rx="7" fill="#ff86b6"/>
+      <text x="302" y="92" font-size="16" font-weight="700" fill="#8c2f5a">~25%</text>
+    </g>
+    <g transform="translate(0 138)">
+      <rect width="356" height="110" rx="20" fill="#fff" stroke="#e1e8f4"/>
+      <text x="24" y="40" font-size="22" font-weight="700" fill="#203047">Expression / 表情</text>
+      <text x="24" y="68" font-size="16" fill="#64748b">Natural smile changes both impression and smile score</text>
+      <rect x="24" y="80" width="260" height="14" rx="7" fill="#e8eef8"/>
+      <rect x="24" y="80" width="144" height="14" rx="7" fill="#ff96c0"/>
+      <text x="302" y="92" font-size="16" font-weight="700" fill="#8c2f5a">~20%</text>
+    </g>
+    <g transform="translate(372 138)">
+      <rect width="356" height="110" rx="20" fill="#fff8fc" stroke="#e1e8f4"/>
+      <text x="24" y="40" font-size="22" font-weight="700" fill="#203047">Background / 背景</text>
+      <text x="24" y="68" font-size="16" fill="#64748b">Clean contrast helps the detector find one clear face</text>
+      <rect x="24" y="80" width="260" height="14" rx="7" fill="#e8eef8"/>
+      <rect x="24" y="80" width="72" height="14" rx="7" fill="#ffadc9"/>
+      <text x="302" y="92" font-size="16" font-weight="700" fill="#8c2f5a">~10%</text>
+    </g>
+    <g transform="translate(0 276)">
+      <rect width="356" height="110" rx="20" fill="#fff8fc" stroke="#e1e8f4"/>
+      <text x="24" y="40" font-size="22" font-weight="700" fill="#203047">Image quality / 画質</text>
+      <text x="24" y="68" font-size="16" fill="#64748b">Resolution and sharpness affect fine landmark placement</text>
+      <rect x="24" y="80" width="260" height="14" rx="7" fill="#e8eef8"/>
+      <rect x="24" y="80" width="72" height="14" rx="7" fill="#ffbed4"/>
+      <text x="302" y="92" font-size="16" font-weight="700" fill="#8c2f5a">~10%</text>
+    </g>
+    <g transform="translate(372 276)">
+      <rect width="356" height="110" rx="20" fill="#fff" stroke="#e1e8f4"/>
+      <text x="24" y="40" font-size="22" font-weight="700" fill="#203047">Filters / 加工</text>
+      <text x="24" y="68" font-size="16" fill="#64748b">Small edits can help readability, reshaping breaks accuracy</text>
+      <rect x="24" y="80" width="260" height="14" rx="7" fill="#e8eef8"/>
+      <rect x="24" y="80" width="110" height="14" rx="7" fill="#ffd1e2"/>
+      <text x="302" y="92" font-size="16" font-weight="700" fill="#8c2f5a">variable</text>
+    </g>
+  </g>
+  <text x="72" y="568" font-family="Arial, sans-serif" font-size="17" fill="#64748b">Numbers are editorial estimates. Model version, camera pipeline, and lighting conditions can shift the ranges.</text>
+</svg>

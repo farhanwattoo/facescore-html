@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 640" role="img" aria-labelledby="title desc">
+  <title id="title">Face thirds proportion diagram</title>
+  <desc id="desc">Original SVG showing the face divided into upper, middle, and lower thirds from hairline to chin.</desc>
+  <rect width="720" height="640" fill="#f8fbff"/>
+  <rect x="24" y="24" width="672" height="592" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
+  <g transform="translate(120 70)">
+    <ellipse cx="190" cy="230" rx="150" ry="205" fill="#fff8fc" stroke="#203047" stroke-width="5"/>
+    <line x1="40" y1="110" x2="340" y2="110" stroke="#ff6ca7" stroke-width="4" stroke-dasharray="10 10"/>
+    <line x1="40" y1="232" x2="340" y2="232" stroke="#ff6ca7" stroke-width="4" stroke-dasharray="10 10"/>
+    <line x1="40" y1="354" x2="340" y2="354" stroke="#ff6ca7" stroke-width="4" stroke-dasharray="10 10"/>
+    <text x="190" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#203047">Hairline</text>
+    <text x="190" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#8c2f5a">Brow line</text>
+    <text x="190" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#8c2f5a">Nose base</text>
+    <text x="190" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#8c2f5a">Chin base</text>
+    <path d="M125 198c18-16 44-16 62 0" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
+    <path d="M195 198c18-16 44-16 62 0" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
+    <path d="M120 236c20-12 52-12 74 0c-22 18-54 18-74 0Z" fill="#fff" stroke="#203047" stroke-width="4"/>
+    <path d="M186 236c20-12 52-12 74 0c-22 18-54 18-74 0Z" fill="#fff" stroke="#203047" stroke-width="4"/>
+    <path d="M188 238c12 20 12 44 0 66" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
+    <path d="M158 318c18 10 38 14 58 14s40-4 58-14" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g font-family="Arial, sans-serif" transform="translate(430 110)">
+    <rect width="208" height="96" rx="18" fill="#fff8fc" stroke="#e1e8f4"/>
+    <text x="18" y="34" font-size="20" font-weight="700" fill="#203047">Upper third</text>
+    <text x="18" y="60" font-size="15" fill="#64748b">Hairline to brow</text>
+    <text x="18" y="80" font-size="15" fill="#64748b">Forehead height</text>
+    <rect y="120" width="208" height="96" rx="18" fill="#fff" stroke="#e1e8f4"/>
+    <text x="18" y="154" font-size="20" font-weight="700" fill="#203047">Middle third</text>
+    <text x="18" y="180" font-size="15" fill="#64748b">Brow to nose base</text>
+    <text x="18" y="200" font-size="15" fill="#64748b">Eye-nose balance</text>
+    <rect y="240" width="208" height="96" rx="18" fill="#fff8fc" stroke="#e1e8f4"/>
+    <text x="18" y="274" font-size="20" font-weight="700" fill="#203047">Lower third</text>
+    <text x="18" y="300" font-size="15" fill="#64748b">Nose base to chin</text>
+    <text x="18" y="320" font-size="15" fill="#64748b">Lip and chin projection</text>
+  </g>
+  <text x="72" y="580" font-family="Arial, sans-serif" font-size="18" fill="#64748b">Used for vertical balance checks. Real faces vary, and the thirds work best as a descriptive guide.</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">NG photo checklist for face analysis</title>
+  <desc id="desc">Original tall SVG checklist of fifteen bad photo patterns that commonly reduce AI face analysis accuracy.</desc>
+  <rect width="900" height="1200" fill="#f7fbff"/>
+  <rect x="24" y="24" width="852" height="1152" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#203047">
+    <text x="72" y="92" font-size="36" font-weight="700">15 NG photo patterns to avoid</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">Shareable checklist for retesting a face score photo setup.</text>
+  </g>
+  <g transform="translate(72 176)" font-family="Arial, sans-serif" font-size="18">
+    <g>
+      <rect width="360" height="920" rx="20" fill="#fff9fb" stroke="#efdbe4"/>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#c62828">Avoid these</text>
+      <text x="24" y="92" fill="#203047">❌ Sunglasses</text><text x="24" y="120" fill="#64748b" font-size="15">Blocks eye landmarks and emotion reading</text>
+      <text x="24" y="170" fill="#203047">❌ Hat or bangs covering the forehead</text><text x="24" y="198" fill="#64748b" font-size="15">Hides upper landmarks and face thirds</text>
+      <text x="24" y="248" fill="#203047">❌ Multiple people in frame</text><text x="24" y="276" fill="#64748b" font-size="15">Detector may lock onto the wrong face</text>
+      <text x="24" y="326" fill="#203047">❌ Strong side profile</text><text x="24" y="354" fill="#64748b" font-size="15">Frontal landmark models lose too many points</text>
+      <text x="24" y="404" fill="#203047">❌ Backlight</text><text x="24" y="432" fill="#64748b" font-size="15">Turns the face into a dark silhouette</text>
+      <text x="24" y="482" fill="#203047">❌ Harsh shadows</text><text x="24" y="510" fill="#64748b" font-size="15">Skews symmetry and under-eye reading</text>
+      <text x="24" y="560" fill="#203047">❌ Blurry photo</text><text x="24" y="588" fill="#64748b" font-size="15">Drops landmark confidence across the face</text>
+      <text x="24" y="638" fill="#203047">❌ Tiny face in frame</text><text x="24" y="666" fill="#64748b" font-size="15">Not enough pixels for accurate landmarks</text>
+    </g>
+    <g transform="translate(396 0)">
+      <rect width="360" height="920" rx="20" fill="#fff9fb" stroke="#efdbe4"/>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#c62828">Also avoid</text>
+      <text x="24" y="92" fill="#203047">❌ Face slimming filter</text><text x="24" y="120" fill="#64748b" font-size="15">Directly changes the ratios being measured</text>
+      <text x="24" y="170" fill="#203047">❌ Extreme cosplay makeup</text><text x="24" y="198" fill="#64748b" font-size="15">Can overwrite natural edges and proportions</text>
+      <text x="24" y="248" fill="#203047">❌ Mask</text><text x="24" y="276" fill="#64748b" font-size="15">Removes nose and mouth data entirely</text>
+      <text x="24" y="326" fill="#203047">❌ Hand covering the face</text><text x="24" y="354" fill="#64748b" font-size="15">Occlusion breaks landmark placement</text>
+      <text x="24" y="404" fill="#203047">❌ Night shot in a dark room</text><text x="24" y="432" fill="#64748b" font-size="15">Noise and blur usually overwhelm the model</text>
+      <text x="24" y="482" fill="#203047">❌ Low-quality screenshot</text><text x="24" y="510" fill="#64748b" font-size="15">Compression damages fine facial detail</text>
+      <text x="24" y="560" fill="#203047">❌ Over-processed HDR</text><text x="24" y="588" fill="#64748b" font-size="15">Creates unnatural skin edges and halos</text>
+      <text x="24" y="638" fill="#203047">❌ Heavy stickers or AR effects</text><text x="24" y="666" fill="#64748b" font-size="15">Adds fake geometry around key landmarks</text>
+    </g>
+  </g>
+  <text x="72" y="1126" font-family="Arial, sans-serif" font-size="18" fill="#64748b">If one of these conditions appears, retesting with a clean setup is usually more useful than reading too much into the score.</text>
+</svg>

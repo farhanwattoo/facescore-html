@@ -8,6 +8,11 @@
         "build:css": "npx clean-css-cli@5.3.3 -O1 -o public/style-core.min.css public/style-core.css && npx clean-css-cli@5.3.3 -O1 -o public/style-pages.min.css public/style-pages.css",
         "build:images": "node scripts/build-hero-images.mjs",
         "audit": "node scripts/audit-site.mjs",
+        "audit:pillar1": "node scripts/audit-site.mjs --pillar=pillar1",
+        "audit:pillar2": "node scripts/audit-site.mjs --pillar=pillar2",
+        "audit:pillar3": "node scripts/audit-site.mjs --pillar=pillar3",
+        "audit:pillar4": "node scripts/audit-site.mjs --pillar=pillar4",
+        "audit:pillar5": "node scripts/audit-site.mjs --pillar=pillar5",
         "upgrade:inner": "python scripts/upgrade_inner_html.py && python scripts/fix_ld_graph.py",
         "build": "npm run build:css && npm run build:images"
     },

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">顔の黄金比イメージ図</title>
+  <desc id="desc">顔の縦横比、目の間隔、鼻幅と口幅、上中下顔面のバランスを示すオリジナル図解です。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fffafc"/>
+      <stop offset="100%" stop-color="#f4f8ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#ff9cc4"/>
+      <stop offset="100%" stop-color="#ff6ca7"/>
+    </linearGradient>
+    <style>
+      .panel { fill: #ffffff; stroke: #dbe4ef; stroke-width: 2; }
+      .guide { fill: none; stroke: #334155; stroke-width: 4; stroke-linecap: round; }
+      .soft { fill: none; stroke: #94a3b8; stroke-width: 3; stroke-dasharray: 10 10; }
+      .accent { fill: none; stroke: url(#accent); stroke-width: 8; stroke-linecap: round; }
+      .label { font-family: "Noto Sans JP", sans-serif; font-size: 28px; fill: #1f2937; font-weight: 700; }
+      .small { font-family: "Noto Sans JP", sans-serif; font-size: 22px; fill: #475569; }
+      .tiny { font-family: "Noto Sans JP", sans-serif; font-size: 18px; fill: #64748b; }
+      .tag { fill: #fff5fb; stroke: #ffc0d8; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="50" y="50" width="1100" height="800" rx="28" class="panel"/>
+
+  <text x="100" y="125" class="label">顔の黄金比は 1 つの「理想値」ではなく、調和を見るための補助線</text>
+  <text x="100" y="165" class="small">下の図は、顔分析でよく使われる比率を整理したオリジナルの説明用ダイアグラムです。</text>
+
+  <ellipse cx="420" cy="475" rx="170" ry="250" fill="#fff" stroke="#334155" stroke-width="6"/>
+  <line x1="420" y1="225" x2="420" y2="725" class="soft"/>
+  <line x1="300" y1="360" x2="540" y2="360" class="guide"/>
+  <line x1="300" y1="500" x2="540" y2="500" class="guide"/>
+  <line x1="300" y1="620" x2="540" y2="620" class="guide"/>
+  <line x1="250" y1="225" x2="250" y2="725" class="accent"/>
+  <line x1="590" y1="225" x2="590" y2="725" class="accent"/>
+  <line x1="275" y1="445" x2="565" y2="445" class="soft"/>
+
+  <ellipse cx="360" cy="405" rx="36" ry="20" fill="none" stroke="#334155" stroke-width="5"/>
+  <ellipse cx="480" cy="405" rx="36" ry="20" fill="none" stroke="#334155" stroke-width="5"/>
+  <circle cx="360" cy="405" r="7" fill="#334155"/>
+  <circle cx="480" cy="405" r="7" fill="#334155"/>
+  <path d="M420 430 C400 470 395 500 395 525" class="guide"/>
+  <path d="M392 560 C415 575 425 575 448 560" class="guide"/>
+
+  <rect x="650" y="220" width="430" height="135" rx="24" class="tag"/>
+  <text x="680" y="265" class="label">1. 顔全体の縦横比</text>
+  <text x="680" y="305" class="small">顔の高さと幅のバランスを見る代表的な基準。</text>
+  <text x="680" y="335" class="tiny">完全一致を目指すより、縦長すぎ・横広すぎに見えない範囲を確認します。</text>
+  <line x1="590" y1="270" x2="650" y2="270" class="accent"/>
+
+  <rect x="650" y="385" width="430" height="135" rx="24" class="tag"/>
+  <text x="680" y="430" class="label">2. 目と目の間隔</text>
+  <text x="680" y="470" class="small">顔幅に対して目の中心間距離がどう見えるか。</text>
+  <text x="680" y="500" class="tiny">角度やレンズ歪みで大きく変わるため、正面写真で比較するのが前提です。</text>
+  <line x1="516" y1="405" x2="650" y2="435" class="accent"/>
+
+  <rect x="650" y="550" width="430" height="135" rx="24" class="tag"/>
+  <text x="680" y="595" class="label">3. 鼻幅と口幅</text>
+  <text x="680" y="635" class="small">鼻翼の幅、口角の広がり、下顔面との釣り合いを見ます。</text>
+  <text x="680" y="665" class="tiny">単独の数値より、下顔面全体の印象と一緒に読むのが重要です。</text>
+  <line x1="448" y1="560" x2="650" y2="600" class="accent"/>
+
+  <rect x="120" y="740" width="960" height="72" rx="18" fill="#eef6ff" stroke="#d5e3f5" stroke-width="2"/>
+  <text x="155" y="785" class="small">上顔面・中顔面・下顔面の3分割、目の配置、鼻と口の関係はよく使われますが、魅力は対称性・表情・肌・文化差も含めて判断されます。</text>
+</svg>

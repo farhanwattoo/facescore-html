@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
+# Block development and translation artefacts
+Disallow: /debug.txt
+Disallow: /titles.txt
+Disallow: /text_to_translate.txt
+Disallow: /text_to_translate2.txt
+Disallow: /text_to_translate3.txt
+Disallow: /text_to_translate_remaining.txt
+Disallow: /Tower-Security.txt
+Disallow: /fix_footers.py
+Disallow: /fix_lang.py
+Disallow: /fix_remaining.py
+Disallow: /translate_batch_1.py
+Disallow: /translate_final_batch.py
+Disallow: /translate_pages.py
+Disallow: /translate_patch.py
+Disallow: /translate_patch_2.py
+Disallow: /screencapture-zerogpt-2026-04-15-10_29_37.png
+Disallow: /index.php
+
 Sitemap: https://face-score.net/sitemap.xml

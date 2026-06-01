@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Filter recommendation traffic light</title>
+  <desc id="desc">Original SVG comparing safe edits, caution edits, and not recommended filters for AI face analysis photos.</desc>
+  <rect width="900" height="620" fill="#f7fbff"/>
+  <rect x="24" y="24" width="852" height="572" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#203047">
+    <text x="72" y="92" font-size="34" font-weight="700">Filter and edit recommendation guide</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">The goal is cleaner data, not tricking the model.</text>
+  </g>
+  <g transform="translate(72 182)" font-family="Arial, sans-serif">
+    <g>
+      <rect width="232" height="282" rx="20" fill="#f8fff9" stroke="#d8eadf"/>
+      <circle cx="116" cy="58" r="26" fill="#2e7d32"/>
+      <text x="116" y="66" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">OK</text>
+      <text x="24" y="118" font-size="22" font-weight="700" fill="#203047">Recommended</text>
+      <text x="24" y="152" font-size="16" fill="#64748b">Small brightness lift</text>
+      <text x="24" y="180" font-size="16" fill="#64748b">Mild contrast correction</text>
+      <text x="24" y="208" font-size="16" fill="#64748b">Natural light makeup</text>
+      <text x="24" y="236" font-size="16" fill="#64748b">Minor crop after shooting farther away</text>
+    </g>
+    <g transform="translate(262 0)">
+      <rect width="232" height="282" rx="20" fill="#fffdf8" stroke="#ebe4d7"/>
+      <circle cx="116" cy="58" r="26" fill="#d5a14a"/>
+      <text x="116" y="66" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">!</text>
+      <text x="24" y="118" font-size="22" font-weight="700" fill="#203047">Use with caution</text>
+      <text x="24" y="152" font-size="16" fill="#64748b">Beauty smoothing on low strength</text>
+      <text x="24" y="180" font-size="16" fill="#64748b">Portrait blur if the face edge stays clean</text>
+      <text x="24" y="208" font-size="16" fill="#64748b">Heavy eyeliner if retests stay consistent</text>
+      <text x="24" y="236" font-size="16" fill="#64748b">HDR if skin texture still looks natural</text>
+    </g>
+    <g transform="translate(524 0)">
+      <rect width="232" height="282" rx="20" fill="#fff9fb" stroke="#efdbe4"/>
+      <circle cx="116" cy="58" r="26" fill="#c62828"/>
+      <text x="116" y="66" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">NO</text>
+      <text x="24" y="118" font-size="22" font-weight="700" fill="#203047">Avoid</text>
+      <text x="24" y="152" font-size="16" fill="#64748b">Face slimming / reshaping</text>
+      <text x="24" y="180" font-size="16" fill="#64748b">Animal ears, stickers, character filters</text>
+      <text x="24" y="208" font-size="16" fill="#64748b">Extreme skin blur</text>
+      <text x="24" y="236" font-size="16" fill="#64748b">Over-brightening that erases facial edges</text>
+    </g>
+  </g>
+  <text x="72" y="534" font-family="Arial, sans-serif" font-size="17" fill="#64748b">Reshaping filters change landmark ratios directly, so they hurt both fairness and repeatable measurement the most.</text>
+</svg>

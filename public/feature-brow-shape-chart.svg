@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Brow shape chart</title>
+  <desc id="desc">Original SVG comparing straight, soft arch, high arch, angled, and rounded eyebrow shapes.</desc>
+  <rect width="720" height="420" fill="#f8fbff"/>
+  <rect x="24" y="24" width="672" height="372" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#203047">
+    <text x="72" y="86" font-size="32" font-weight="700">Brow shape reference</text>
+    <text x="72" y="116" font-size="17" fill="#64748b">Useful for reading brow-eye distance, symmetry, and grooming clarity.</text>
+  </g>
+  <g transform="translate(70 162)" font-family="Arial, sans-serif" stroke="#203047" fill="none" stroke-width="6" stroke-linecap="round">
+    <g transform="translate(0 0)">
+      <path d="M0 30c28-6 72-6 98 0"/>
+      <text x="8" y="86" fill="#203047" font-size="15" stroke="none" font-weight="700">Straight</text>
+    </g>
+    <g transform="translate(122 0)">
+      <path d="M0 34c20-20 44-22 98 0"/>
+      <text x="2" y="86" fill="#203047" font-size="15" stroke="none" font-weight="700">Soft arch</text>
+    </g>
+    <g transform="translate(252 0)">
+      <path d="M0 42c20-34 46-42 98 0"/>
+      <text x="8" y="86" fill="#203047" font-size="15" stroke="none" font-weight="700">High arch</text>
+    </g>
+    <g transform="translate(382 0)">
+      <path d="M0 46l54-24 44 16"/>
+      <text x="10" y="86" fill="#203047" font-size="15" stroke="none" font-weight="700">Angled</text>
+    </g>
+    <g transform="translate(512 0)">
+      <path d="M0 46c16-18 32-28 48-28s34 10 50 28"/>
+      <text x="6" y="86" fill="#203047" font-size="15" stroke="none" font-weight="700">Rounded</text>
+    </g>
+  </g>
+  <g transform="translate(92 268)" font-family="Arial, sans-serif" fill="#64748b">
+    <text x="0" y="0" font-size="16">AI usually tracks brow endpoints, inner brow height, and the peak of the arch.</text>
+    <text x="0" y="28" font-size="16">Clear grooming improves landmark stability more than it changes the actual anatomy.</text>
+  </g>
+</svg>

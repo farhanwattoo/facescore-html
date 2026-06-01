@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-labelledby="title desc">
+  <title id="title">68-point facial landmark map</title>
+  <desc id="desc">An original labeled SVG showing jaw, brows, nose, eyes, and mouth zones in a 68-point landmark model.</desc>
+  <rect width="800" height="640" fill="#f8fbff"/>
+  <rect x="24" y="24" width="752" height="592" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
+  <g transform="translate(120 60)">
+    <ellipse cx="280" cy="250" rx="168" ry="210" fill="#fff8fc" stroke="#203047" stroke-width="5"/>
+    <path d="M210 188c26-22 64-22 90 0" fill="none" stroke="#203047" stroke-width="5" stroke-linecap="round"/>
+    <path d="M360 188c26-22 64-22 90 0" fill="none" stroke="#203047" stroke-width="5" stroke-linecap="round"/>
+    <path d="M210 240c28-18 64-18 92 0c-28 18-64 18-92 0Z" fill="#fff" stroke="#203047" stroke-width="4"/>
+    <path d="M358 240c28-18 64-18 92 0c-28 18-64 18-92 0Z" fill="#fff" stroke="#203047" stroke-width="4"/>
+    <circle cx="256" cy="240" r="9" fill="#ff6ca7"/>
+    <circle cx="404" cy="240" r="9" fill="#ff6ca7"/>
+    <path d="M330 236c14 24 14 50 0 76" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
+    <path d="M309 324c18 10 42 14 68 14s50-4 68-14" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
+    <path d="M260 378c42 22 96 34 150 34s108-12 150-34" fill="none" stroke="#203047" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#8c2f5a">
+      <circle cx="150" cy="200" r="5"/><circle cx="170" cy="255" r="5"/><circle cx="195" cy="310" r="5"/>
+      <circle cx="230" cy="360" r="5"/><circle cx="280" cy="405" r="5"/><circle cx="340" cy="430" r="5"/>
+      <circle cx="400" cy="430" r="5"/><circle cx="460" cy="405" r="5"/><circle cx="510" cy="360" r="5"/>
+      <circle cx="545" cy="310" r="5"/><circle cx="570" cy="255" r="5"/><circle cx="590" cy="200" r="5"/>
+      <circle cx="225" cy="176" r="5"/><circle cx="250" cy="164" r="5"/><circle cx="278" cy="160" r="5"/>
+      <circle cx="304" cy="164" r="5"/><circle cx="329" cy="176" r="5"/>
+      <circle cx="365" cy="176" r="5"/><circle cx="392" cy="164" r="5"/><circle cx="420" cy="160" r="5"/>
+      <circle cx="448" cy="164" r="5"/><circle cx="476" cy="176" r="5"/>
+      <circle cx="325" cy="196" r="5"/><circle cx="328" cy="222" r="5"/><circle cx="330" cy="250" r="5"/>
+      <circle cx="332" cy="278" r="5"/><circle cx="334" cy="304" r="5"/>
+      <circle cx="286" cy="300" r="5"/><circle cx="306" cy="292" r="5"/><circle cx="330" cy="288" r="5"/>
+      <circle cx="354" cy="292" r="5"/><circle cx="374" cy="300" r="5"/>
+      <circle cx="217" cy="240" r="5"/><circle cx="235" cy="226" r="5"/><circle cx="256" cy="222" r="5"/>
+      <circle cx="277" cy="226" r="5"/><circle cx="295" cy="240" r="5"/><circle cx="256" cy="248" r="5"/>
+      <circle cx="367" cy="240" r="5"/><circle cx="385" cy="226" r="5"/><circle cx="404" cy="222" r="5"/>
+      <circle cx="425" cy="226" r="5"/><circle cx="443" cy="240" r="5"/><circle cx="404" cy="248" r="5"/>
+      <circle cx="285" cy="352" r="5"/><circle cx="315" cy="344" r="5"/><circle cx="345" cy="341" r="5"/>
+      <circle cx="375" cy="344" r="5"/><circle cx="405" cy="352" r="5"/><circle cx="375" cy="370" r="5"/>
+      <circle cx="345" cy="370" r="5"/><circle cx="315" cy="365" r="5"/><circle cx="435" cy="365" r="5"/>
+    </g>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#203047" font-weight="700">
+    <text x="84" y="130">Jaw 1-17</text>
+    <text x="92" y="178" fill="#64748b" font-size="17" font-weight="500">Face shape and width-height ratio</text>
+    <text x="78" y="256">Brows 18-27</text>
+    <text x="78" y="304" fill="#64748b" font-size="17" font-weight="500">Brow arch, spacing, brow-eye distance</text>
+    <text x="560" y="132">Eyes 37-48</text>
+    <text x="560" y="180" fill="#64748b" font-size="17" font-weight="500">Eye width, eye aspect ratio, corner angle</text>
+    <text x="558" y="258">Nose 28-36</text>
+    <text x="558" y="306" fill="#64748b" font-size="17" font-weight="500">Bridge, nostril width, tip position</text>
+    <text x="555" y="384">Mouth 49-68</text>
+    <text x="555" y="432" fill="#64748b" font-size="17" font-weight="500">Lip ratio, mouth width, smile intensity</text>
+    <text x="84" y="524">dlib 68-point model: sparse landmark map used for ratio-based face analysis</text>
+  </g>
+</svg>

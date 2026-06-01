@@ -1,569 +1,112 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>【2026年最新】顔のランドマークの10のポイント完全ガイド！特徴点とAI診断。。。。。。。。。。。。。。。。</title>
-<meta content="顔のランドマーク, AI顔分析, 顔認識技術, 測定ポイント, 仕組み" name="keywords"/>
-<meta content="【2026年版】顔のランドマークに関する詳細情報。10の基準や特徴点、AI認識、そして顔の構造についてAI技術を用いて正確に解説します。より高いスコアを目指すための究極のガイド。今すぐチェックして、あなたの魅力を最大限に引き出しましょう！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！" name="description"/>
+<title>AIランドマーク技術詳細解説｜dlib 68-pointとMediaPipe Face Meshをやさしく図解【2026年版】</title>
+<meta content="顔ランドマーク 解説, facial landmarks AI detection, dlib 68 point, MediaPipe Face Mesh 468 478, 顔 座標 検出" name="keywords"/>
+<meta content="AIランドマーク技術を技術寄りに解説。dlib 68-point、MediaPipe Face Mesh系、座標の読み方、ズレやすい条件を図解で整理します。" name="description"/>
 <link href="https://face-score.net/facial-landmarks-explained.html" rel="canonical"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet"/>
 <link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet"/>
+<link href="style-cluster.css?v=20260528-pillar4" rel="stylesheet"/>
 <link href="intent-tools.css?v=20260415-stylefix2" rel="stylesheet"/>
-<noscript><link href="style-core.min.css?v=20260415-stylefix2" rel="stylesheet"/><link href="style-pages.min.css?v=20260415-stylefix2" rel="stylesheet"/></noscript>
-<meta content="顔のランドマーク解説 | AIは顔をどう分析しているか" property="og:title"/>
-<meta content="AIはどうやって顔の特徴を検出しているのか？顔のランドマーク、測定ポイント、分析プロセスの仕組みを詳しく解説します。" property="og:description"/>
+<meta content="AIランドマーク技術詳細解説｜dlib 68-pointとMediaPipe Face Meshをやさしく図解" property="og:title"/>
+<meta content="68点モデルと高密度Face Mesh系を、日本語で図解しながら説明する技術サポートページです。" property="og:description"/>
 <meta content="article" property="og:type"/>
-<style>
-      .article-page {
-        max-width: 1040px;
-      }
-      .article-hero {
-        background: linear-gradient(135deg, #fff, #f8fbff);
-        border: 1px solid #e6edf7;
-        border-radius: 18px;
-        padding: 1.7rem;
-        box-shadow: 0 18px 42px rgba(16, 24, 40, 0.08);
-        margin-bottom: 1.25rem;
-      }
-      .eyebrow,
-      .tool-label {
-        display: inline-flex;
-        border-radius: 999px;
-        background: rgba(255, 126, 179, 0.12);
-        color: #a82d67;
-        padding: 0.34rem 0.72rem;
-        font-size: 0.82rem;
-        font-weight: 800;
-        margin-bottom: 0.8rem;
-      }
-      .article-hero h1 {
-        display: block;
-        font-size: clamp(2rem, 4vw, 3rem);
-        line-height: 1.15;
-        letter-spacing: 0;
-        margin: 0 0 0.85rem;
-      }
-      .lead,
-      .article-body p {
-        color: #4f5d73;
-        line-height: 1.9;
-        margin: 0.75rem 0 0;
-      }
-      .article-body h2 {
-        margin-top: 2rem;
-        padding-bottom: 0.55rem;
-        border-bottom: 2px solid rgba(255, 126, 179, 0.18);
-        font-size: 1.45rem;
-        line-height: 1.35;
-      }
-      .summary-list {
-        background: #f8fbff;
-        border: 1px solid #dce8f8;
-        border-radius: 14px;
-        padding: 1rem 1.2rem 1rem 2rem;
-        color: #4f5d73;
-        line-height: 1.75;
-      }
-      .jump-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7rem;
-        margin-top: 1rem;
-      }
-      .jump-links a {
-        border: 1px solid #dbe4ef;
-        background: #fff;
-        border-radius: 999px;
-        padding: 0.5rem 0.82rem;
-        text-decoration: none;
-        color: #44556d;
-        font-weight: 700;
-        font-size: 0.92rem;
-      }
-      .intent-tool label {
-        display: grid;
-        gap: 0.4rem;
-        font-weight: 700;
-        color: #334155;
-      }
-      @media (max-width: 760px) {
-        .nav-container,
-        .nav-links {
-          flex-wrap: wrap;
-        }
-        .article-hero,
-        .trust-section {
-          padding: 1.1rem;
-        }
-      }
-    </style>
-<script id="static-seo-schema" type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "email": "support@face-score.net",
-            "name": "Face Score AI",
-            "@id": "https://face-score.net/#organization",
-            "logo": "https://face-score.net/favicon.svg",
-            "@type": "Organization",
-            "url": "https://face-score.net",
-            "telephone": "+1-415-555-0198",
-            "sameAs": [
-              "https://twitter.com/facescoreai",
-              "https://www.facebook.com/facescoreai",
-              "https://www.linkedin.com/company/facescoreai",
-              "https://www.youtube.com/@facescoreai",
-              "https://www.instagram.com/facescoreai",
-              "https://www.pinterest.com/facescoreai",
-              "https://www.tiktok.com/@facescoreai"
-            ],
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-415-555-0198",
-              "email": "support@face-score.net",
-              "contactType": "customer support",
-              "availableLanguage": ["English", "Japanese"]
-            }
-          },
-          {
-            "name": "Face Score AI",
-            "@id": "https://face-score.net/#website",
-            "publisher": { "@id": "https://face-score.net/#organization" },
-            "@type": "WebSite",
-            "url": "https://face-score.net",
-            "potentialAction": {
-              "query-input": "required name=search_term_string",
-              "target": "https://face-score.net/sitemap.html?q={search_term_string}",
-              "@type": "SearchAction"
-            }
-          },
-          {
-            "@id": "https://face-score.net/facial-landmarks-explained.html#webpage",
-            "@type": "WebPage",
-            "url": "https://face-score.net/facial-landmarks-explained.html",
-            "name": "顔のランドマーク解説 | AIは顔をどう分析しているか",
-            "description": "AIはどうやって顔の特徴を検出しているのか？顔のランドマーク、測定ポイント、分析プロセスの仕組みを詳しく解説します。",
-            "inLanguage": "ja",
-            "dateModified": "2026-04-15",
-            "isPartOf": { "@id": "https://face-score.net/#website" }
-          },
-          {
-            "mainEntity": [
-              {
-                "acceptedAnswer": {
-                  "text": "このセクションでは、ツールが1枚の画像から合理的に読み取れることと、人について知ることができないことについて説明します。永続的な判断基準としてではなく、実用的な写真のガイダンスとして使用してください。",
-                  "@type": "Answer"
-                },
-                "name": "記事の流れ：このガイドで扱う内容?",
-                "@type": "Question"
-              },
-              {
-                "acceptedAnswer": {
-                  "text": "写真の品質は、ユーザーが予想する以上にほとんどの顔分析結果を変化させます。ぼかし、圧縮、影、フィルター、極端なカメラの角度はすべて、顔のモデルを不安定にする可能性があります。",
-                  "@type": "Answer"
-                },
-                "name": "2. How does it work?",
-                "@type": "Question"
-              },
-              {
-                "acceptedAnswer": {
-                  "text": "スコアは、目に見えるシグナルに基づく推定値として読み取る必要があります。性格、自信、優しさ、声、動き、文化、現実世界の相性を測定することはできません。",
-                  "@type": "Answer"
-                },
-                "name": "3. なぜ写真の品質が重要なのか？?",
-                "@type": "Question"
-              },
-              {
-                "acceptedAnswer": {
-                  "text": "顔画像は個人的なものであるため、プライバシーは重要です。ユーザーは、写真がブラウザで処理されるか、サーバーにアップロードされるか、保存されるか、または分析後に削除されるかを知っておく必要があります。",
-                  "@type": "Answer"
-                },
-                "name": "4. どの設定が結果を改善するか？?",
-                "@type": "Question"
-              }
-            ],
-            "@id": "https://face-score.net/facial-landmarks-explained.html#faq",
-            "@type": "FAQPage"
-          },
-          {
-            "itemListElement": [
-              {
-                "position": 1,
-                "url": "https://face-score.net/",
-                "name": "Home",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 2,
-                "url": "https://face-score.net/how-it-works.html",
-                "name": "How It Works",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 3,
-                "url": "https://face-score.net/accuracy-limitations.html",
-                "name": "Accuracy and Limits",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 4,
-                "url": "https://face-score.net/editorial-guidelines.html",
-                "name": "Editorial Guidelines",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 5,
-                "url": "https://face-score.net/sitemap.html",
-                "name": "HTML Sitemap",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 6,
-                "url": "https://face-score.net/rss.xml",
-                "name": "RSS Feed",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 7,
-                "url": "https://face-score.net/ai-face-analysis.html",
-                "name": "AI Face Analysis",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 8,
-                "url": "https://face-score.net/photo-face-rating.html",
-                "name": "Photo Face Rating",
-                "@type": "SiteNavigationElement"
-              },
-              {
-                "position": 9,
-                "url": "https://face-score.net/contact.html",
-                "name": "Contact",
-                "@type": "SiteNavigationElement"
-              }
-            ],
-            "name": "Site Navigation",
-            "@id": "https://face-score.net/#site-navigation",
-            "@type": "ItemList"
-          }
-        ]
-      }
-    </script>
-<link href="rss.xml" rel="alternate" title="Face Score AI RSS Feed" type="application/rss+xml"/>
-<script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "ホーム",
-                    "item": "https://face-score.net/"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "顔のランドマーク",
-                    "item": "https://face-score.net/facial-landmarks-explained.html"
-                }
-            ]
-        }
-        </script>
-<script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "【2026年最新】顔のランドマークの10のポイント完全ガイド！特徴点とAI診断。。。。。。。。。。。。。。。。",
-            "image": "https://face-score.net/ganmen-hensachi-keyword.webp",
-            "author": {
-                "@type": "Organization",
-                "name": "顔スコアAI編集部",
-                "url": "https://face-score.net/team.html"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Face Score AI",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://face-score.net/favicon.svg"
-                }
-            },
-            "datePublished": "2026-04-15T08:00:00+08:00",
-            "dateModified": "2026-04-22T14:16:20.179754"
-        }
-        </script>
 </head>
 <body class="inner-page">
 <nav class="navbar">
 <div class="nav-container">
-<a class="nav-logo" href="">顔スコアAI</a>
+<a class="nav-logo" href="/">顔スコアAI</a>
 <ul class="nav-links">
 <li><a href="index.html">ホーム</a></li>
 <li><a href="ai-face-analysis.html">AI顔分析</a></li>
-<li><a href="face-attractiveness-test.html">魅力度テスト</a></li>
-<li><a href="how-it-works.html">仕組み</a></li>
-<li><a href="accuracy-limitations.html">精度と限界</a></li>
+<li><a href="顔-パーツ-ランドマーク-解説.html">顔パーツ解説</a></li>
 <li><a href="about.html">運営情報</a></li>
 </ul>
 </div>
 </nav>
-<main class="container page-content professional-inner article-page">
-<section class="article-hero">
-<p class="eyebrow"><strong>顔のランドマーク</strong>は、実践ガイドとツール</p>
-<h1>【2026年】顔のランドマークを徹底解説！10の秘訣とは？</h1>
-<div class="article-meta" style="margin-bottom: 2rem; color: #666; font-size: 0.9rem;">
-<span>公開日: <time datetime="2026-04-15">2026年4月15日</time></span> | 
-    <span>著者: <a href="team.html" style="color:var(--primary); font-weight:bold;">顔スコアAI編集部</a></span>
+<main class="container page-content professional-inner cluster-page">
+<section class="cluster-hero">
+<p class="cluster-eyebrow">Pillar 2 &amp; 4 Support Page</p>
+<h1>AIランドマーク技術詳細解説｜dlib 68-pointとMediaPipe Face Meshをやさしく図解</h1>
+<div class="cluster-meta">
+<span>公開日: <time datetime="2026-05-28">2026年5月28日</time></span>
+<span>ツールハブ: <a href="ai-face-analysis.html">AI顔診断 無料</a></span>
+<span>図解ハブ: <a href="顔-パーツ-ランドマーク-解説.html">顔のパーツ完全解説</a></span>
 </div>
-<div class="table-of-contents" style="background:#f9f9f9; padding:20px; margin:20px 0; border:1px solid #ccc;"><h3>目次 (Table of Contents)</h3><ul><li><a href="#heading-0">顔のランドマーク写真準備状況チェッカー</a></li><li><a href="#heading-1">記事の流れ：このガイドで扱う内容?</a></li><li><a href="#heading-2">2. How does it work?</a></li><li><a href="#heading-3">3. なぜ写真の品質が重要なのか？?</a></li><li><a href="#heading-4">4. どの設定が結果を改善するか？?</a></li><li><a href="#heading-5">5. What should you avoid?</a></li><li><a href="#heading-6">6. How accurate is the result?</a></li><li><a href="#heading-7">7. プライバシーはどう扱うべきか？?</a></li><li><a href="#heading-8">8. AIは役立つ推奨事項を提供できるか？?</a></li><li><a href="#heading-9">9. 結果はどう解釈されるべきか？?</a></li><li><a href="#heading-10">10. What is the healthiest way to use it?</a></li><li><a href="#summary">覚えておくべき最も重要なこと</a></li></ul></div>
-<p class="lead">
-          顔のランドマークは、AIシステムが構造、表情、向き、動きを検出するのに役立つ、顔の重要なポイントです。
-        </p>
-<p class="lead">
-          この記事は、実践的な手順を提供し、限界を説明し、スコアについて考えすぎずに機能を使用するのに役立つため、読む価値があります。
-        </p>
-<div class="jump-links">
-<a href="#tool">Tool</a><a href="#outline">Outline</a><a href="#summary">Summary</a>
-</div>
+<p class="cluster-lead">顔ランドマークは、AI顔診断の「見えない土台」です。年齢推定や笑顔スコアより手前で、まず目頭、目尻、鼻先、口角、顎先といった基準点が置かれ、その座標から比率や左右差が計算されます。このページでは、一般向けの顔パーツ解説より少し技術寄りに、dlib 68-point と MediaPipe Face Mesh系の違い、どこでズレるのか、どう読むと実装理解につながるのかをまとめます。</p>
 </section>
-<section class="trust-section intent-tool" data-guidance-tool="" id="tool">
-<span class="tool-label">クイック品質チェッカー</span>
-<h2 id="heading-0">顔のランドマーク写真準備状況チェッカー</h2>
-<div class="intent-tool__grid two">
-<label>照明の品質<input max="100" min="0" type="range" value="72"/></label><label>カメラの角度<input max="100" min="0" type="range" value="70"/></label><label>Face visibility<input max="100" min="0" type="range" value="76"/></label><label>編集レベル<select>
-<option data-score="82">ナチュラル</option>
-<option data-score="62">軽いフィルター</option>
-<option data-score="38">強いフィルター</option>
-</select></label>
-</div>
-<button class="btn btn-secondary" data-guidance-run="" type="button">
-          準備状況を確認する
-        </button>
-<div class="intent-tool__result" data-guidance-result="">
-          このクイックチェッカーを使用して、写真のセットアップが安定した推定を生成する可能性が高いかどうかを確認してください。
-        </div>
-</section>
-<article class="trust-section article-body">
-<section id="outline">
-<h2 id="heading-1">記事の流れ：このガイドで扱う内容?</h2>
-<p>
-            このセクションでは、ツールが1枚の画像から合理的に読み取れるものと、人物について知ることができないことを説明します。永続的な判断としてではなく、実用的な写真のガイダンスとして使用してください。
-          </p>
-<p>
-            通常、より良い結果は明瞭な入力から始まります。柔らかい光、正面からの角度、はっきりと見える顔の特徴、最小限の編集です。結果に驚いた場合は、結論を出す前に写真を撮り直してください。
-          </p>
-</section>
-<h2 id="heading-2">2. How does it work?</h2>
-<p>
-          写真の品質は、ユーザーが予想する以上にほとんどの顔分析結果を変化させます。ぼかし、圧縮、影、フィルター、極端なカメラの角度はすべて、顔のモデルを不安定にする可能性があります。
-        </p>
-<p>
-          結果を比較する最も安全な方法は、毎回同等の条件を使用することです。カメラの距離、照明、表情、トリミングを一定に保つことで、ツールはセットアップのノイズではなく安定して顔を読み取ります。
-        </p>
-<h2 id="heading-3">3. なぜ写真の品質が重要なのか？?</h2>
-<p>
-          スコアは、目に見える兆候に基づく推定値として読み取ってください。性格、自信、優しさ、声、動き、文化、または現実世界の相性を測定することはできません。
-        </p>
-<p>
-          フィードバックを使用して、より強力な写真を選択し、ある画像が別の画像よりもうまく機能する理由を理解し、1つの数値について考えすぎないようにしてください。
-        </p>
-<h2 id="heading-4">4. どの設定が結果を改善するか？?</h2>
-<p>
-          顔画像は個人的なものであるため、プライバシーは重要です。ユーザーは、写真がブラウザで処理されるか、サーバーにアップロードされるか、保存されるか、または分析後に削除されるかを知っておく必要があります。
-        </p>
-<p>
-          同意なしに他人の顔をアップロードしないでください。身元確認、年齢確認、医療判断などの機密性の高いユースケースについては、カジュアルなウェブツールではなく、適格なサービスを使用してください。
-        </p>
-<h2 id="heading-5">5. What should you avoid?</h2>
-<p>
-          有用な結果は、数値だけでなく文脈を提供します。信頼度、可能性のある入力の問題、および照明の改善や強いフィルターの削減などの簡単な次のステップを説明する必要があります。
-        </p>
-<p>
-          目標は、スコアが不完全であってもページを役立つものにすることです。明確な制限は、誇張された主張よりも多くの信頼を築きます。
-        </p>
-<h2 id="heading-6">6. How accurate is the result?</h2>
-<p>
-          このセクションでは、ツールが1枚の画像から合理的に読み取れるものと、人物について知ることができないことを説明します。永続的な判断としてではなく、実用的な写真のガイダンスとして使用してください。
-        </p>
-<p>
-          通常、より良い結果は明瞭な入力から始まります。柔らかい光、正面からの角度、はっきりと見える顔の特徴、最小限の編集です。結果に驚いた場合は、結論を出す前に写真を撮り直してください。
-        </p>
-<h2 id="heading-7">7. プライバシーはどう扱うべきか？?</h2>
-<p>
-          写真の品質は、ユーザーが予想する以上にほとんどの顔分析結果を変化させます。ぼかし、圧縮、影、フィルター、極端なカメラの角度はすべて、顔のモデルを不安定にする可能性があります。
-        </p>
-<p>
-          結果を比較する最も安全な方法は、毎回同等の条件を使用することです。カメラの距離、照明、表情、トリミングを一定に保つことで、ツールはセットアップのノイズではなく安定して顔を読み取ります。
-        </p>
-<h2 id="heading-8">8. AIは役立つ推奨事項を提供できるか？?</h2>
-<p>
-          スコアは、目に見える兆候に基づく推定値として読み取ってください。性格、自信、優しさ、声、動き、文化、または現実世界の相性を測定することはできません。
-        </p>
-<p>
-          フィードバックを使用して、より強力な写真を選択し、ある画像が別の画像よりもうまく機能する理由を理解し、1つの数値について考えすぎないようにしてください。
-        </p>
-<h2 id="heading-9">9. 結果はどう解釈されるべきか？?</h2>
-<p>
-          顔画像は個人的なものであるため、プライバシーは重要です。ユーザーは、写真がブラウザで処理されるか、サーバーにアップロードされるか、保存されるか、または分析後に削除されるかを知っておく必要があります。
-        </p>
-<p>
-          同意なしに他人の顔をアップロードしないでください。身元確認、年齢確認、医療判断などの機密性の高いユースケースについては、カジュアルなウェブツールではなく、適格なサービスを使用してください。
-        </p>
-<h2 id="heading-10">10. What is the healthiest way to use it?</h2>
-<p>
-          有用な結果は、数値だけでなく文脈を提供します。信頼度、可能性のある入力の問題、および照明の改善や強いフィルターの削減などの簡単な次のステップを説明する必要があります。
-        </p>
-<p>
-          目標は、スコアが不完全であってもページを役立つものにすることです。明確な制限は、誇張された主張よりも多くの信頼を築きます。
-        </p>
-<h2 id="summary">覚えておくべき最も重要なこと</h2>
-<ul class="summary-list">
-<li>Use clear, well-lit photos.</li>
-<li>AIの結果は推定値であり、最終的な判断ではありません。</li>
-<li>
-            画像をアップロードする前にプライバシーを念頭に置いてください。
-          </li>
-<li>類似の条件下で結果を比較します。</li>
-<li>
-            自分の価値を判断するためではなく、写真を改善するためにアドバイスを使用してください。
-          </li>
-</ul>
-</article>
-<table style="width:100%; border-collapse:collapse; margin: 20px 0;">
-<tr style="background:#f1f1f1;"><th style="border:1px solid #ccc; padding:8px;">項目</th><th style="border:1px solid #ccc; padding:8px;">詳細</th></tr>
-<tr><td style="border:1px solid #ccc; padding:8px;">顔のランドマーク</td><td style="border:1px solid #ccc; padding:8px;">特徴点</td></tr>
-<tr><td style="border:1px solid #ccc; padding:8px;">関連指標</td><td style="border:1px solid #ccc; padding:8px;">AI認識</td></tr>
-</table>
-<div class="definition-format" style="background:#fff; padding:15px; border-left:4px solid var(--primary); margin:20px 0;">
-<dl>
-<dt><strong>顔のランドマークとは？ (定義)</strong></dt>
-<dd>特徴点やAI認識を活用し、客観的に評価する仕組みのことです。</dd>
-</dl>
-</div>
 
-<section class="lsi-depth-section article-content" style="margin-top: 3rem; border-top: 2px solid #eee; padding-top: 2rem;">
-<h2>深掘り解説：関連する重要なキーワード (顔のランドマークなど)</h2>
-<p>このページに関連する重要な概念とLSIキーワード（潜在的意味索引）を深く理解することで、トピック全体のコンテキストを把握できます。以下のキーワードは、高度なAI分析と正確な評価に不可欠です。</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-<div style="background: #f8fbff; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0;">
-<h3 style="margin-top:0; font-size: 1.1rem; color: var(--primary);"><strong>顔のランドマーク</strong> と <strong>特徴点</strong></h3>
-<p style="font-size: 0.9rem; margin-bottom:0;">基本的な概念であり、分析の基礎となります。精度を高めるためには、この2つの要素を正確に測定することが不可欠です。</p>
+<section class="cluster-section intent-tool intent-tool--primary tool-shell" data-guidance-tool="">
+<span class="tool-label">ランドマーク安定性チェック</span>
+<h2>座標検出が安定しそうかを先に見る</h2>
+<p class="cluster-lead">技術解説を読む前に、写真条件の良し悪しがどれくらいランドマーク安定性へ響くかを軽く確認しておくと理解しやすくなります。これはモデル品質ではなく、入力品質のチェックです。</p>
+<div class="intent-tool__grid two">
+<label>正面性<input max="100" min="0" type="range" value="82"/></label>
+<label>顔の大きさ<input max="100" min="0" type="range" value="76"/></label>
+<label>明るさ<input max="100" min="0" type="range" value="74"/></label>
+<label>遮蔽物の少なさ<input max="100" min="0" type="range" value="78"/></label>
 </div>
-<div style="background: #f8fbff; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0;">
-<h3 style="margin-top:0; font-size: 1.1rem; color: var(--primary);"><strong>AI認識</strong> と <strong>顔の構造</strong></h3>
-<p style="font-size: 0.9rem; margin-bottom:0;">これらは高度なアルゴリズムによって計算されます。AIは膨大なデータセットを使用して、これらの指標を客観的に評価します。</p>
-</div>
-<div style="background: #f8fbff; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0;">
-<h3 style="margin-top:0; font-size: 1.1rem; color: var(--primary);"><strong>目鼻立ち</strong> と <strong>ポイント抽出</strong></h3>
-<p style="font-size: 0.9rem; margin-bottom:0;">心理学的・視覚的な観点から重要視されるキーワードです。人間の脳が直感的に認識する美しさや魅力を数値化します。</p>
-</div>
-<div style="background: #f8fbff; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0;">
-<h3 style="margin-top:0; font-size: 1.1rem; color: var(--primary);"><strong>ランドマーク検出</strong> と <strong>顔の輪郭</strong></h3>
-<p style="font-size: 0.9rem; margin-bottom:0;">実用的な応用例や基準を示します。客観的な指標として、多くのシステムや研究で採用されている概念です。</p>
-</div>
-</div>
-<div style="margin-top: 2rem; padding: 1.5rem; background: #fff; border-left: 4px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-<h3 style="margin-top:0;">その他の関連概念</h3>
-<p>さらに包括的な理解のために、<strong>パーツの位置関係</strong> や <strong>マッピング</strong> といった要素も考慮する必要があります。これらを総合的に分析することで、最も信頼性の高い結果が得られます。</p>
+<div class="row"><button class="btn btn-secondary" data-guidance-run="" type="button">ランドマーク安定性を確認</button></div>
+<div class="intent-tool__result" data-guidance-result="">ランドマーク検出の前提条件を簡単に確認できます。</div>
+</section>
+
+<article class="cluster-section">
+<h2>dlib 68-point はなぜ今もよく参照される？</h2>
+<p>dlib の68点モデルは、顔特徴点の教育用サンプルとして今も非常にわかりやすい存在です。jaw 17点、眉 10点、鼻 9点、目 12点、口 20点という構成で、どのパーツに何点あるかが直感的です。開発者や解説記事がこのモデルを参照し続ける理由は、顔パーツと点群の対応関係を学びやすいからです。顔型、眼間距離、鼻幅、口幅のような ratio-based な説明との相性もよく、軽量な実験にも使いやすい枠組みです。</p>
+<p>ただし 68点は sparse です。頬のふくらみ、唇の厚み、額の曲面のような細かな形状までは十分に表現できません。そのため、教育用には優秀でも、ブラウザ上で滑らかに表情変化を追う用途では、より高密度なメッシュのほうが有利です。</p>
+
+<figure class="science-figure">
+<img alt="68 point facial landmarks dlib 顔ランドマーク 解説 図" src="feature-landmark-map-68.svg"/>
+<figcaption>68点モデルのゾーン別マップです。jaw・brow・nose・eye・mouth という基本ブロックが明確なので、AIがどこを測るかを学ぶ導入として非常に使いやすい構成です。</figcaption>
+</figure>
+
+<h2>MediaPipe Face Mesh系は何が違う？</h2>
+<p>MediaPipe Face Mesh 系は、ブラウザやモバイル上で高速に顔の高密度トラッキングを行うために広く使われてきました。旧 Face Mesh 文脈では 468 点がよく参照され、現行の Face Landmarker task 文脈では 478 点出力を扱うケースもあります。数字が混在して見えるのは実装系統の違いによるものです。ここで大切なのは、68点よりもずっと細かい輪郭と表情の動きを取れることです。</p>
+<p>高密度メッシュは、頬や唇、目まわりの曲線をなめらかに追えるため、リアルタイム UI や表情追跡に向いています。一方で、点が多いぶん「どの点がどの指標に使われるのか」を説明しないと、ユーザーにはブラックボックスに見えやすくなります。そのため、教育コンテンツでは 68点を地図として見せつつ、実装では高密度メッシュを使う、という構成がバランスを取りやすいです。</p>
+
+<h2>ランドマーク座標はどう比率に変換される？</h2>
+<p>座標そのものは x, y の点列ですが、顔分析ではこの点を距離、角度、比率に変換して解釈します。目頭と目尻の距離は目幅、左右の目頭間は眼間距離、鼻翼の外側は鼻幅、口角間は口幅、顎先と生え際の距離は顔の縦長感に結びつきます。左右対応する点同士の差を見ると、対称性の参考値も作れます。つまり、ランドマークはゴールではなく、各指標の計算材料です。</p>
+<p>この変換で最も重要なのは、どの写真条件なら比較可能かを理解することです。異なる照明、異なるレンズ、異なる表情で取った数値は、骨格差と撮影差が混ざります。だから実用面では、数値そのものより「条件をそろえたときにどう変わるか」を見る方が役立ちます。</p>
+
+<h2>ランドマークがズレやすい条件は何か</h2>
+<p>ズレやすい条件の代表は、強い逆光、極端な斜め顔、顔が小さすぎる画像、片側だけ髪やマスクで隠れる状態、近距離広角による歪みです。眉や顎先が切れているだけでも、輪郭点や brow points の配置が不安定になります。さらに、濃いメイクやフィルターは、AIにとって「輪郭線を変える情報」として働くことがあります。</p>
+<p>そのため、ランドマーク技術を理解すると、結果に納得がいかないときに「モデルがおかしい」と感じる前に、「入力条件に何が混ざったか」を考えられるようになります。これはユーザーにとっても、技術ブログからリンクされるページにとっても大きな価値です。</p>
+
+<h2>顔パーツ解説とどうつながる？</h2>
+<p>このページは技術寄りですが、最終的にはユーザー向けの顔パーツ解説へ戻ることが大切です。68点と高密度メッシュの違いを理解したあとで <a href="顔-パーツ-ランドマーク-解説.html">顔のパーツ完全解説</a> を読むと、目・鼻・口・顎・輪郭の各セクションが「どの座標から作られている説明なのか」が見えやすくなります。逆に、ツール用途から入りたい人は <a href="ai-face-analysis.html">AI顔診断 無料</a> へ戻ると、実際の画面で点の意味を確認できます。</p>
+
+<h2>技術用語をユーザー向けに言い換える視点</h2>
+<p>ランドマーク解説で避けたいのは、難しい技術名だけを並べて終わることです。ユーザーにとって本当に知りたいのは、「どこが測られ」「なぜ結果が変わり」「どうすれば比較しやすくなるか」です。だから、開発者が 68-point と Face Mesh を知っているだけでなく、その差がどのパーツ説明にどう翻訳されるかを示すことが、技術的権威とユーザー理解の両方に効きます。</p>
+</article>
+
+<section class="cluster-section" id="faq">
+<h2>FAQ</h2>
+<div class="faq-grid">
+<div class="faq-item"><h3>68点と468点はどちらが正しいのですか？</h3><p>どちらも文脈が違うだけで正しいです。68点は dlib 系の代表的な特徴点モデル、468点は旧 Face Mesh 系でよく参照される高密度メッシュです。新しい task 文脈では 478 点出力を扱う実装もあります。</p></div>
+<div class="faq-item"><h3>点が多いほど必ず精度が高いですか？</h3><p>必ずではありません。点が多いと細部は取りやすくなりますが、説明可能性や処理量の問題も増えます。用途に応じて、わかりやすさ重視なら68点、細かなトラッキング重視なら高密度メッシュが向きます。</p></div>
+<div class="faq-item"><h3>ランドマークがズレたら何が起きますか？</h3><p>目幅、鼻幅、口角角度、対称性など、その後の比率計算がすべて影響を受けます。だからランドマークは顔診断の前提条件です。</p></div>
+<div class="faq-item"><h3>次に読むならどこですか？</h3><p>一般向けの全体像なら <a href="顔-パーツ-ランドマーク-解説.html">顔のパーツ完全解説</a>、ツールとして体験したいなら <a href="ai-face-analysis.html">AI顔診断 無料</a> が次の読み先です。</p></div>
 </div>
 </section>
-<div class="internal-links" style="margin:20px 0;">
-<h3>関連記事</h3>
-<ul><li><a href="index.html">トップページに戻る</a></li><li><a href="how-it-works.html">仕組みを見る</a></li></ul>
+
+<section class="cluster-section">
+<h2>関連記事</h2>
+<div class="hub-links">
+<a class="hub-link" href="顔-パーツ-ランドマーク-解説.html"><strong>顔のパーツ完全解説</strong><p>ランドマークの意味を、目・鼻・口・輪郭の具体的な読み方へ戻して確認できます。</p></a>
+<a class="hub-link" href="ai-face-analysis.html"><strong>AI顔診断 無料</strong><p>技術解説のあとに、実際のツール画面で体験したい人向けのハブです。</p></a>
+<a class="hub-link" href="face-symmetry-guide.html"><strong>顔の対称性ガイド</strong><p>左右対応点の差がどのように対称性指標へ変換されるかを詳しく見られます。</p></a>
 </div>
-<div class="social-share" style="margin: 2rem 0; padding: 1rem; background: #f8fbff; border-radius: 8px;">
-<strong>シェアする:</strong>
-<a href="#" style="margin-left:10px; color:#1da1f2; text-decoration:none;">[Twitter]</a>
-<a href="#" style="margin-left:10px; color:#4267B2; text-decoration:none;">[Facebook]</a>
-<a href="#" style="margin-left:10px; color:#0077b5; text-decoration:none;">[LinkedIn]</a>
-</div>
-<div class="article-sources" style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee;">
-<h3>参考文献・ソース (Sources)</h3>
-<ul>
-<li>Face Analysis Technology Guidelines 2026</li>
-<li>AI Recognition Standards Institute</li>
-<li>Psychological Aspects of Facial Attractiveness Research</li>
-</ul>
-</div>
+</section>
 </main>
 <footer class="site-footer">
-<div class="footer-content">
-<a class="footer-logo" href="">顔スコアAI</a>
-<div class="footer-directory">
-<div class="footer-column">
-<h4>おすすめのAI診断</h4>
-<a href="index.html">総合AI顔診断</a>
-<a href="ai-face-analysis.html">AI顔分析</a>
-<a href="face-attractiveness-test.html">顔の魅力度テスト</a>
-<a href="photo-face-rating.html">写真顔評価</a>
-<a href="face-comparison-tool.html">顔比較ツール</a>
-<a href="random-face-score-generator.html">ランダム顔スコア</a>
-<a href="golden-ratio-face.html">黄金比テスト</a>
-<a href="hotness-scale-test.html">ホットネススケール</a>
-</div>
-<div class="footer-column">
-<h4>詳細分析機能</h4>
-<a href="smile-expression-analysis.html">笑顔・表情分析</a>
-<a href="age-estimation-ai.html">年齢推定AI</a>
-<a href="golden-ratio-face-analysis.html">顔の黄金比分析</a>
-</div>
-<div class="footer-column">
-<h4>ガイド・解説記事</h4>
-<a href="how-it-works.html">仕組みについて</a>
-<a href="how-face-score-works.html">顔スコアの仕組み</a>
-<a href="accuracy-limitations.html">精度と限界</a>
-<a href="selfie-photo-quality-guide.html">自撮り写真ガイド</a>
-<a href="facial-landmarks-explained.html">顔のランドマーク</a>
-<a href="face-symmetry-guide.html">顔の対称性ガイド</a>
-<a href="what-makes-you-attractive.html">魅力の特徴</a>
-</div>
-<div class="footer-column">
-<h4>サポートと組織情報</h4>
-<a href="about.html">当サイトについて</a>
-<a href="team.html">運営チーム</a>
-<a href="editorial-guidelines.html">編集ガイドライン</a>
-<a href="privacy.html">プライバシーポリシー</a>
-<a href="terms.html">利用規約</a>
-<a href="contact.html">お問い合わせ</a>
-<a href="sitemap.html">HTMLサイトマップ</a>
-</div>
-</div>
-<form action="/sitemap.html" class="footer-search" id="site-search-form" role="search">
-<label for="site-search-input">顔スコアAIのツールとガイドを検索</label>
-<input aria-label="顔スコアAIを検索" id="site-search-input" name="q" placeholder="ツール、ガイド、ポリシーを検索" type="search"/>
-<button type="submit">検索</button>
-</form>
-<div class="footer-trust">
-<div class="footer-contact">
-<span>Email:
-              <a href="mailto:support@face-score.net">support@face-score.net</a></span>
-<span>Phone: <a href="tel:+14155550198">+1 (415) 555-0198</a></span>
-</div>
-<div aria-label="ソーシャルメディアリンク" class="footer-social">
-<a href="https://twitter.com/facescoreai" rel="nofollow noopener" target="_blank">Twitter/X</a>
-<a href="https://www.facebook.com/facescoreai" rel="nofollow noopener" target="_blank">Facebook</a>
-<a href="https://www.linkedin.com/company/facescoreai" rel="nofollow noopener" target="_blank">LinkedIn</a>
-<a href="https://www.youtube.com/@facescoreai" rel="nofollow noopener" target="_blank">YouTube</a>
-<a href="https://www.instagram.com/facescoreai" rel="nofollow noopener" target="_blank">Instagram</a>
-<a href="https://www.pinterest.com/facescoreai" rel="nofollow noopener" target="_blank">Pinterest</a>
-<a href="https://www.tiktok.com/@facescoreai" rel="nofollow noopener" target="_blank">TikTok</a>
-</div>
-<div class="footer-legal">
-<a class="dmca-badge" href="https://www.dmca.com/Protection/Status.aspx" rel="nofollow noopener" target="_blank">DMCA Protected</a>
-<span>Copyright © 2026 顔スコアAI. All rights reserved.</span>
-</div>
-</div>
-</div>
+<div class="footer-content"><a class="footer-logo" href="/">顔スコアAI</a></div>
 </footer>
-<button aria-label="Back to top" class="back-to-top" id="back-to-top">
-      Top
-    </button>
-<script defer="" src="intent-tools.js?v=20260415-stylefix2"></script>
-<script defer="" src="site.js?v=20260415-seo-meta2"></script>
+<button aria-label="Back to top / ページ上部へ戻る" class="back-to-top" id="back-to-top">トップ</button>
+<script defer="" src="site.js?v=20260528-pillar4"></script>
+<script defer="" src="intent-tools.js?v=20260528-pillar4"></script>
 </body>
 </html>

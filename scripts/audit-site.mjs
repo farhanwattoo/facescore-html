@@ -33,6 +33,62 @@ const supportPages = new Set([
   'sitemap.html',
   'how-it-works.html'
 ]);
+const pillarPages = {
+  pillar1: [
+    'index.html',
+    'how-face-score-works.html',
+    'selfie-photo-quality-guide.html',
+    'golden-ratio-face-analysis.html',
+    'face-symmetry-guide.html',
+    'accuracy-limitations.html',
+    '顔面偏差値-平均.html',
+    '顔面偏差値-上げる方法.html',
+    '顔面偏差値-男女別ランキング.html'
+  ],
+  pillar2: [
+    'ai-face-analysis.html',
+    'photo-face-rating.html',
+    'face-attractiveness-test.html',
+    'face-comparison-tool.html',
+    'hotness-scale-test.html',
+    'age-estimation-ai.html',
+    'smile-expression-analysis.html',
+    'facial-landmarks-explained.html'
+  ],
+  pillar3: [
+    '顔-黄金比-美しさの科学.html',
+    'golden-ratio-face-analysis.html',
+    'face-symmetry-guide.html',
+    'attractiveness-psychology.html',
+    'beauty-standards-by-culture.html',
+    'averageness-face-attractiveness.html',
+    'evolutionary-psychology-beauty.html',
+    'smile-attractiveness-science.html',
+    'skin-quality-attractiveness.html'
+  ],
+  pillar4: [
+    '顔-パーツ-ランドマーク-解説.html',
+    'eye-shape-types-guide.html',
+    'face-shape-types.html',
+    'nose-shape-attractiveness.html',
+    'lip-ratio-guide.html',
+    'jawline-face-shape-guide.html',
+    'eyebrow-shape-attractiveness.html',
+    'facial-landmarks-explained.html',
+    'face-thirds-proportions.html'
+  ],
+  pillar5: [
+    '自撮り-顔写真-完全ガイド.html',
+    'selfie-lighting-guide.html',
+    'best-camera-angle-face.html',
+    'natural-smile-guide.html',
+    'filter-effect-face-score.html',
+    'smartphone-selfie-setup.html',
+    'professional-vs-selfie-score.html',
+    'face-analysis-bad-photos.html',
+    'makeup-effect-face-score.html'
+  ]
+};
 
 function stripTags(html) {
   return html
@@ -49,13 +105,63 @@ function count(pattern, html) {
 
 function wordCount(html) {
   const text = stripTags(html);
+
+  if (typeof Intl?.Segmenter === 'function') {
+    const segmenter = new Intl.Segmenter('ja', { granularity: 'word' });
+    let total = 0;
+
+    for (const segment of segmenter.segment(text)) {
+      if (segment.isWordLike) total += 1;
+    }
+
+    return total;
+  }
+
   return (text.match(/[A-Za-z0-9\u3040-\u30ff\u3400-\u9fff]+/g) || []).length;
 }
 
-const files = (await readdir(publicDir))
+function collectSitemapPaths(xml) {
+  const locMatches = xml.match(/<loc>([^<]+)<\/loc>/gi) || [];
+  const paths = new Set();
+
+  for (const entry of locMatches) {
+    const loc = entry.replace(/<\/?loc>/gi, '').trim();
+
+    try {
+      const pathname = new URL(loc).pathname;
+      paths.add(pathname);
+      paths.add(decodeURIComponent(pathname));
+    } catch {
+      paths.add(loc);
+
+      try {
+        paths.add(decodeURIComponent(loc));
+      } catch {
+        // Ignore malformed percent-encoding and keep the raw value.
+      }
+    }
+  }
+
+  return paths;
+}
+
+const args = process.argv.slice(2);
+const explicitFiles = [];
+
+for (const arg of args) {
+  if (!arg.startsWith('--')) explicitFiles.push(arg);
+}
+
+const presetArg = args.find((arg) => arg.startsWith('--pillar='));
+const presetName = presetArg ? presetArg.split('=')[1] : '';
+const presetFiles = presetArg ? pillarPages[presetName] || [] : [];
+const selectedFiles = new Set([...presetFiles, ...explicitFiles]);
+const allFiles = (await readdir(publicDir))
   .filter((file) => /\.(html|php)$/i.test(file))
   .sort();
+const files = selectedFiles.size ? allFiles.filter((file) => selectedFiles.has(file)) : allFiles;
 const sitemap = await readFile(path.join(publicDir, 'sitemap.xml'), 'utf8').catch(() => '');
+const sitemapPaths = collectSitemapPaths(sitemap);
 
 const findings = [];
 const rows = [];
@@ -70,7 +176,7 @@ for (const file of files) {
   const hasToolScript = /intent-tools\.js/i.test(html) || /upload-area/i.test(html) || /data-simple-tool/i.test(html) || /querySelector\(['"]\.tool-result['"]\)/i.test(html);
   const shouldHaveTool = toolNamePattern.test(file) && !nonToolPages.has(file);
   const placeholders = placeholderPatterns.filter((pattern) => pattern.test(html)).map(String);
-  const inSitemap = file === 'index.php' || file === 'index.html' || sitemap.includes(`/${file}`);
+  const inSitemap = file === 'index.php' || file === 'index.html' || sitemapPaths.has(`/${file}`) || sitemapPaths.has(file);
   const requiredWords = supportPages.has(file) ? supportMinWords : guideMinWords;
 
   rows.push({ file, words, h1, h2, hasToolMarkup, hasSiteJs, inSitemap });
