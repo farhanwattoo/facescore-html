@@ -609,6 +609,31 @@
   }
 </style>
 <link href="rss.xml" rel="alternate" title="Face Score AI RSS Feed" type="application/rss+xml"/>
+<style id="tool-hero-styles">
+.tool-hero-top{background:linear-gradient(160deg,#fff0f7 0%,#f0f4ff 60%,#fffaff 100%);border:1px solid rgba(255,126,179,.18);border-radius:20px;padding:2rem 2rem 1.5rem;margin:1.5rem 0 0;text-align:center}
+.tool-hero-headline h1{font-size:2rem;font-weight:800;color:#1e293b;margin-bottom:.5rem;line-height:1.2}
+.tool-hero-sub{font-size:1rem;color:#64748b;margin-bottom:1.4rem;line-height:1.6}
+.main-tool-wrapper{max-width:640px;margin:0 auto}
+.upload-area--hero{background:#fff;border:2.5px dashed rgba(255,126,179,.5);border-radius:18px;padding:2.5rem 1.5rem;cursor:pointer;transition:border-color .2s,background .2s}
+.upload-area--hero:hover{border-color:var(--primary);background:#fff8fb}
+.upload-icon{font-size:3rem;margin-bottom:.75rem}
+.upload-main-text{font-size:1.1rem;color:#1e293b;line-height:1.6;margin-bottom:.5rem}
+.upload-area--hero .sub-text{font-size:.87rem;color:#94a3b8;margin-bottom:1rem}
+.btn-upload-cta{display:inline-block;background:var(--primary,#ff7eb3);color:#fff;border:none;padding:.75rem 2rem;border-radius:999px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:.25rem;transition:background .2s,transform .1s}
+.btn-upload-cta:hover{background:#e0629f;transform:translateY(-1px)}
+.privacy-note{margin-top:1rem;font-size:.82rem;color:#64748b}
+.tools-quicknav{background:#fff;border:1px solid #e6edf7;border-radius:16px;padding:1rem 1.2rem;margin:1rem 0;box-shadow:0 4px 16px rgba(15,23,42,.04)}
+.tools-quicknav-label{font-size:.78rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.7rem}
+.tools-quicknav-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:.6rem}
+.tool-nav-card{display:flex;flex-direction:column;align-items:center;gap:.3rem;padding:.6rem .3rem;border:1px solid #e6edf7;border-radius:12px;text-decoration:none;transition:border-color .15s,background .15s,transform .1s;background:#fafbfd}
+.tool-nav-card:hover{border-color:rgba(255,126,179,.45);background:#fff4f9;transform:translateY(-2px)}
+.tool-nav-icon{font-size:1.5rem}
+.tool-nav-name{font-size:.72rem;font-weight:700;color:#44556d;text-align:center}
+.pillar-article-title{font-size:1.5rem;line-height:1.35;margin-bottom:.9rem;padding-bottom:0;border-bottom:none;font-weight:700}
+@media(max-width:900px){.tools-quicknav-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){.tool-hero-top{padding:1.2rem 1rem 1rem}.tool-hero-headline h1{font-size:1.45rem}.upload-area--hero{padding:1.5rem 1rem}.upload-icon{font-size:2.2rem}.tools-quicknav-grid{grid-template-columns:repeat(4,1fr)}.tool-nav-icon{font-size:1.2rem}}
+@media(max-width:380px){.tools-quicknav-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
 </head>
 <body class="home-page">
 <nav class="navbar">
@@ -625,108 +650,102 @@
 </div>
 </nav>
 <main class="container home-layout">
-<section class="hero-card pillar-hero">
-<p class="hero-badge"><strong>顔面偏差値とは</strong>を、平均・分布・AI診断の読み方まで1ページで整理</p>
-<h1>顔面偏差値とは？平均・計算方法・70点80点の目安までAI診断で解説</h1>
-<div class="article-meta">
-<span>公開日: <time datetime="2026-05-28">2026年5月28日</time></span>
-<span>更新日: <time datetime="2026-05-28">2026年5月28日</time></span>
-<span>著者: <a href="team.html" style="color:var(--primary); font-weight:700;">顔スコアAI編集部</a></span>
-<span>編集方針: <a href="editorial-guidelines.html" style="color:var(--primary); font-weight:700;">編集ガイドライン</a></span>
-</div>
-<p class="hero-lead">「顔面偏差値」とは、顔の印象や写りを数字で言い表したいときに使われるネット俗語です。ただし、学校の偏差値のように全国共通の計算式があるわけではありません。SNSの会話で使う意味、AI顔診断サイトで使う意味、そして本来の偏差値の意味が混ざりやすいため、まずはそこを整理しておくと検索意図にまっすぐ答えられます。</p>
-<p class="hero-lead">このページでは、顔面偏差値の意味、平均の考え方、AIがどこを見てスコア化するのか、70点・80点がどの程度の目安なのか、無料ツールの使い方、スコアを改善しやすい撮影のコツ、心理学と美の科学までを日本語でまとめました。上から順番に読むと、単なる数字の見方ではなく、なぜ結果が揺れるのかまで理解できます。</p>
-<div class="hero-summary-grid">
-<div class="hero-summary-card">
-<strong>先に結論</strong>
-<p>厳密な偏差値なら平均は50ですが、AI顔診断サイトの参考スコアは必ずしも50平均ではありません。</p>
-</div>
-<div class="hero-summary-card">
-<strong>このツールの軸</strong>
-<p>本サイトは1枚の写真から左右対称性と笑顔強度を中心に読み取り、参考スコアを表示します。</p>
-</div>
-<div class="hero-summary-card">
-<strong>70点の目安</strong>
-<p>70点台は高めです。写真条件と顔の読み取りが両方安定しているケースで出やすくなります。</p>
-</div>
-<div class="hero-summary-card">
-<strong>80点の目安</strong>
-<p>80点以上はかなり少数です。顔立ちだけでなく、光・角度・画質の良さも強く影響します。</p>
-</div>
-</div>
-<div class="toc-panel">
-<h2>このページの目次</h2>
-<ul class="toc-list">
-<li><a href="#tool-top">無料AI顔面偏差値診断</a></li>
-<li><a href="#meaning">顔面偏差値の意味と仕組み</a></li>
-<li><a href="#calculation">AIの計算方法</a></li>
-<li><a href="#distribution">平均・分布チャート</a></li>
-<li><a href="#high-score">70点・80点以上の特徴</a></li>
-<li><a href="#tool-guide">無料ツールの使い方</a></li>
-<li><a href="#improve">スコアを上げる方法</a></li>
-<li><a href="#science">心理学・美の科学</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#summary">まとめ</a></li>
-</ul>
-</div>
+
+<!-- TOOL HERO: FIRST THING USERS SEE -->
+<section class="tool-hero-top" id="tool-top">
+  <div class="tool-hero-headline">
+    <h1>顔面偏差値を無料AI診断</h1>
+    <p class="tool-hero-sub">写真1枚で顔のバランス・笑顔強度・推定年齢・感情をAIが瞬時に分析。無料・登録不要・写真の保存なし。</p>
+  </div>
+  <div class="main-tool-wrapper" data-analyzer="">
+    <div class="upload-area upload-area--hero" data-upload-area="">
+      <div class="upload-content">
+        <div class="upload-icon" aria-hidden="true">📷</div>
+        <p class="upload-main-text">写真をドラッグ＆ドロップ<br>または <strong>クリックして選択</strong></p>
+        <p class="sub-text">JPEG・PNG・WEBP対応 ／ ブラウザ内処理・保存なし</p>
+        <button class="btn btn-upload-cta" type="button">写真を選んで診断スタート</button>
+      </div>
+      <input accept="image/*" capture="user" data-file-input="" hidden="" type="file"/>
+    </div>
+    <div class="hidden" data-loading="">
+      <div class="spinner"></div>
+      <div class="progress-container"><div class="progress-bar" data-progress-bar=""></div></div>
+      <p data-loading-text="">AIが解析中...</p>
+      <p class="loading-sub">顔のランドマークを検出しています</p>
+    </div>
+    <div class="hidden error-card" data-error-message=""></div>
+    <div class="hidden results-area" data-results-area="">
+      <div class="image-preview"><canvas data-result-canvas=""></canvas></div>
+      <div class="stats-grid">
+        <div class="stat-card primary">
+          <p class="stat-heading">総合判定</p>
+          <div class="score-value" data-score-val="">-</div>
+          <div class="score-stars" data-score-stars=""></div>
+          <div class="jp-label">総合スコア</div>
+        </div>
+        <div class="stat-card"><p class="stat-heading">年齢</p><div class="stat-value" data-age-val="">-</div></div>
+        <div class="stat-card"><p class="stat-heading">性別</p><div class="stat-value" data-gender-val="">-</div></div>
+        <div class="stat-card"><p class="stat-heading">感情</p><div class="stat-value" data-emotion-val="">-</div></div>
+        <div class="stat-card"><p class="stat-heading">シンメトリー</p><div class="stat-value" data-symmetry-val="">-</div></div>
+        <div class="stat-card"><p class="stat-heading">笑顔</p><div class="stat-value" data-smile-val="">-</div></div>
+      </div>
+      <div class="action-buttons">
+        <button class="btn btn-secondary" data-download-btn="">結果画像を保存</button>
+        <button class="btn btn-twitter" data-share-x-btn="">Xでシェア</button>
+        <button class="btn" data-reset-btn="">別の写真を診断</button>
+      </div>
+    </div>
+  </div>
+  <p class="privacy-note">🔒 写真はブラウザ内のみで処理 — サーバーへの送信・保存は一切ありません</p>
 </section>
 
-<section class="analyzer-card" data-analyzer="" id="tool-top">
-<h2>無料AI顔面偏差値診断ツール</h2>
-<p class="tool-lead">まずは写真1枚で現在の写りをチェックできます。診断はブラウザ内で行われ、左右対称性、笑顔、推定年齢、性別、表情を表示します。1回だけで判断するより、同じ条件で3枚ほど撮って比較すると傾向がつかみやすくなります。</p>
-<div class="upload-area" data-upload-area="">
-<div class="upload-content">
-<p>画像をドラッグ＆ドロップ または <strong>クリックして選択</strong></p>
-<p class="sub-text">対応形式: JPEG, PNG, WEBP</p>
-</div>
-<input accept="image/*" capture="user" data-file-input="" hidden="" type="file"/>
-</div>
-<div class="hidden" data-loading="">
-<div class="spinner"></div>
-<div class="progress-container">
-<div class="progress-bar" data-progress-bar=""></div>
-</div>
-<p data-loading-text="">AIが解析中...</p>
-<p class="loading-sub">画像特徴点を抽出しています</p>
-</div>
-<div class="hidden error-card" data-error-message=""></div>
-<div class="hidden results-area" data-results-area="">
-<div class="image-preview"><canvas data-result-canvas=""></canvas></div>
-<div class="stats-grid">
-<div class="stat-card primary">
-<p class="stat-heading">総合判定</p>
-<div class="score-value" data-score-val="">-</div>
-<div class="score-stars" data-score-stars=""></div>
-<div class="jp-label">総合スコア</div>
-</div>
-<div class="stat-card">
-<p class="stat-heading">年齢</p>
-<div class="stat-value" data-age-val="">-</div>
-</div>
-<div class="stat-card">
-<p class="stat-heading">性別</p>
-<div class="stat-value" data-gender-val="">-</div>
-</div>
-<div class="stat-card">
-<p class="stat-heading">感情</p>
-<div class="stat-value" data-emotion-val="">-</div>
-</div>
-<div class="stat-card">
-<p class="stat-heading">シンメトリー</p>
-<div class="stat-value" data-symmetry-val="">-</div>
-</div>
-<div class="stat-card">
-<p class="stat-heading">笑顔</p>
-<div class="stat-value" data-smile-val="">-</div>
-</div>
-</div>
-<div class="action-buttons">
-<button class="btn btn-secondary" data-download-btn="">結果画像を保存</button>
-<button class="btn btn-twitter" data-share-x-btn="">Xでシェア</button>
-<button class="btn" data-reset-btn="">別の写真を診断</button>
-</div>
-</div>
+<!-- OTHER TOOLS QUICK-NAV -->
+<nav class="tools-quicknav" aria-label="その他のAI診断ツール">
+  <p class="tools-quicknav-label">その他のAI診断ツール</p>
+  <div class="tools-quicknav-grid">
+    <a class="tool-nav-card" href="ai-face-analysis.html"><span class="tool-nav-icon">🔍</span><span class="tool-nav-name">AI顔分析</span></a>
+    <a class="tool-nav-card" href="face-attractiveness-test.html"><span class="tool-nav-icon">✨</span><span class="tool-nav-name">魅力度テスト</span></a>
+    <a class="tool-nav-card" href="face-comparison-tool.html"><span class="tool-nav-icon">⚖️</span><span class="tool-nav-name">顔比較ツール</span></a>
+    <a class="tool-nav-card" href="golden-ratio-face.html"><span class="tool-nav-icon">📐</span><span class="tool-nav-name">黄金比テスト</span></a>
+    <a class="tool-nav-card" href="smile-expression-analysis.html"><span class="tool-nav-icon">😊</span><span class="tool-nav-name">笑顔分析</span></a>
+    <a class="tool-nav-card" href="age-estimation-ai.html"><span class="tool-nav-icon">🎂</span><span class="tool-nav-name">年齢推定AI</span></a>
+    <a class="tool-nav-card" href="hotness-scale-test.html"><span class="tool-nav-icon">🔥</span><span class="tool-nav-name">ホットネス</span></a>
+    <a class="tool-nav-card" href="photo-face-rating.html"><span class="tool-nav-icon">📸</span><span class="tool-nav-name">写真評価</span></a>
+  </div>
+</nav>
+
+<!-- PILLAR ARTICLE CONTENT: BELOW THE FOLD -->
+<section class="hero-card pillar-hero" id="article-start">
+  <p class="hero-badge"><strong>顔面偏差値とは</strong>を、平均・分布・AI診断の読み方まで1ページで整理</p>
+  <h2 class="pillar-article-title">顔面偏差値とは？平均・計算方法・70点80点の目安までAI診断で解説</h2>
+  <div class="article-meta">
+    <span>公開日: <time datetime="2026-05-28">2026年5月28日</time></span>
+    <span>更新日: <time datetime="2026-05-28">2026年5月28日</time></span>
+    <span>著者: <a href="team.html" style="color:var(--primary);font-weight:700;">顔スコアAI編集部</a></span>
+    <span>編集方針: <a href="editorial-guidelines.html" style="color:var(--primary);font-weight:700;">編集ガイドライン</a></span>
+  </div>
+  <p class="hero-lead">「顔面偏差値」とは、顔の印象や写りを数字で言い表したいときに使われるネット俗語です。学校の偏差値のように全国共通の計算式があるわけではなく、SNSの会話・AI診断サイト・本来の偏差値の意味が混在しています。このページでは意味・平均・計算方法・70点80点の目安・改善方法・美の科学まで日本語でまとめました。</p>
+  <div class="hero-summary-grid">
+    <div class="hero-summary-card"><strong>先に結論</strong><p>厳密な偏差値なら平均は50。ただしAI診断サイトの参考スコアは必ずしも50平均ではありません。</p></div>
+    <div class="hero-summary-card"><strong>このツールの軸</strong><p>左右対称性（70%）と笑顔強度（30%）を中心に読み取り、参考スコアを表示します。</p></div>
+    <div class="hero-summary-card"><strong>70点の目安</strong><p>高めのレンジです。写真条件と顔の読み取りが両方安定しているときに出やすくなります。</p></div>
+    <div class="hero-summary-card"><strong>80点の目安</strong><p>かなり少数派です。顔立ちだけでなく光・角度・画質の良さも強く影響します。</p></div>
+  </div>
+  <div class="toc-panel">
+    <h2>このページの目次</h2>
+    <ul class="toc-list">
+      <li><a href="#meaning">顔面偏差値の意味と仕組み</a></li>
+      <li><a href="#calculation">AIの計算方法</a></li>
+      <li><a href="#distribution">平均・分布チャート</a></li>
+      <li><a href="#high-score">70点・80点以上の特徴</a></li>
+      <li><a href="#improve">スコアを上げる方法</a></li>
+      <li><a href="#science">心理学・美の科学</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#summary">まとめ</a></li>
+    </ul>
+  </div>
 </section>
+
 
 <section class="trust-section section-card" id="meaning">
 <h2>顔面偏差値とは？意味と仕組み</h2>
@@ -1148,7 +1167,9 @@
 <p>顔面偏差値とは、厳密な学術指標というより、顔の印象や写真写りを数字で語るための検索キーワードです。だからこそ、平均を見るときは「偏差値としての平均50」と「AIサイトの独自スコア」を分けて理解する必要があります。本サイトでは、1枚の写真から左右対称性と笑顔強度を中心に読み取り、比較用の参考スコアを表示しています。</p>
 <p>結果の見方としては、60点台は中心帯、70点台は高め、80点以上はかなり少数という目安が使いやすい一方、数字は光・角度・画質・表情で大きく変わります。つまり、顔面偏差値を本当に役立つ情報に変えるコツは、自己否定の材料にすることではなく、同じ人の写真条件を比較して改善点を見つけることです。まずはこのページ内のAI診断を3回ほど試し、どの条件で最も自然に高く出るかを確認してみてください。</p>
 </section>
+
 </main>
+
 <footer class="site-footer">
 <div class="footer-content">
 <a class="footer-logo" href="/">顔スコアAI</a>
