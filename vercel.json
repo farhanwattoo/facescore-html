@@ -2,97 +2,33 @@
     "headers": [
         {
             "source": "/(.*)\\.(css|js|svg|woff2|webp|avif|png|jpg|jpeg|gif|ico)",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=604800, stale-while-revalidate=86400"
-                }
-            ]
+            "headers": [{"key": "Cache-Control","value": "public, max-age=604800, stale-while-revalidate=86400"}]
         },
         {
             "source": "/models/(.*)",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=2592000, stale-while-revalidate=604800"
-                }
-            ]
+            "headers": [{"key": "Cache-Control","value": "public, max-age=2592000, stale-while-revalidate=604800"}]
         },
         {
             "source": "/(.*)\\.html",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "public, max-age=1800, stale-while-revalidate=3600"
-                }
-            ]
+            "headers": [{"key": "Cache-Control","value": "public, max-age=1800, stale-while-revalidate=3600"}]
         }
     ],
     "redirects": [
-        {
-            "source": "/index.html",
-            "destination": "/",
-            "permanent": true
-        },
-        {
-            "source": "/index.php",
-            "destination": "/",
-            "permanent": true
-        },
-        {
-            "source": "/about-us/",
-            "destination": "/about-us",
-            "permanent": true
-        },
-        {
-            "source": "/:path+/",
-            "destination": "/:path+",
-            "permanent": true
-        },
-        {
-            "source": "/自撮り-顔写真-完全ガイド",
-            "destination": "/自撮り-顔診断-写真-完全ガイド",
-            "permanent": true
-        },
-        {
-            "source": "/自撮り-顔写真-完全ガイド.html",
-            "destination": "/自撮り-顔診断-写真-完全ガイド",
-            "permanent": true
-        },
-        {
-            "source": "/ai-face-analysis.html",
-            "destination": "/ai-face-analysis",
-            "permanent": true
-        }
+        {"source": "/index.html", "destination": "/", "permanent": true},
+        {"source": "/index.php",  "destination": "/", "permanent": true},
+        {"source": "/:path+/",    "destination": "/:path+", "permanent": true},
+        {"source": "/自撮り-顔写真-完全ガイド",      "destination": "/自撮り-顔診断-写真-完全ガイド", "permanent": true},
+        {"source": "/自撮り-顔写真-完全ガイド.html",  "destination": "/自撮り-顔診断-写真-完全ガイド", "permanent": true},
+        {"source": "/ai-face-analysis.html",          "destination": "/ai-face-analysis",              "permanent": true}
     ],
     "rewrites": [
-        {
-            "source": "/",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/顔-黄金比-美しさの科学",
-            "destination": "/顔-黄金比-美しさの科学.html"
-        },
-        {
-            "source": "/顔-パーツ-ランドマーク-解説",
-            "destination": "/顔-パーツ-ランドマーク-解説.html"
-        },
-        {
-            "source": "/自撮り-顔診断-写真-完全ガイド",
-            "destination": "/自撮り-顔診断-写真-完全ガイド.html"
-        },
-        {
-            "source": "/顔面偏差値-上げる方法",
-            "destination": "/顔面偏差値-上げる方法.html"
-        },
-        {
-            "source": "/ai-face-analysis",
-            "destination": "/ai-face-analysis.html"
-        },
-        {
-            "source": "/about-us",
-            "destination": "/about.html"
-        }
+        {"source": "/",                               "destination": "/index.html"},
+        {"source": "/顔-黄金比-美しさの科学",          "destination": "/顔-黄金比-美しさの科学.html"},
+        {"source": "/顔-パーツ-ランドマーク-解説",     "destination": "/顔-パーツ-ランドマーク-解説.html"},
+        {"source": "/自撮り-顔診断-写真-完全ガイド",   "destination": "/自撮り-顔診断-写真-完全ガイド.html"},
+        {"source": "/顔面偏差値-上げる方法",           "destination": "/顔面偏差値-上げる方法.html"},
+        {"source": "/顔面偏差値-ランキング-比較",      "destination": "/顔面偏差値-ランキング-比較.html"},
+        {"source": "/ai-face-analysis",               "destination": "/ai-face-analysis.html"},
+        {"source": "/about-us",                       "destination": "/about.html"}
     ]
 }
