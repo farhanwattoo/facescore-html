@@ -4,44 +4,44 @@
   <rect width="900" height="760" fill="#f7fbff"/>
   <rect x="24" y="24" width="852" height="712" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
   <g font-family="Arial, sans-serif" fill="#203047">
-    <text x="72" y="92" font-size="34" font-weight="700">7-step perfect photo setup</text>
-    <text x="72" y="126" font-size="18" fill="#64748b">A simple recipe for consistent retests with any modern smartphone.</text>
+    <text x="72" y="92" font-size="34" font-weight="700">完璧な撮影セットアップ7ステップ</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">最近のスマホなら誰でも再現できる、安定した再測定のためのレシピ。</text>
   </g>
   <g transform="translate(72 176)" font-family="Arial, sans-serif">
     <g>
       <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">1</text>
-      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Find soft front light</text>
-      <text x="72" y="60" font-size="16" fill="#64748b">Window light or a ring light at eye level</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">やわらかい正面光を見つける</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">窓の光、または目の高さのリングライト</text>
     </g>
     <g transform="translate(0 80)">
       <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">2</text>
-      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Choose a plain background</text>
-      <text x="72" y="60" font-size="16" fill="#64748b">Light wall, no other faces, no busy patterns</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">無地の背景を選ぶ</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">明るい壁・他の顔なし・柄なし</text>
     </g>
     <g transform="translate(0 160)">
       <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">3</text>
-      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Use the rear camera if possible</text>
-      <text x="72" y="60" font-size="16" fill="#64748b">Set a timer and step back 60 to 80 cm</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">できれば背面カメラを使う</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">タイマーを設定して60〜80cm離れる</text>
     </g>
     <g transform="translate(0 240)">
       <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">4</text>
-      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Place the camera slightly above eye level</text>
-      <text x="72" y="60" font-size="16" fill="#64748b">This reduces jaw distortion without over-stretching the forehead</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">カメラを目線よりやや上に置く</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">額を伸ばしすぎずに顎の歪みを減らせる</text>
     </g>
     <g transform="translate(0 320)">
       <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">5</text>
-      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Relax the face</text>
-      <text x="72" y="60" font-size="16" fill="#64748b">Aim for a soft natural smile and relaxed brows</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">顔の力を抜く</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">やわらかい自然な笑顔とリラックスした眉を意識</text>
     </g>
     <g transform="translate(0 400)">
       <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">6</text>
-      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Take at least five shots</text>
-      <text x="72" y="60" font-size="16" fill="#64748b">Keep conditions the same and pick the sharpest frame</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">最低5枚撮影する</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">条件を揃えて最もシャープな1枚を選ぶ</text>
     </g>
     <g transform="translate(0 480)">
       <circle cx="28" cy="28" r="24" fill="#ff6ca7"/><text x="28" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">7</text>
-      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">Check before uploading</text>
-      <text x="72" y="60" font-size="16" fill="#64748b">Eyes in focus, face fills at least half the frame, no blockers</text>
+      <text x="72" y="34" font-size="20" font-weight="700" fill="#203047">アップロード前に確認</text>
+      <text x="72" y="60" font-size="16" fill="#64748b">目にピント・顔が画面の半分以上・遮るものなし</text>
     </g>
   </g>
 </svg>

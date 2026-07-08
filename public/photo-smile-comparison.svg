@@ -4,8 +4,8 @@
   <rect width="900" height="560" fill="#f7fbff"/>
   <rect x="24" y="24" width="852" height="512" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
   <g font-family="Arial, sans-serif" fill="#203047">
-    <text x="72" y="92" font-size="34" font-weight="700">Smile types and score behavior</text>
-    <text x="72" y="126" font-size="18" fill="#64748b">A relaxed closed-mouth smile usually balances expression and landmark clarity best.</text>
+    <text x="72" y="92" font-size="34" font-weight="700">笑顔のタイプとスコアの傾向</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">口を閉じたリラックスした笑顔が、表情とランドマークの明瞭さのバランスに最も優れています。</text>
   </g>
   <g transform="translate(72 172)" font-family="Arial, sans-serif">
     <g>
@@ -13,8 +13,8 @@
       <ellipse cx="110" cy="118" rx="62" ry="82" fill="#fff8fc" stroke="#203047" stroke-width="4"/>
       <path d="M82 98c8-8 20-8 28 0M110 98c8-8 20-8 28 0" stroke="#203047" stroke-width="4" fill="none" stroke-linecap="round"/>
       <path d="M98 162c10 -2 24 -2 34 0" stroke="#203047" stroke-width="4" fill="none" stroke-linecap="round"/>
-      <text x="110" y="208" text-anchor="middle" font-size="20" font-weight="700">Neutral</text>
-      <text x="110" y="232" text-anchor="middle" font-size="14" fill="#64748b">Stable landmarks, lower smile score</text>
+      <text x="110" y="208" text-anchor="middle" font-size="20" font-weight="700">無表情</text>
+      <text x="110" y="232" text-anchor="middle" font-size="14" fill="#64748b">ランドマークは安定、笑顔スコアは低め</text>
     </g>
     <g transform="translate(268 0)">
       <rect width="220" height="252" rx="20" fill="#f8fff9" stroke="#d8eadf"/>
@@ -22,17 +22,17 @@
       <path d="M82 98c8-8 20-8 28 0M110 98c8-8 20-8 28 0" stroke="#203047" stroke-width="4" fill="none" stroke-linecap="round"/>
       <path d="M92 160c18 16 40 16 58 0" stroke="#203047" stroke-width="4" fill="none" stroke-linecap="round"/>
       <path d="M78 102c2 14 10 24 20 30M140 102c-2 14-10 24-20 30" stroke="#ff6ca7" stroke-width="3" fill="none" opacity=".8"/>
-      <text x="110" y="208" text-anchor="middle" font-size="20" font-weight="700">Natural smile</text>
-      <text x="110" y="232" text-anchor="middle" font-size="14" fill="#2e7d32">Best balance of warmth and clarity</text>
+      <text x="110" y="208" text-anchor="middle" font-size="20" font-weight="700">自然な笑顔</text>
+      <text x="110" y="232" text-anchor="middle" font-size="14" fill="#2e7d32">温かみと明瞭さのバランスが最良</text>
     </g>
     <g transform="translate(536 0)">
       <rect width="220" height="252" rx="20" fill="#fffdf8" stroke="#ebe4d7"/>
       <ellipse cx="110" cy="118" rx="62" ry="82" fill="#fff8fc" stroke="#203047" stroke-width="4"/>
       <path d="M82 100c10-4 20-4 28 0M110 100c10-4 20-4 28 0" stroke="#203047" stroke-width="4" fill="none" stroke-linecap="round"/>
       <path d="M90 160c18 4 40 4 60 0" stroke="#203047" stroke-width="4" fill="none" stroke-linecap="round"/>
-      <text x="110" y="208" text-anchor="middle" font-size="20" font-weight="700">Forced smile</text>
-      <text x="110" y="232" text-anchor="middle" font-size="14" fill="#8a6d1f">Looks tense, often narrows the eyes too much</text>
+      <text x="110" y="208" text-anchor="middle" font-size="20" font-weight="700">作り笑い</text>
+      <text x="110" y="232" text-anchor="middle" font-size="14" fill="#8a6d1f">緊張して見え、目が細くなりすぎがち</text>
     </g>
   </g>
-  <text x="72" y="476" font-family="Arial, sans-serif" font-size="17" fill="#64748b">If teeth exposure hides the lip line or your eyes squeeze shut, a softer closed-mouth smile is usually more consistent for retests.</text>
+  <text x="72" y="476" font-family="Arial, sans-serif" font-size="17" fill="#64748b">歯を見せて唇のラインが隠れたり目をつぶりがちになる場合は、口を閉じたやわらかい笑顔の方が再測定で安定します。</text>
 </svg>

@@ -398,7 +398,7 @@
 <p>顔スコア系サイトにとって重要なのは、点の多さそのものより「どの点がどの指標に使われるか」を明確に説明することです。jaw points は顔型や縦横比、brow points は眉間距離と眉山、eye corner points は目の横幅と眼間距離、nose base points は鼻幅、lip corners は口幅と笑顔の判定に結びつきます。ここを理解していると、同じ人でも写真条件によってなぜ結果が変わるのかがかなり読みやすくなります。</p>
 <figure class="science-figure">
 <span class="caption-badge">Critical diagram</span>
-<img alt="顔ランドマーク 解説 68点 dlib facial landmarks AI detection 図" src="feature-landmark-map-68.svg"/>
+<img alt="顔ランドマーク 解説 68点 dlib facial landmarks AI detection 図" src="feature-landmark-map-68.svg?v=20260708"/>
 <figcaption>68点モデルのゾーン別マップです。教育用に sparse な点配置を使うと、jaw・brow・nose・eye・mouth がどの指標に結びつくかを説明しやすくなります。より細かい Face Mesh 系では、この骨組みのあいだをさらに密な点で埋め、頬や唇の輪郭も読み取ります。</figcaption>
 </figure>
 <div class="note-split">
@@ -426,7 +426,7 @@
 <p>二重まぶたは、上まぶたの折り返しが視認しやすいため、写真上で目の境界が見えやすいことがあります。その結果、アイメイクや光の当たり方も相まって目が大きく見え、AIの目開き指標や印象スコアに影響することがあります。ただし、一重や奥二重でも、眼間距離が安定していて、目尻の角度が自然で、白目の見え方がきれいなら十分に高い評価を出せます。まぶたの形は、優劣ではなく「どのように読まれやすいか」の違いです。</p>
 <figure class="science-figure">
 <span class="caption-badge">High-volume image asset</span>
-<img alt="目の形 美人 種類 eye shape types 日本語 英語 SVG chart" src="feature-eye-shapes-chart.svg"/>
+<img alt="目の形 美人 種類 eye shape types 日本語 英語 SVG chart" src="feature-eye-shapes-chart.svg?v=20260708"/>
 <figcaption>目の形8種類と、よく使われる眼間距離のガイドです。目元の診断は、ラベルそのものより、目の横幅・開き・目尻角度・眉との距離を組み合わせて読むと精度が上がります。詳しい見分け方は <a href="eye-shape-types-guide.html">目の形8種類完全ガイド</a> でも掘り下げています。</figcaption>
 </figure>
 <div class="cluster-note">
@@ -486,7 +486,7 @@
 <h3>鼻が高いと顔面偏差値は上がる？</h3>
 <p>上がると断定はできません。日本や韓国の美容文脈では高めの鼻筋が好まれやすい一方、AIの実際のスコアは鼻単体ではなく、眼間距離、頬の影、顎とのつながり、正面写真での左右差と一緒に読まれます。鼻が高くても光が強すぎれば鼻先だけが飛んで見えますし、逆に鼻筋が控えめでも中央の比率が整っていれば十分に安定した印象が出ます。</p>
 <figure class="science-figure">
-<img alt="鼻の形 美人比率 nose ratio face score 鼻幅 眼間距離 図" src="feature-nose-ratio-diagram.svg"/>
+<img alt="鼻の形 美人比率 nose ratio face score 鼻幅 眼間距離 図" src="feature-nose-ratio-diagram.svg?v=20260708"/>
 <figcaption>鼻幅、眼間距離、鼻筋、鼻翼の基準点をまとめた図です。鼻の評価は鼻だけで完結せず、目との中央バランス、顔幅に対する見え方、光による影の出方と一緒に読むとズレを避けやすくなります。詳細版は <a href="nose-shape-attractiveness.html">鼻の形・美人比率ガイド</a> で整理しています。</figcaption>
 </figure>
 </section>
@@ -498,7 +498,7 @@
 <h3>唇の厚さと顔面偏差値の関係</h3>
 <p>唇の厚さだけでスコアが決まることはありません。むしろ口角、上下比率、表情との一致、口の左右差のほうが結果に影響しやすいです。口紅や輪郭補正で見え方も変わるため、メイク有無を混ぜて比較すると、純粋な骨格差ではなく演出差を読んでしまうことがあります。</p>
 <figure class="science-figure">
-<img alt="唇の比率 美人 lip ratio attractiveness キューピッドボウ SVG 図" src="feature-lip-ratio-diagram.svg"/>
+<img alt="唇の比率 美人 lip ratio attractiveness キューピッドボウ SVG 図" src="feature-lip-ratio-diagram.svg?v=20260708"/>
 <figcaption>上唇と下唇の比率、口幅、キューピッドボウ、口角の方向を整理した図です。口元の動きは笑顔分析と直結するため、口比率だけでなく <a href="smile-expression-analysis.html">笑顔・表情分析</a> と一緒に読むと結果の意味がつながります。</figcaption>
 </figure>
 
@@ -516,15 +516,15 @@
 <p>Vラインが検索で人気なのは、顔の余白が減って見え、小顔イメージと結びつきやすいからです。ただし、AIが高く読むのは「Vであること」単体ではなく、目・鼻・口との位置関係まで含めて違和感が少ないことです。横幅が締まっていても、近距離レンズで下顔面だけ伸びると逆効果になるため、骨格と撮影条件は切り分けて考えるべきです。</p>
 <div class="diagram-wall">
 <figure class="science-figure">
-<img alt="顎 Vライン 美人 jawline attractiveness 比較 SVG 図" src="feature-jawline-comparison.svg"/>
+<img alt="顎 Vライン 美人 jawline attractiveness 比較 SVG 図" src="feature-jawline-comparison.svg?v=20260708"/>
 <figcaption>V-line、U-line、square jaw の違いを、優劣ではなく輪郭の動きとして整理した図です。</figcaption>
 </figure>
 <figure class="science-figure">
-<img alt="小顔 顔面偏差値 face width height ratio 図" src="feature-face-width-height-ratio.svg"/>
+<img alt="小顔 顔面偏差値 face width height ratio 図" src="feature-face-width-height-ratio.svg?v=20260708"/>
 <figcaption>顔の横幅と縦幅の測り方です。小顔感は絶対サイズより、縦横比と周辺余白の見え方に左右されます。</figcaption>
 </figure>
 <figure class="science-figure">
-<img alt="顔のサードゾーン比率 face thirds proportions 図" src="feature-face-thirds-diagram.svg"/>
+<img alt="顔のサードゾーン比率 face thirds proportions 図" src="feature-face-thirds-diagram.svg?v=20260708"/>
 <figcaption>三分割の見え方を確認する図です。下顔面が長く見えるときは、骨格だけでなく顎の角度やカメラ位置もチェックすると読み違いを減らせます。詳しくは <a href="face-thirds-proportions.html">顔のサードゾーン比率ガイド</a> へ。</figcaption>
 </figure>
 </div>
@@ -537,7 +537,7 @@
 <p>ここで重要なのは、顔型はヘアスタイルや前髪で大きく印象が動くことです。つまり「この顔型だから低い」ではなく、「この顔型ならどこに余白が出やすいか」「どこを見せると安定しやすいか」が実用的な読み方です。顔型は優劣のラベルではなく、髪型・メイク・撮り方を合わせるための地図だと考えると使いやすくなります。髪型寄りの実践に進みたい場合は、<a href="顔面偏差値-上げる方法.html">顔型に合う髪型・メイク</a> に進むと橋渡ししやすいです。</p>
 <div class="shape-gallery">
 <figure class="science-figure">
-<img alt="顔の輪郭 種類 特徴 face shape types oval round SVG" src="feature-face-shapes-chart.svg"/>
+<img alt="顔の輪郭 種類 特徴 face shape types oval round SVG" src="feature-face-shapes-chart.svg?v=20260708"/>
 <figcaption>日本語と英語ラベルでまとめた顔型7種類の基本図です。Google画像検索や Pinterest 向けの共有にも使えるよう、シンプルで再利用しやすい構成にしています。</figcaption>
 </figure>
 </div>
@@ -596,7 +596,7 @@
 <p>眉毛は見落とされがちですが、AIにとってはかなり重要です。理由は、眉が目の上のフレームとして働き、顔上部の対称性や表情の方向を決めやすいからです。眉間距離が狭すぎるか広すぎるか、眉山の位置が左右でそろっているか、眉と目の距離がどれくらいかで、目元の印象は大きく変わります。特に、眉尻が片側だけ消えている、前髪で片眉が隠れる、メイクで形が極端に変わると、AIは目元全体の読み取りを誤りやすくなります。</p>
 <p>68点モデルでは眉まわりの点数は多くありませんが、その少ない点でも眉頭、眉山、眉尻の位置関係は十分に拾えます。眉を整えるとスコアが変わることがあるのは、骨格が変わるからではなく、ランドマークが置きやすくなり、左右差が読みやすくなるからです。美容の観点でも、眉はもっとも低コストで印象を変えやすいパーツのひとつです。</p>
 <figure class="science-figure">
-<img alt="眉毛 形 美人 eyebrow shape score 眉間距離 比率 SVG chart" src="feature-brow-shape-chart.svg"/>
+<img alt="眉毛 形 美人 eyebrow shape score 眉間距離 比率 SVG chart" src="feature-brow-shape-chart.svg?v=20260708"/>
 <figcaption>眉の形は、直線、ソフトアーチ、高めアーチ、角度強め、丸めなど複数のラベルで説明されます。どれかが優れているのではなく、目との距離と顔全体のラインにどう接続するかがポイントです。深掘り版は <a href="eyebrow-shape-attractiveness.html">眉毛の形 美人ガイド</a> にまとめています。</figcaption>
 </figure>
 <div class="science-callout">
@@ -609,7 +609,7 @@
 <h2>各パーツが顔面偏差値に与える影響度【まとめ表】</h2>
 <p>最後に、ユーザーがもっとも知りたい「何が一番大事なのか」を、教育用の目安として整理します。ここで示す割合は、このサイトで説明しているランドマーク型の比率読みをもとにした illustrative な配分です。実際のモデルや写真条件で上下しますが、目・輪郭・対称性が土台で、鼻・口・顎・眉がそれを支える、と考えると結果を読みやすくなります。</p>
 <figure class="science-figure">
-<img alt="顔面偏差値 パーツ 影響 bar chart 目 鼻 口 スコア SVG" src="feature-impact-bar-chart.svg"/>
+<img alt="顔面偏差値 パーツ 影響 bar chart 目 鼻 口 スコア SVG" src="feature-impact-bar-chart.svg?v=20260708"/>
 <figcaption>影響度の棒グラフです。固定的な絶対順位ではなく、写真条件がそろったときにどの領域がスコア説明に効きやすいかを可視化した教育図として見てください。</figcaption>
 </figure>
 <table class="cluster-table feature-table" id="impact-table">

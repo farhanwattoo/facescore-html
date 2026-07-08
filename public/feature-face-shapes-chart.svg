@@ -4,76 +4,76 @@
   <rect width="960" height="720" fill="#f8fbff"/>
   <rect x="24" y="24" width="912" height="672" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
   <g font-family="Arial, sans-serif" fill="#203047">
-    <text x="72" y="92" font-size="34" font-weight="700">7 face shape types / 顔型7種類</text>
-    <text x="72" y="126" font-size="18" fill="#64748b">Measured from forehead width, cheekbone width, jaw width, and face length.</text>
+    <text x="72" y="92" font-size="34" font-weight="700">顔型7種類</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">額の幅・頬骨の幅・顎の幅・顔の長さから判定します。</text>
   </g>
   <g transform="translate(66 162)" font-family="Arial, sans-serif">
     <g transform="translate(0 0)">
       <rect width="115" height="210" rx="20" fill="#fff8fc" stroke="#e1e8f4"/>
       <path d="M58 26c26 0 42 18 42 50v60c0 42-18 60-42 60s-42-18-42-60V76c0-32 16-50 42-50Z" fill="none" stroke="#203047" stroke-width="4"/>
-      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">Oval</text>
+      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">卵型</text>
       <text x="18" y="204" font-size="12" fill="#64748b">卵型</text>
     </g>
     <g transform="translate(125 0)">
       <rect width="115" height="210" rx="20" fill="#fff" stroke="#e1e8f4"/>
       <path d="M58 32c30 0 46 24 46 54v46c0 42-22 62-46 62s-46-20-46-62V86c0-30 16-54 46-54Z" fill="none" stroke="#203047" stroke-width="4"/>
-      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">Round</text>
+      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">丸型</text>
       <text x="18" y="204" font-size="12" fill="#64748b">丸型</text>
     </g>
     <g transform="translate(250 0)">
       <rect width="115" height="210" rx="20" fill="#fff8fc" stroke="#e1e8f4"/>
       <path d="M18 72c0-28 22-48 40-48h0c18 0 40 20 40 48v58c0 28-18 64-40 64S18 158 18 130Z" fill="none" stroke="#203047" stroke-width="4"/>
-      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">Square</text>
+      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">四角型</text>
       <text x="18" y="204" font-size="12" fill="#64748b">四角型</text>
     </g>
     <g transform="translate(375 0)">
       <rect width="115" height="210" rx="20" fill="#fff" stroke="#e1e8f4"/>
       <path d="M16 70c0-30 26-48 42-48h0c18 0 42 18 42 48v24c0 56-18 84-42 100c-24-16-42-44-42-100Z" fill="none" stroke="#203047" stroke-width="4"/>
-      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">Heart</text>
+      <text x="18" y="186" font-size="16" font-weight="700" fill="#203047">ハート型</text>
       <text x="18" y="204" font-size="12" fill="#64748b">ハート型</text>
     </g>
     <g transform="translate(500 0)">
       <rect width="115" height="210" rx="20" fill="#fff8fc" stroke="#e1e8f4"/>
       <path d="M58 24c30 0 44 20 44 50v18c0 26-20 40-44 40S14 118 14 92V74c0-30 14-50 44-50Zm0 108c16 0 28 14 28 34c0 18-10 28-28 40c-18-12-28-22-28-40c0-20 12-34 28-34Z" fill="none" stroke="#203047" stroke-width="4"/>
-      <text x="10" y="186" font-size="16" font-weight="700" fill="#203047">Diamond</text>
+      <text x="10" y="186" font-size="16" font-weight="700" fill="#203047">ひし形</text>
       <text x="10" y="204" font-size="12" fill="#64748b">ダイヤ型</text>
     </g>
     <g transform="translate(625 0)">
       <rect width="115" height="210" rx="20" fill="#fff" stroke="#e1e8f4"/>
       <path d="M26 26h64c16 0 26 18 26 42v82c0 34-20 48-58 48S0 184 0 150V68c0-24 10-42 26-42Z" fill="none" stroke="#203047" stroke-width="4"/>
-      <text x="4" y="186" font-size="16" font-weight="700" fill="#203047">Oblong</text>
+      <text x="4" y="186" font-size="16" font-weight="700" fill="#203047">面長</text>
       <text x="4" y="204" font-size="12" fill="#64748b">長方形型</text>
     </g>
     <g transform="translate(750 0)">
       <rect width="115" height="210" rx="20" fill="#fff8fc" stroke="#e1e8f4"/>
       <path d="M58 24c16 0 28 8 38 20c12 14 16 28 16 46v38c0 26-14 44-30 54c-10 6-16 10-24 10c-8 0-14-4-24-10c-16-10-30-28-30-54V90c0-18 4-32 16-46c10-12 22-20 38-20Z" fill="none" stroke="#203047" stroke-width="4"/>
-      <text x="10" y="186" font-size="16" font-weight="700" fill="#203047">Triangle</text>
+      <text x="10" y="186" font-size="16" font-weight="700" fill="#203047">三角型</text>
       <text x="10" y="204" font-size="12" fill="#64748b">三角型</text>
     </g>
   </g>
   <g transform="translate(72 430)" font-family="Arial, sans-serif">
-    <text x="0" y="0" font-size="24" font-weight="700" fill="#203047">How the AI classifies shape</text>
-    <text x="0" y="32" font-size="17" fill="#64748b">The classifier compares forehead width, cheekbone width, jaw width, jaw angle, and face length.</text>
+    <text x="0" y="0" font-size="24" font-weight="700" fill="#203047">AIによる顔型分類の仕組み</text>
+    <text x="0" y="32" font-size="17" fill="#64748b">分類器は額の幅・頬骨の幅・顎の幅・顎の角度・顔の長さを比較します。</text>
     <g transform="translate(0 62)">
       <rect width="250" height="144" rx="18" fill="#fff" stroke="#e1e8f4"/>
-      <text x="18" y="34" font-size="18" font-weight="700" fill="#203047">Oval / 卵型</text>
-      <text x="18" y="60" font-size="15" fill="#64748b">Cheekbones slightly widest</text>
-      <text x="18" y="84" font-size="15" fill="#64748b">Jaw softly tapered</text>
-      <text x="18" y="108" font-size="15" fill="#64748b">Face length &gt; width</text>
+      <text x="18" y="34" font-size="18" font-weight="700" fill="#203047">卵型</text>
+      <text x="18" y="60" font-size="15" fill="#64748b">頬骨がやや最も広い</text>
+      <text x="18" y="84" font-size="15" fill="#64748b">顎はなだらかに細くなる</text>
+      <text x="18" y="108" font-size="15" fill="#64748b">顔の縦幅 ＞ 横幅</text>
     </g>
     <g transform="translate(280 62)">
       <rect width="250" height="144" rx="18" fill="#fff8fc" stroke="#e1e8f4"/>
-      <text x="18" y="34" font-size="18" font-weight="700" fill="#203047">Round / 丸型</text>
-      <text x="18" y="60" font-size="15" fill="#64748b">Width and height are close</text>
-      <text x="18" y="84" font-size="15" fill="#64748b">Jaw corners are soft</text>
-      <text x="18" y="108" font-size="15" fill="#64748b">Cheeks create the widest region</text>
+      <text x="18" y="34" font-size="18" font-weight="700" fill="#203047">丸型</text>
+      <text x="18" y="60" font-size="15" fill="#64748b">縦幅と横幅がほぼ同じ</text>
+      <text x="18" y="84" font-size="15" fill="#64748b">顎の角がやわらかい</text>
+      <text x="18" y="108" font-size="15" fill="#64748b">頬が最も広い部分になる</text>
     </g>
     <g transform="translate(560 62)">
       <rect width="250" height="144" rx="18" fill="#fff" stroke="#e1e8f4"/>
-      <text x="18" y="34" font-size="18" font-weight="700" fill="#203047">Square / 四角型</text>
-      <text x="18" y="60" font-size="15" fill="#64748b">Forehead and jaw widths match more closely</text>
-      <text x="18" y="84" font-size="15" fill="#64748b">Gonial angle reads stronger</text>
-      <text x="18" y="108" font-size="15" fill="#64748b">Cheek-to-jaw transition is straighter</text>
+      <text x="18" y="34" font-size="18" font-weight="700" fill="#203047">四角型</text>
+      <text x="18" y="60" font-size="15" fill="#64748b">額と顎の幅が近い</text>
+      <text x="18" y="84" font-size="15" fill="#64748b">エラの角度がはっきり出る</text>
+      <text x="18" y="108" font-size="15" fill="#64748b">頬から顎へのラインが直線的</text>
     </g>
   </g>
 </svg>

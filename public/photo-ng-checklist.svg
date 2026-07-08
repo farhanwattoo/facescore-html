@@ -4,34 +4,34 @@
   <rect width="900" height="1200" fill="#f7fbff"/>
   <rect x="24" y="24" width="852" height="1152" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
   <g font-family="Arial, sans-serif" fill="#203047">
-    <text x="72" y="92" font-size="36" font-weight="700">15 NG photo patterns to avoid</text>
-    <text x="72" y="126" font-size="18" fill="#64748b">Shareable checklist for retesting a face score photo setup.</text>
+    <text x="72" y="92" font-size="36" font-weight="700">避けたいNG写真パターン15選</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">顔スコア撮影を見直すための共有用チェックリスト。</text>
   </g>
   <g transform="translate(72 176)" font-family="Arial, sans-serif" font-size="18">
     <g>
       <rect width="360" height="920" rx="20" fill="#fff9fb" stroke="#efdbe4"/>
-      <text x="24" y="48" font-size="24" font-weight="700" fill="#c62828">Avoid these</text>
-      <text x="24" y="92" fill="#203047">❌ Sunglasses</text><text x="24" y="120" fill="#64748b" font-size="15">Blocks eye landmarks and emotion reading</text>
-      <text x="24" y="170" fill="#203047">❌ Hat or bangs covering the forehead</text><text x="24" y="198" fill="#64748b" font-size="15">Hides upper landmarks and face thirds</text>
-      <text x="24" y="248" fill="#203047">❌ Multiple people in frame</text><text x="24" y="276" fill="#64748b" font-size="15">Detector may lock onto the wrong face</text>
-      <text x="24" y="326" fill="#203047">❌ Strong side profile</text><text x="24" y="354" fill="#64748b" font-size="15">Frontal landmark models lose too many points</text>
-      <text x="24" y="404" fill="#203047">❌ Backlight</text><text x="24" y="432" fill="#64748b" font-size="15">Turns the face into a dark silhouette</text>
-      <text x="24" y="482" fill="#203047">❌ Harsh shadows</text><text x="24" y="510" fill="#64748b" font-size="15">Skews symmetry and under-eye reading</text>
-      <text x="24" y="560" fill="#203047">❌ Blurry photo</text><text x="24" y="588" fill="#64748b" font-size="15">Drops landmark confidence across the face</text>
-      <text x="24" y="638" fill="#203047">❌ Tiny face in frame</text><text x="24" y="666" fill="#64748b" font-size="15">Not enough pixels for accurate landmarks</text>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#c62828">避けるべきもの</text>
+      <text x="24" y="92" fill="#203047">❌ サングラス</text><text x="24" y="120" fill="#64748b" font-size="15">目のランドマークと感情読み取りを妨げる</text>
+      <text x="24" y="170" fill="#203047">❌ 帽子や前髪で額が隠れる</text><text x="24" y="198" fill="#64748b" font-size="15">上部ランドマークと顔の三分割が隠れる</text>
+      <text x="24" y="248" fill="#203047">❌ 複数人が写り込む</text><text x="24" y="276" fill="#64748b" font-size="15">検出器が別の顔を対象にする恐れ</text>
+      <text x="24" y="326" fill="#203047">❌ 強い横顔アングル</text><text x="24" y="354" fill="#64748b" font-size="15">正面向けモデルでは多くの点を失う</text>
+      <text x="24" y="404" fill="#203047">❌ 逆光</text><text x="24" y="432" fill="#64748b" font-size="15">顔が暗いシルエットになる</text>
+      <text x="24" y="482" fill="#203047">❌ 強い影</text><text x="24" y="510" fill="#64748b" font-size="15">左右対称性と目の下の読み取りを歪める</text>
+      <text x="24" y="560" fill="#203047">❌ ぼやけた写真</text><text x="24" y="588" fill="#64748b" font-size="15">顔全体のランドマーク信頼度が下がる</text>
+      <text x="24" y="638" fill="#203047">❌ 顔が小さく写っている</text><text x="24" y="666" fill="#64748b" font-size="15">正確なランドマークに必要な画素が足りない</text>
     </g>
     <g transform="translate(396 0)">
       <rect width="360" height="920" rx="20" fill="#fff9fb" stroke="#efdbe4"/>
-      <text x="24" y="48" font-size="24" font-weight="700" fill="#c62828">Also avoid</text>
-      <text x="24" y="92" fill="#203047">❌ Face slimming filter</text><text x="24" y="120" fill="#64748b" font-size="15">Directly changes the ratios being measured</text>
-      <text x="24" y="170" fill="#203047">❌ Extreme cosplay makeup</text><text x="24" y="198" fill="#64748b" font-size="15">Can overwrite natural edges and proportions</text>
-      <text x="24" y="248" fill="#203047">❌ Mask</text><text x="24" y="276" fill="#64748b" font-size="15">Removes nose and mouth data entirely</text>
-      <text x="24" y="326" fill="#203047">❌ Hand covering the face</text><text x="24" y="354" fill="#64748b" font-size="15">Occlusion breaks landmark placement</text>
-      <text x="24" y="404" fill="#203047">❌ Night shot in a dark room</text><text x="24" y="432" fill="#64748b" font-size="15">Noise and blur usually overwhelm the model</text>
-      <text x="24" y="482" fill="#203047">❌ Low-quality screenshot</text><text x="24" y="510" fill="#64748b" font-size="15">Compression damages fine facial detail</text>
-      <text x="24" y="560" fill="#203047">❌ Over-processed HDR</text><text x="24" y="588" fill="#64748b" font-size="15">Creates unnatural skin edges and halos</text>
-      <text x="24" y="638" fill="#203047">❌ Heavy stickers or AR effects</text><text x="24" y="666" fill="#64748b" font-size="15">Adds fake geometry around key landmarks</text>
+      <text x="24" y="48" font-size="24" font-weight="700" fill="#c62828">こちらも避ける</text>
+      <text x="24" y="92" fill="#203047">❌ 小顔フィルター</text><text x="24" y="120" fill="#64748b" font-size="15">測定対象の比率を直接変えてしまう</text>
+      <text x="24" y="170" fill="#203047">❌ 過度なコスプレメイク</text><text x="24" y="198" fill="#64748b" font-size="15">本来の輪郭や比率を覆い隠すことがある</text>
+      <text x="24" y="248" fill="#203047">❌ マスク</text><text x="24" y="276" fill="#64748b" font-size="15">鼻と口のデータが完全に失われる</text>
+      <text x="24" y="326" fill="#203047">❌ 手で顔を覆う</text><text x="24" y="354" fill="#64748b" font-size="15">遮蔽によりランドマーク配置が崩れる</text>
+      <text x="24" y="404" fill="#203047">❌ 暗い部屋での夜間撮影</text><text x="24" y="432" fill="#64748b" font-size="15">ノイズとぼけでモデルが対応できない</text>
+      <text x="24" y="482" fill="#203047">❌ 低画質のスクリーンショット</text><text x="24" y="510" fill="#64748b" font-size="15">圧縮で細かい顔の情報が損なわれる</text>
+      <text x="24" y="560" fill="#203047">❌ 過度なHDR加工</text><text x="24" y="588" fill="#64748b" font-size="15">不自然な肌の縁や光のにじみが生じる</text>
+      <text x="24" y="638" fill="#203047">❌ 派手なスタンプ・ARエフェクト</text><text x="24" y="666" fill="#64748b" font-size="15">主要ランドマーク周辺に偽の形状が加わる</text>
     </g>
   </g>
-  <text x="72" y="1126" font-family="Arial, sans-serif" font-size="18" fill="#64748b">If one of these conditions appears, retesting with a clean setup is usually more useful than reading too much into the score.</text>
+  <text x="72" y="1126" font-family="Arial, sans-serif" font-size="18" fill="#64748b">これらの条件に当てはまる場合は、スコアを深読みするより、条件を整えて撮り直す方が有益です。</text>
 </svg>

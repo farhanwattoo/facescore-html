@@ -20,14 +20,14 @@
   </g>
   <g transform="translate(410 94)" font-family="Arial, sans-serif">
     <rect width="210" height="92" rx="16" fill="#fff8fc" stroke="#e1e8f4"/>
-    <text x="18" y="34" font-size="20" font-weight="700" fill="#203047">Inner eye distance</text>
-    <text x="18" y="62" font-size="15" fill="#64748b">Often compared with nose width</text>
+    <text x="18" y="34" font-size="20" font-weight="700" fill="#203047">目頭間の距離</text>
+    <text x="18" y="62" font-size="15" fill="#64748b">鼻の幅としばしば比較される</text>
     <rect y="110" width="210" height="92" rx="16" fill="#fff" stroke="#e1e8f4"/>
-    <text x="18" y="144" font-size="20" font-weight="700" fill="#203047">Bridge height</text>
-    <text x="18" y="172" font-size="15" fill="#64748b">Top ridge to tip projection</text>
+    <text x="18" y="144" font-size="20" font-weight="700" fill="#203047">鼻筋の高さ</text>
+    <text x="18" y="172" font-size="15" fill="#64748b">鼻根から鼻先への高さ</text>
     <rect y="220" width="210" height="92" rx="16" fill="#fff8fc" stroke="#e1e8f4"/>
-    <text x="18" y="254" font-size="20" font-weight="700" fill="#203047">Nostril flare</text>
-    <text x="18" y="282" font-size="15" fill="#64748b">Base width and outer curve</text>
+    <text x="18" y="254" font-size="20" font-weight="700" fill="#203047">小鼻の広がり</text>
+    <text x="18" y="282" font-size="15" fill="#64748b">付け根の幅と外側のカーブ</text>
   </g>
-  <text x="80" y="460" font-family="Arial, sans-serif" font-size="18" fill="#64748b">The AI reads nose width from base landmarks and compares it with nearby eye spacing and face width.</text>
+  <text x="80" y="460" font-family="Arial, sans-serif" font-size="18" fill="#64748b">AIは鼻の幅を付け根のランドマークから読み取り、目の間隔や顔の幅と比較します。</text>
 </svg>

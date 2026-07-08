@@ -4,8 +4,8 @@
   <rect width="900" height="620" fill="#f7fbff"/>
   <rect x="24" y="24" width="852" height="572" rx="28" fill="#fff" stroke="#d9e5f4" stroke-width="2"/>
   <g font-family="Arial, sans-serif" fill="#203047">
-    <text x="72" y="92" font-size="34" font-weight="700">Light direction and score stability</text>
-    <text x="72" y="126" font-size="18" fill="#64748b">Front-facing light gives the detector the cleanest facial boundaries.</text>
+    <text x="72" y="92" font-size="34" font-weight="700">光の方向とスコアの安定性</text>
+    <text x="72" y="126" font-size="18" fill="#64748b">正面からの光が最も明瞭な顔の境界を検出器に与えます。</text>
   </g>
   <g transform="translate(72 172)" font-family="Arial, sans-serif">
     <g>
@@ -13,8 +13,8 @@
       <circle cx="92" cy="64" r="28" fill="#ffd76d"/>
       <path d="M92 106l0 34M74 122l36 0M80 112l24 20M104 112l-24 20" stroke="#f3b61b" stroke-width="4" stroke-linecap="round"/>
       <ellipse cx="92" cy="182" rx="52" ry="74" fill="#fff8fc" stroke="#203047" stroke-width="4"/>
-      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">Front light</text>
-      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#2e7d32">Good</text>
+      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">正面光</text>
+      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#2e7d32">良い</text>
     </g>
     <g transform="translate(208 0)">
       <rect width="184" height="252" rx="20" fill="#fffdf8" stroke="#ebe4d7"/>
@@ -22,8 +22,8 @@
       <path d="M60 110l30 0" stroke="#f3b61b" stroke-width="5" stroke-linecap="round"/>
       <ellipse cx="104" cy="182" rx="52" ry="74" fill="#fff8fc" stroke="#203047" stroke-width="4"/>
       <path d="M104 108c-16 20-22 48-22 74c0 26 6 54 22 74" fill="rgba(32,48,71,0.12)"/>
-      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">Side light</text>
-      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#8a6d1f">Average</text>
+      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">側面光</text>
+      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#8a6d1f">普通</text>
     </g>
     <g transform="translate(416 0)">
       <rect width="184" height="252" rx="20" fill="#fffdf8" stroke="#ebe4d7"/>
@@ -31,20 +31,20 @@
       <path d="M92 76l0 34" stroke="#f3b61b" stroke-width="5" stroke-linecap="round"/>
       <ellipse cx="92" cy="182" rx="52" ry="74" fill="#fff8fc" stroke="#203047" stroke-width="4"/>
       <path d="M60 180c12 26 24 34 32 34c8 0 20-8 32-34" fill="rgba(32,48,71,0.12)"/>
-      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">Overhead</text>
-      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#8a6d1f">Average to poor</text>
+      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">真上からの光</text>
+      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#8a6d1f">普通〜悪い</text>
     </g>
     <g transform="translate(624 0)">
       <rect width="184" height="252" rx="20" fill="#fff9fb" stroke="#efdbe4"/>
       <circle cx="92" cy="212" r="28" fill="#ffd76d"/>
       <path d="M92 180l0 -34" stroke="#f3b61b" stroke-width="5" stroke-linecap="round"/>
       <ellipse cx="92" cy="182" rx="52" ry="74" fill="#b8c2d6" stroke="#203047" stroke-width="4"/>
-      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">Backlight</text>
-      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#c62828">Poor</text>
+      <text x="92" y="228" text-anchor="middle" font-size="18" font-weight="700">逆光</text>
+      <text x="92" y="250" text-anchor="middle" font-size="14" fill="#c62828">悪い</text>
     </g>
   </g>
   <g transform="translate(72 472)" font-family="Arial, sans-serif" fill="#64748b" font-size="17">
-    <text x="0" y="0">Window light and a soft ring light work best because they raise landmark confidence and reduce uneven under-eye shadows.</text>
-    <text x="0" y="28">One-sided light often drags symmetry down, while backlight can break face detection entirely.</text>
+    <text x="0" y="0">窓からの光ややわらかいリングライトは、ランドマーク信頼度を高め、目の下の不均一な影を減らすため最適です。</text>
+    <text x="0" y="28">片側からの光は左右対称性を下げやすく、逆光は顔検出自体を失敗させることがあります。</text>
   </g>
 </svg>

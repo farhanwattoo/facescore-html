@@ -13,18 +13,18 @@
     <path d="M194 176c18-10 44-10 62 0c-18 14-44 14-62 0Z" fill="#fff" stroke="#203047" stroke-width="4"/>
     <path d="M190 154c10 20 10 48 0 80" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
     <path d="M156 252c20 10 44 14 68 14s48-4 68-14" fill="none" stroke="#203047" stroke-width="4" stroke-linecap="round"/>
-    <text x="190" y="-34" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8c2f5a">Face height</text>
-    <text x="190" y="194" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ff6ca7">Face width</text>
+    <text x="190" y="-34" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8c2f5a">顔の縦幅</text>
+    <text x="190" y="194" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ff6ca7">顔の横幅</text>
   </g>
   <g transform="translate(426 116)" font-family="Arial, sans-serif">
     <rect width="196" height="92" rx="16" fill="#fff8fc" stroke="#e1e8f4"/>
-    <text x="18" y="34" font-size="20" font-weight="700" fill="#203047">Width line</text>
-    <text x="18" y="60" font-size="15" fill="#64748b">Usually around the cheekbone zone</text>
+    <text x="18" y="34" font-size="20" font-weight="700" fill="#203047">横幅ライン</text>
+    <text x="18" y="60" font-size="15" fill="#64748b">通常は頬骨のあたり</text>
     <rect y="114" width="196" height="92" rx="16" fill="#fff" stroke="#e1e8f4"/>
-    <text x="18" y="148" font-size="20" font-weight="700" fill="#203047">Height line</text>
-    <text x="18" y="174" font-size="15" fill="#64748b">Hairline or upper forehead to chin</text>
+    <text x="18" y="148" font-size="20" font-weight="700" fill="#203047">縦幅ライン</text>
+    <text x="18" y="174" font-size="15" fill="#64748b">生え際（額上部）から顎先まで</text>
     <rect y="228" width="196" height="92" rx="16" fill="#fff8fc" stroke="#e1e8f4"/>
-    <text x="18" y="262" font-size="20" font-weight="700" fill="#203047">Ratio output</text>
-    <text x="18" y="288" font-size="15" fill="#64748b">Used with jaw angle and thirds, not alone</text>
+    <text x="18" y="262" font-size="20" font-weight="700" fill="#203047">比率の出力</text>
+    <text x="18" y="288" font-size="15" fill="#64748b">単独ではなく顎の角度や三分割と併用</text>
   </g>
 </svg>

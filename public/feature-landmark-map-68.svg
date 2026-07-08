@@ -37,16 +37,16 @@
     </g>
   </g>
   <g font-family="Arial, sans-serif" font-size="22" fill="#203047" font-weight="700">
-    <text x="84" y="130">Jaw 1-17</text>
-    <text x="92" y="178" fill="#64748b" font-size="17" font-weight="500">Face shape and width-height ratio</text>
-    <text x="78" y="256">Brows 18-27</text>
-    <text x="78" y="304" fill="#64748b" font-size="17" font-weight="500">Brow arch, spacing, brow-eye distance</text>
-    <text x="560" y="132">Eyes 37-48</text>
-    <text x="560" y="180" fill="#64748b" font-size="17" font-weight="500">Eye width, eye aspect ratio, corner angle</text>
-    <text x="558" y="258">Nose 28-36</text>
-    <text x="558" y="306" fill="#64748b" font-size="17" font-weight="500">Bridge, nostril width, tip position</text>
-    <text x="555" y="384">Mouth 49-68</text>
-    <text x="555" y="432" fill="#64748b" font-size="17" font-weight="500">Lip ratio, mouth width, smile intensity</text>
-    <text x="84" y="524">dlib 68-point model: sparse landmark map used for ratio-based face analysis</text>
+    <text x="84" y="130">輪郭 1-17</text>
+    <text x="92" y="178" fill="#64748b" font-size="17" font-weight="500">顔型と縦横比</text>
+    <text x="78" y="256">眉 18-27</text>
+    <text x="78" y="304" fill="#64748b" font-size="17" font-weight="500">眉のアーチ・間隔・眉と目の距離</text>
+    <text x="560" y="132">目 37-48</text>
+    <text x="560" y="180" fill="#64748b" font-size="17" font-weight="500">目の幅・縦横比・目尻の角度</text>
+    <text x="558" y="258">鼻 28-36</text>
+    <text x="558" y="306" fill="#64748b" font-size="17" font-weight="500">鼻筋・小鼻の幅・鼻先の位置</text>
+    <text x="555" y="384">口 49-68</text>
+    <text x="555" y="432" fill="#64748b" font-size="17" font-weight="500">唇の比率・口の幅・笑顔の強さ</text>
+    <text x="84" y="524">dlib 68点モデル：比率ベースの顔分析に使われるランドマークマップ</text>
   </g>
 </svg>
