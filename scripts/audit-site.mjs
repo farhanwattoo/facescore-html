@@ -156,8 +156,10 @@ const presetArg = args.find((arg) => arg.startsWith('--pillar='));
 const presetName = presetArg ? presetArg.split('=')[1] : '';
 const presetFiles = presetArg ? pillarPages[presetName] || [] : [];
 const selectedFiles = new Set([...presetFiles, ...explicitFiles]);
+const verificationFiles = new Set(['google8a2939e9b7d79b04.html']);
 const allFiles = (await readdir(publicDir))
   .filter((file) => /\.(html|php)$/i.test(file))
+  .filter((file) => !verificationFiles.has(file))
   .sort();
 const files = selectedFiles.size ? allFiles.filter((file) => selectedFiles.has(file)) : allFiles;
 const sitemap = await readFile(path.join(publicDir, 'sitemap.xml'), 'utf8').catch(() => '');
