@@ -399,7 +399,7 @@ function initAnalyzer(root) {
           ? `${t('shareText')}\u3010${currentScore}\u3011${t('shareSuffix')}`
           : `${t('shareText')}${currentScore}${t('shareSuffix')}`
       );
-      const url = encodeURIComponent('https://face-score.net/');
+      const url = encodeURIComponent('https://facescore.net/');
       const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
       window.open(twitterUrl, '_blank', 'noopener,noreferrer');
     });
