@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://facescore.net/sitemap.xml
+Sitemap: https://face-score.net/sitemap.xml
